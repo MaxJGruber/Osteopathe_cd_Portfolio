@@ -1,19 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <LandingPage />
+    <Featured />
+    <Hook />
+    <!-- <Carousel /> -->
+    <!-- <ContactForm /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LandingPage from "./components/LandingPage.vue";
+// import Carousel from "./components/Carousel";
+// import ContactForm from "./components/ContactForm"
+import Hook from "./components/Hook";
+import Featured from "./components/Featured.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    LandingPage,
+    // Carousel,
+    Hook,
+    // ContactForm
+    Featured,
+  },
+};
 </script>
 
 <style>
@@ -23,6 +34,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
