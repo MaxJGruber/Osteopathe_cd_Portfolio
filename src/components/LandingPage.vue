@@ -62,7 +62,7 @@
               >
 
               <a href="#" class="font-medium text-gray-500 hover:text-gray-900"
-                >L'art du Métier</a
+                >L'Art du Métier</a
               >
 
               <a href="#" class="font-medium text-gray-500 hover:text-gray-900"

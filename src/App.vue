@@ -1,19 +1,24 @@
 <template>
   <div id="app">
-    <LandingPage />
-    <Featured />
-    <Hook />
-    <!-- <Carousel /> -->
-    <!-- <ContactForm /> -->
+
+      <LandingPage />
+      <Featured />
+      <ContactInfo />
+      <Hook />
+      <!-- <Carousel /> -->
+      <!-- <ContactForm /> -->
+      <!-- <Footer /> -->
+   
   </div>
 </template>
 
 <script>
 import LandingPage from "./components/LandingPage.vue";
 // import Carousel from "./components/Carousel";
-// import ContactForm from "./components/ContactForm"
+import ContactInfo from "./components/ContactInfo";
 import Hook from "./components/Hook";
 import Featured from "./components/Featured.vue";
+// import Footer from "./components/Footer";
 
 export default {
   name: "App",
@@ -21,8 +26,9 @@ export default {
     LandingPage,
     // Carousel,
     Hook,
-    // ContactForm
+    ContactInfo,
     Featured,
+    // Footer,
   },
 };
 </script>

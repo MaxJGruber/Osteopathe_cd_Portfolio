@@ -181,5 +181,6 @@ export default {};
 <style>
 .type:hover {
   color: blue;
+  font-weight: 900;
 }
 </style>
