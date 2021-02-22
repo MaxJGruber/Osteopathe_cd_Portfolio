@@ -57,7 +57,7 @@
               </div>
             </div>
             <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900"
+              <a href="/" class="font-medium text-gray-500 hover:text-gray-900"
                 >Accueil</a
               >
 
@@ -69,8 +69,15 @@
                 >Patients</a
               >
 
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900"
-                >Contact</a
+              <router-link
+                to="/contact-page"
+                class="font-medium text-gray-500 hover:text-gray-900"
+                >Contact & Informations Pratiques</router-link
+              >
+              <router-link
+                to="/photo-gallery"
+                class="font-medium text-gray-500 hover:text-gray-900"
+                >Galerie</router-link
               >
 
               <!-- <a

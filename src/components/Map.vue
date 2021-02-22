@@ -1,10 +1,10 @@
 <template>
   <div class="map">
-    <h1>Map</h1>
     <MglMap
       :accessToken="accessToken"
       :mapStyle="mapStyle"
       :center="coordinates"
+      :zoom="15"
     >
       <MglMarker :coordinates="coordinates" color="blue" />
     </MglMap>
@@ -25,7 +25,7 @@ export default {
       accessToken:
         "pk.eyJ1IjoibWF4amdydWJlciIsImEiOiJja2xjM3E3MmcxYzBrMm9sYnp1MW81cGs2In0.A0nMg1Jdr81usX1IZRhggQ", // your access token. Needed if you using Mapbox maps
       mapStyle: "mapbox://styles/mapbox/streets-v11", // your map style
-      coordinates: [48.95519468914018, 2.8800294692906894],
+      coordinates: [2.8800294692906894, 48.95519468914018],
     };
   },
 
