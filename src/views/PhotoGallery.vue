@@ -1,23 +1,29 @@
 <template>
   <div>
-    <h1>Photo Gallery</h1>
+    <NavBar />
     <div class="photo-grid">
       <div v-for="(img, key) in photos" :key="key">
-        <img :src="img" class="pic" alt="pic" />
+        <img :src="getImgUrl(img)" class="pic" alt="pic" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import NavBar from "../components/NavBar";
 export default {
+  components: {
+    NavBar,
+  },
   data() {
     return {
-      photos: [
-        "src/assets/photo-gallery/shooting1.jpg",
-        "../assets/Ostheo1.jpg",
-      ],
+      photos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     };
+  },
+  methods: {
+    getImgUrl: function (num) {
+      return require("../assets/photo-gallery/shooting" + num + ".jpg");
+    },
   },
 };
 </script>
@@ -25,11 +31,12 @@ export default {
 <style>
 .photo-grid {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
   height: 300px;
 }
 .pic {
-  height: 100px;
-  width: 100px;
+  height: auto;
+  width: auto;
 }
 </style>

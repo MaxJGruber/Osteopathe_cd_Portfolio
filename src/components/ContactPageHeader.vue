@@ -75,7 +75,7 @@
                 >Contact & Informations Pratiques</router-link
               >
               <router-link
-                to="/contact-page"
+                to="/photo-gallery"
                 class="font-medium text-gray-500 hover:text-gray-900"
                 >Galerie</router-link
               >
@@ -228,8 +228,8 @@
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
       <img
-        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-        src="../assets/Ostheo1.jpg"
+        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full"
+        src="../assets/photo-gallery/shooting9.jpg"
         alt=""
       />
     </div>

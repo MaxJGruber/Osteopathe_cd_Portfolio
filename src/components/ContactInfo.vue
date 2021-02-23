@@ -44,6 +44,7 @@ export default {
 
 .map-container {
   display: flex;
-  place-content: center;
+  justify-content: center;
+  align-items: center;
 }
 </style>
