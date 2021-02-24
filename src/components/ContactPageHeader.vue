@@ -241,5 +241,5 @@ export default {};
 </script>
 
 <style>
-@import "../tailwind.css";
+/* @import "../tailwind.css"; */
 </style>
