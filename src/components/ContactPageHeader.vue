@@ -12,7 +12,7 @@
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          <polygon points="50,0 100,0 50,100 0,100" />
+          <polygon points="0,0 0,0 0,0 0,0" />
         </svg>
 
         <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
@@ -30,6 +30,7 @@
                 </a>
                 <div class="-mr-2 flex items-center md:hidden">
                   <button
+                    v-on:click="open = !open"
                     type="button"
                     class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                     id="main-menu"
@@ -100,6 +101,7 @@
           To: "opacity-0 scale-95"
       -->
         <div
+          v-show="open"
           class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
           <div
@@ -111,6 +113,7 @@
               </div>
               <div class="-mr-2">
                 <button
+                  v-on:click="open = !open"
                   type="button"
                   class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 >
@@ -207,18 +210,18 @@
             >
               <div class="rounded-md shadow">
                 <a
-                  href="#"
+                  href="tel:06 38 69 77 16"
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                 >
-                  Prendre Contact
+                  Appelez le 06 38 69 77 16
                 </a>
               </div>
               <div class="mt-3 sm:mt-0 sm:ml-3">
                 <a
-                  href="#"
+                  href="mailto:charlesdumeige@outlook.fr?subject=Contact"
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
                 >
-                  Apprenez plus
+                  Contactez par mail
                 </a>
               </div>
             </div>
@@ -228,7 +231,7 @@
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
       <img
-        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full"
+        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
         src="../assets/photo-gallery/shooting9.jpg"
         alt=""
       />
@@ -237,9 +240,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      open: false,
+    };
+  },
+};
 </script>
 
 <style>
-/* @import "../tailwind.css"; */
 </style>

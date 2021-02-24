@@ -9,10 +9,11 @@
         <span class="block">Assez entendu?</span>
         <span class="block text-indigo-600">Prenez rendez-vous.</span>
       </h2>
-      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+      <div class="mt-8 push-left flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
           <a
             href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
+            target="_blank"
             class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
           >
             Prenez RDV sur doctolib.com
@@ -36,4 +37,7 @@ export default {};
 </script>
 
 <style>
+.push-left {
+  padding-left: 25%;
+}
 </style>

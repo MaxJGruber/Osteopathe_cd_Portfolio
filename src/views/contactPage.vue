@@ -3,7 +3,9 @@
     <ContactHeaderPage />
     <ContactInfo />
     <PriceList />
+    <Reimbursements />
     <PracticalInfo />
+    <Footer />
   </div>
 </template>
 
@@ -11,7 +13,9 @@
 import ContactHeaderPage from "../components/ContactPageHeader";
 import ContactInfo from "../components/ContactInfo";
 import PriceList from "../components/PriceList";
+import Reimbursements from "../components/Reimbursements";
 import PracticalInfo from "../components/PracticalInfo";
+import Footer from "../components/Footer";
 
 export default {
   name: "ContactPage",
@@ -20,10 +24,11 @@ export default {
     ContactInfo,
     PriceList,
     PracticalInfo,
+    Reimbursements,
+    Footer,
   },
 };
 </script>
 
 <style>
-/* @import "../tailwind.css"; */
 </style>

@@ -30,6 +30,7 @@
                 </a>
                 <div class="-mr-2 flex items-center md:hidden">
                   <button
+                    v-on:click="open = !open"
                     type="button"
                     class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                     id="main-menu"
@@ -100,6 +101,7 @@
           To: "opacity-0 scale-95"
       -->
         <div
+          v-show="open"
           class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
           <div
@@ -111,6 +113,7 @@
               </div>
               <div class="-mr-2">
                 <button
+                  v-on:click="open = !open"
                   type="button"
                   class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 >
@@ -189,7 +192,7 @@
               class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
             >
               <span class="block xl:inline"
-                >Faîtes vous du bien en allant voir...</span
+                >Bienvenue sur le site de votre osthéopathe...</span
               >
               <span class="block text-indigo-600 xl:inline">
                 Charles Dumeige</span
@@ -206,12 +209,12 @@
               class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
             >
               <div class="rounded-md shadow">
-                <a
-                  href="#"
+                <router-link
+                  to="/contact-page"
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                 >
                   Prendre Contact
-                </a>
+                </router-link>
               </div>
               <div class="mt-3 sm:mt-0 sm:ml-3">
                 <a
@@ -237,7 +240,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      open: false,
+    };
+  },
+};
 </script>
 
 <style>

@@ -4,19 +4,16 @@
     <Featured />
     <ContactInfo />
     <Hook />
-    <!-- <Carousel /> -->
-    <!-- <ContactForm /> -->
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
 <script>
 import LandingPage from "../components/LandingPage.vue";
-// import Carousel from "./components/Carousel";
 import ContactInfo from "../components/ContactInfo";
 import Hook from "../components/Hook";
 import Featured from "../components/Featured.vue";
-// import Footer from "./components/Footer";
+import Footer from "../components/Footer";
 
 export default {
   name: "Home",
@@ -26,7 +23,7 @@ export default {
     Hook,
     ContactInfo,
     Featured,
-    // Footer,
+    Footer,
   },
 };
 </script>
