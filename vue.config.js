@@ -1,1 +1,1 @@
-// module.exports = {publicPath: "/"}
+module.exports = {publicPath: "/Osteopathe_cd_Portfolio"}
