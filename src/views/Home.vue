@@ -35,7 +35,7 @@ export default {
         button1: "Prendre Contact",
         linkbutton1: "/contact-page",
         button2: "Apprenez Plus",
-        image: require("../assets/osteo1.jpg"),
+        image: require("../assets/Osteo1.jpg"),
       },
     };
   },
