@@ -5,7 +5,7 @@
         <h2
           class="text-base text-logo-blue font-semibold tracking-wide uppercase"
         >
-          L'Osthéopathie
+          L'Ostéopathie
         </h2>
         <p
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
@@ -13,7 +13,7 @@
           Générale - Viscérale - Crânienne
         </p>
         <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Dans son Cabinet, le M. Dumeige prend en charge tout type de patient.
+          Dans son Cabinet, M. Dumeige prend en charge tout type de patient.
         </p>
         <p
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl"
@@ -58,7 +58,7 @@
                 A l'écoute du patient
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                Une attitude active dans l’approche relationnelle osthéopathe et
+                Une attitude active dans l’approche relationnelle ostéopathe et
                 patient.
               </dd>
             </div>

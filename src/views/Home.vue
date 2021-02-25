@@ -28,14 +28,14 @@ export default {
   data: () => {
     return {
       info: {
-        titlePart1: "Bienvenue sur le site de votre osthéopathe...",
+        titlePart1: "Bienvenue sur le site de votre ostéopathe...",
         titlePart2: "Charles Dumeige",
         introPara:
-          "Installé depuis 2019 dans son cabinet à Meaux (Dept 77), Charles Dumeige, osthéopathe D.O est à votre écoute et se charge de soulager vos douleurs musculo-squelettiques.",
+          "Installé depuis 2019 dans son cabinet à Meaux (Dept 77), Charles Dumeige, ostéopathe D.O est à votre écoute et se charge de soulager vos douleurs musculo-squelettiques.",
         button1: "Prendre Contact",
         linkbutton1: "/contact-page",
         button2: "Apprenez Plus",
-        image: require("../assets/Ostheo1.jpg"),
+        image: require("../assets/osteo1.jpg"),
       },
     };
   },

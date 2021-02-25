@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LandingPage :info="infoContact" page="contact"/>
+    <LandingPage :info="infoContact" page="contact" />
     <ContactInfo />
     <PriceList />
     <Reimbursements />
@@ -33,7 +33,7 @@ export default {
         titlePart1: "Faîtes vous du bien en allant voir...",
         titlePart2: "Charles Dumeige",
         introPara:
-          "Installé depuis 2019 dans son cabinet à Meaux (Dept 77), Charles Dumeige, osthéopathe D.O est à votre écoute et se charge de soulager vos douleurs musculo-squelettiques.",
+          "Installé depuis 2019 dans son cabinet à Meaux (Dept 77), Charles Dumeige, ostéopathe D.O est à votre écoute et se charge de soulager vos douleurs musculo-squelettiques.",
         button1: "Appelez le 06 38 69 77 16",
         linkbutton1: "tel:06 38 69 77 16",
         button2: "Contactez par mail",

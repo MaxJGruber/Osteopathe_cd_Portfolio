@@ -27,7 +27,7 @@
                 Paiement par espèces ou chèque uniquement
               </dt>
               <!-- <dd class="mt-2 text-base text-gray-500">
-                Une attitude active dans l’approche relationnelle osthéopathe et
+                Une attitude active dans l’approche relationnelle ostéopathe et
                 patient.
               </dd> -->
             </div>

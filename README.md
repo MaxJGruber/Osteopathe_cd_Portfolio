@@ -1,4 +1,4 @@
-# ostheopathe_cd_portfolio
+# osteopathe_cd_portfolio
 
 ## Project setup
 ```
