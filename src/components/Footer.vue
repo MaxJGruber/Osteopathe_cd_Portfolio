@@ -2,24 +2,36 @@
   <footer>
     <div class="center">
       <div class="footer-nav">
-        <router-link to="/" class=""> Home</router-link>
-        <router-link to="/contact-page" class=""> Contact</router-link>
-        <router-link to="/photo-gallery" class=""> Galerie</router-link>
-        <img src="../assets/Logo_Doctolib.svg.png" class="doctolib" />
+        <router-link to="/" class="nav-link"> Home</router-link>
+        <router-link to="/contact-page" class="nav-link"> Contact</router-link>
+        <router-link to="/photo-gallery" class="nav-link"> Galerie</router-link>
+        <a href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige" class="nav-link">
+        Doctolib</a>
         <!-- <font-awesome-icon :icon="['fab', 'fa-linkedin']" /> -->
       </div>
-      <div>{{ new Date().getFullYear() }} — <strong>By Max Gruber</strong></div>
+      <div>
+        {{ new Date().getFullYear() }} —
+        <a
+          href="https://www.linkedin.com/in/maximilian-j-gruber/"
+          target="_blank"
+          ><strong>By Max Gruber</strong></a
+        >
+      </div>
     </div>
   </footer>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return { active: false };
+  },
+};
 </script>
 
 <style>
 footer {
-  background-color: #5c71e5;
+  background-color: #3abfd6;
   padding: 5px;
 }
 
@@ -35,13 +47,13 @@ footer .center * {
   flex-direction: column;
 }
 
-.footer-nav * {
+.footer-nav .nav-link {
   font-size: 1.15rem;
-  padding: 3px;
+  padding: 10px;
   margin: 3px;
 }
 
-.footer-nav *:hover {
+.footer-nav .nav-link:hover {
   background-color: white;
   color: #5c71e5;
   border-radius: 2em;
@@ -49,6 +61,9 @@ footer .center * {
 
 .doctolib {
   height: auto;
-  width: 8%;
+  width: 5em;
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 </style>

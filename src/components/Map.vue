@@ -45,6 +45,6 @@ export default {
 .map-frame {
   height: 85%;
   width: 85%;
-  border: 2px indigo solid;
+  border: 2px #3abfd6 solid;
 }
 </style>

@@ -7,22 +7,22 @@
         class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
       >
         <span class="block">Assez entendu?</span>
-        <span class="block text-indigo-600">Prenez rendez-vous.</span>
+        <span class="block text-logo-blue">Prenez rendez-vous.</span>
       </h2>
       <div class="mt-8 push-left flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
           <a
             href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
             target="_blank"
-            class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+            class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-logo-blue"
           >
-            Prenez RDV sur doctolib.com
+            Prenez RDV sur doctolib.fr
           </a>
         </div>
         <div class="ml-3 inline-flex rounded-md shadow">
           <a
             href="tel:0638697716"
-            class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
+            class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-white hook-btn2"
           >
             Appelez le 06 38 69 77 16
           </a>
@@ -39,5 +39,9 @@ export default {};
 <style>
 .push-left {
   padding-left: 25%;
+}
+
+.hook-btn2:hover {
+  box-shadow: 1px 1px 12px #555;
 }
 </style>

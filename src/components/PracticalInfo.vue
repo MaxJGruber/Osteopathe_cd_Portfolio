@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2
-          class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+          class="text-base text-logo-blue font-semibold tracking-wide uppercase"
         >
           Informations Pratiques
         </h2>
@@ -16,7 +16,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/globe-alt -->
                 <font-awesome-icon icon="money-bill-wave" class="icon" />
@@ -35,7 +35,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/lightning-bolt -->
                 <font-awesome-icon icon="comment" class="icon" />
@@ -55,7 +55,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/lightning-bolt -->
                 <font-awesome-icon icon="head-side-mask" class="icon" />
@@ -75,7 +75,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/lightning-bolt -->
                 <font-awesome-icon icon="wheelchair" class="icon" />

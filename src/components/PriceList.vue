@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2
-          class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+          class="text-base text-logo-blue font-semibold tracking-wide uppercase"
         >
           Tarifs
         </h2>
@@ -16,7 +16,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/globe-alt -->
                 <p class="price">55€</p>
@@ -36,7 +36,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/scale -->
                 <p class="price">70€</p>
@@ -57,7 +57,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/lightning-bolt -->
                 <p class="price">80€</p>

@@ -1,6 +1,6 @@
 <template>
   <div class="py-12 bg-gray-50 contact-info-comp">
-    <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+    <h2 class="text-base text-logo-blue font-semibold tracking-wide uppercase">
       Horaires & Accès
     </h2>
     <div class="contact-info-container">

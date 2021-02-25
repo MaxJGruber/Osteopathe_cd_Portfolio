@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2
-          class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+          class="text-base text-logo-blue font-semibold tracking-wide uppercase"
         >
           L'Osthéopathie
         </h2>
@@ -13,14 +13,14 @@
           Générale - Viscérale - Crânienne
         </p>
         <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Dans son Cabinet, le Dr. Dumeige prend en charge tout type de patient.
+          Dans son Cabinet, le M. Dumeige prend en charge tout type de patient.
         </p>
         <p
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl"
         >
           <span class="type">Nourissons</span> -
           <span class="type">Enfants & Adolescents</span> -
-          <span class="type">Femmes & Femmes Enceintes</span> -
+          <span class="type">Femmes Enceintes</span> -
           <span class="type">Adultes & Séniors</span> -
           <span class="type">Sportifs</span>
         </p>
@@ -33,7 +33,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/globe-alt -->
                 <svg
@@ -67,7 +67,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/scale -->
                 <svg
@@ -102,7 +102,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/lightning-bolt -->
                 <svg
@@ -137,7 +137,7 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/annotation -->
                 <svg
@@ -180,7 +180,7 @@ export default {};
 
 <style>
 .type:hover {
-  color: blue;
+  color: #3abfd6;
   font-weight: 900;
 }
 </style>

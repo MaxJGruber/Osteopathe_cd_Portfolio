@@ -1,10 +1,11 @@
 <template>
   <div>
-    <LandingPage />
+    <LandingPage :info="info" page="home" />
     <Featured />
     <ContactInfo />
     <Hook />
     <Footer />
+    <!-- <div class="elfsight-app-1b9ea368-a2a5-4b67-a658-806a9bbba15e review"></div> -->
   </div>
 </template>
 
@@ -19,11 +20,24 @@ export default {
   name: "Home",
   components: {
     LandingPage,
-    // Carousel,
     Hook,
     ContactInfo,
     Featured,
     Footer,
+  },
+  data: () => {
+    return {
+      info: {
+        titlePart1: "Bienvenue sur le site de votre osthéopathe...",
+        titlePart2: "Charles Dumeige",
+        introPara:
+          "Installé depuis 2019 dans son cabinet à Meaux (Dept 77), Charles Dumeige, osthéopathe D.O est à votre écoute et se charge de soulager vos douleurs musculo-squelettiques.",
+        button1: "Prendre Contact",
+        linkbutton1: "/contact-page",
+        button2: "Apprenez Plus",
+        image: require("../assets/Ostheo1.jpg"),
+      },
+    };
   },
 };
 </script>
@@ -35,6 +49,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
- /* margin-top: 60px;  */
+  /* margin-top: 60px;  */
 }
 </style>
