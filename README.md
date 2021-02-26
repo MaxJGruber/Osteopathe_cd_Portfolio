@@ -1,24 +1,7 @@
-# osteopathe_cd_portfolio
+# Site d'Ostéopathe / Osteopath Website
 
-## Project setup
+## Project using Vue.js & tailwind css
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+This portfolio website was created for Charles Dumeige, dear friend of mine.
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
