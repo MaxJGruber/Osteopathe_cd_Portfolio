@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <div class="center">
+    <!-- <div class="center">
       <v-carousel class="carousel" cycle :show-arrows="false">
         <v-carousel-item
           v-for="(img, key) in photos"
@@ -12,10 +12,10 @@
           class="carousel-pic"
         ></v-carousel-item>
       </v-carousel>
-    </div>
+    </div> -->
     <div class="photo-grid">
       <div v-for="(img, key) in photos" :key="key" class="pic-container">
-        <img :src="getImgUrl(img)" class="pic" alt="pic" />
+        <img :src="img" class="pic" alt="pic" />
       </div>
     </div>
     <Footer />
@@ -25,6 +25,8 @@
 <script>
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import apiHandler from "../apiHandler";
+
 export default {
   components: {
     NavBar,
@@ -32,13 +34,19 @@ export default {
   },
   data() {
     return {
-      photos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      photos: [],
     };
   },
   methods: {
-    getImgUrl: function (num) {
-      return require("../assets/photo-gallery/shooting" + num + ".jpg");
+    getPics() {
+      apiHandler
+        .getPicUrls("/api/pics")
+        .then((res) => (this.photos = res))
+        .catch((err) => console.log(err));
     },
+  },
+  created() {
+    this.getPics();
   },
 };
 </script>
@@ -50,8 +58,8 @@ export default {
   width: 50%;
 }
 .carousel-pic {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100% !important;
+  height: auto !important;
 }
 
 .center {
@@ -74,8 +82,8 @@ export default {
 }
 
 .pic {
-  max-width: 100%;
-  max-height: 80%;
+  width: 100% !important;
+  height: auto !important;
   padding: 10px;
 }
 </style>
