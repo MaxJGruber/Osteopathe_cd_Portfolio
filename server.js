@@ -12,6 +12,8 @@ app.get(/.*/, function (req, res) {
 	res.sendFile(path.join(__dirname, '/dist/index.html'))
 })
 
+console.log(__dirname)
+
 const port = 8080
 app.listen(port)
 console.log(`app is listening on port: ${port}`)
