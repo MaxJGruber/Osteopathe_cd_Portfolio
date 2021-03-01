@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev:all": "vue-cli-service serve & nodemon ./server_osteo/server.js",
-    "start": "node server.js"
+    "start": "node server_osteo/server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",

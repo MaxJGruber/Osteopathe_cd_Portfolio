@@ -14,6 +14,7 @@ app.use((req, res, next) => {
 })
 
 const corsOptions = { origin: process.env.VUE_APP_FRONTEND_URL, credentials: true };
+
 app.use(cors(corsOptions));
 //here we are configuring dist to serve app files
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
@@ -26,7 +27,6 @@ app.get(/.*/, function (req, res) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-console.log(process.env.VUE_APP_PORT)
 const port = process.env.VUE_APP_PORT || 8080
 app.listen(port)
 console.log(`app is listening on port: ${port}`)

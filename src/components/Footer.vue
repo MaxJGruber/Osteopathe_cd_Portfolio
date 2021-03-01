@@ -5,8 +5,12 @@
         <router-link to="/" class="nav-link"> Home</router-link>
         <router-link to="/contact-page" class="nav-link"> Contact</router-link>
         <router-link to="/photo-gallery" class="nav-link"> Galerie</router-link>
-        <a href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige" class="nav-link">
-        Doctolib</a>
+        <a
+          href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
+          class="nav-link"
+        >
+          Doctolib</a
+        >
         <!-- <font-awesome-icon :icon="['fab', 'fa-linkedin']" /> -->
       </div>
       <div>
@@ -49,21 +53,21 @@ footer .center * {
 
 .footer-nav .nav-link {
   font-size: 1.15rem;
-  padding: 10px;
-  margin: 3px;
+  padding: 0.2em;
+  margin: 0.5em;
 }
 
 .footer-nav .nav-link:hover {
   background-color: white;
-  color: #5c71e5;
+  color: #3abfd6;
   border-radius: 2em;
 }
-
+/* 
 .doctolib {
   height: auto;
   width: 5em;
   display: inline;
   margin: 0;
   padding: 0;
-}
+} */
 </style>

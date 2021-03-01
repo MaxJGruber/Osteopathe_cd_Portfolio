@@ -4,7 +4,7 @@ const express = require('express')
 const router = express.Router();
 
 // CLOUDINARY CONFIG SETUP
-console.log(process.env.VUE_APP_CLOUD_NAME)
+
 cloudinary.config({
     cloud_name: process.env.VUE_APP_CLOUD_NAME,
     api_key: process.env.VUE_APP_API_KEY,
@@ -12,7 +12,7 @@ cloudinary.config({
 });
 
 router.get("/api/pics", async (req, res) => {
-    const allPicObjs = await cloudinary.api.resources();
+    const allPicObjs = await cloudinary.api.resources({ max_results: 30 },);
     const picsArray = allPicObjs.resources.map((picDetails) => picDetails.secure_url)
     console.log(picsArray)
     res.status(200).json(picsArray)
