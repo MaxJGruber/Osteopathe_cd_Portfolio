@@ -27,13 +27,13 @@ export default {
 
 <style>
 .contact-info-container {
-  height: 100%;
+  height: auto;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(auto-fit, minmax(413px, 1fr));
 }
 
 .contact-info-comp {
-  height: 75vh;
+  height: auto;
 }
 
 .contact-info {

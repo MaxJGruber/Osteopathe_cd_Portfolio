@@ -25,8 +25,7 @@ export default {
   },
   data() {
     return {
-      accessToken:
-        "pk.eyJ1IjoibWF4amdydWJlciIsImEiOiJja2xjM3E3MmcxYzBrMm9sYnp1MW81cGs2In0.A0nMg1Jdr81usX1IZRhggQ", // your access token. Needed if you using Mapbox maps
+      accessToken: process.env.VUE_APP_MAPBOX_TOKEN, // your access token. Needed if you using Mapbox maps
       mapStyle: "mapbox://styles/mapbox/streets-v11", // your map style
       coordinatesCabinet: [2.8800294692906894, 48.95519468914018],
       coordinatesBusMarche: [2.8791945681925313, 48.955286120169596],
@@ -43,8 +42,8 @@ export default {
 </script>
 <style>
 .map-frame {
-  height: 85%;
-  width: 85%;
+  height: 400px;
+  width: 400px;
   border: 2px #3abfd6 solid;
 }
 </style>
