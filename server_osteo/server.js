@@ -23,7 +23,6 @@ app.use("/", cloudinaryRouter)
 // app.get(/.*/, function (req, res) {
 //     res.sendFile(path.join(__dirname, '/public/index.html'))
 // })
-console.log(__dirname)
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
