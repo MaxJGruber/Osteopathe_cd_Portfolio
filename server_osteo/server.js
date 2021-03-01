@@ -17,11 +17,11 @@ const corsOptions = { origin: process.env.VUE_APP_FRONTEND_URL, credentials: tru
 
 app.use(cors(corsOptions));
 //here we are configuring dist to serve app files
-app.use('/', serveStatic(path.join(__dirname, '../public')))
+app.use('/', serveStatic(path.join(__dirname, '../dist')))
 app.use("/", cloudinaryRouter)
 // this * route is to serve project on different page routes except root `/`
 app.get(/.*/, function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'))
+    res.sendFile(path.join(__dirname, '../dist/index.html'))
 })
 
 // console.log(path.join(__dirname, '../public/index.html'))
