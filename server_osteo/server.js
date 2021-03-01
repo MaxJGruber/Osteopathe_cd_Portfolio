@@ -27,6 +27,6 @@ app.get(/.*/, function (req, res) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const port = process.env.VUE_APP_PORT || 8080
+const port = process.env.VUE_APP_PORT || process.env.PORT || 8080
 app.listen(port)
 console.log(`app is listening on port: ${port}`)
