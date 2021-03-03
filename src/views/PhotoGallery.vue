@@ -60,7 +60,6 @@ export default {
         },
       ];
       console.log(this.lightboxOn);
-      this.lightboxOn = false;
     },
   },
   created() {
