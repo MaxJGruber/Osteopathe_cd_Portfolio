@@ -1,7 +1,7 @@
 <template>
   <div>
-    <LandingPage :info="info" page="home" />
-    <AttentionTab />
+    <LandingPage :info="info" :links="links" page="home" />
+    <AttentionTab :message="message" />
     <Featured />
     <ContactInfo />
     <Hook />
@@ -40,6 +40,14 @@ export default {
         button2: "Apprenez Plus",
         image: require("../assets/Osteo1.jpg"),
       },
+      links: {
+        accueil: "Accueil",
+        presentations: "Présentations",
+        patients: "Patients",
+        contact: "Contact & Informations Pratiques",
+        galerie: "Galerie",
+      },
+      message: "Votre ostéopathe prend exceptionnellement des RDV le dimanche!",
     };
   },
 };

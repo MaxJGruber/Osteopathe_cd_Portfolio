@@ -61,25 +61,31 @@
               </div>
             </div>
             <div class="hidden md:block md:space-x-8">
-              <a href="/" class="font-medium text-gray-500 hover:text-gray-900"
-                >Accueil</a
+              <a
+                href="/"
+                class="font-medium text-gray-500 hover:text-gray-900"
+                >{{ links.accueil }}</a
               >
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900"
-                >L'Art du Métier</a
+              <a
+                href="#"
+                class="font-medium text-gray-500 hover:text-gray-900"
+                >{{ links.presentations }}</a
               >
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900"
-                >Patients</a
+              <a
+                href="#"
+                class="font-medium text-gray-500 hover:text-gray-900"
+                >{{ links.patients }}</a
               >
 
               <router-link
                 to="/contact-page"
                 class="font-medium text-gray-500 hover:text-gray-900"
-                >Contact & Informations Pratiques</router-link
+                >{{ links.contact }}</router-link
               >
               <router-link
                 to="/photo-gallery"
                 class="font-medium text-gray-500 hover:text-gray-900"
-                >Galerie</router-link
+                >{{ links.galerie }}</router-link
               >
             </div>
           </nav>
@@ -142,38 +148,29 @@
                   href="#"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   role="menuitem"
-                  >Accueil</a
+                  >{{ links.accueil }}</a
                 >
 
                 <a
                   href="#"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   role="menuitem"
-                  >L'Art du Métier</a
+                  >{{ links.presentations }}</a
                 >
 
                 <a
                   href="#"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   role="menuitem"
-                  >Patients</a
+                  >{{ links.patients }}</a
                 >
 
                 <a
                   href="#"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   role="menuitem"
-                  >Contact</a
+                  >{{ links.contact }}</a
                 >
-              </div>
-              <div role="none">
-                <!-- <a
-                  href="#"
-                  class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
-                  role="menuitem"
-                >
-                  Log in
-                </a> -->
               </div>
             </div>
           </div>
@@ -260,7 +257,7 @@ export default {
       open: false,
     };
   },
-  props: { info: Object, page: String },
+  props: { info: Object, links: Object, page: String },
 };
 </script>
 

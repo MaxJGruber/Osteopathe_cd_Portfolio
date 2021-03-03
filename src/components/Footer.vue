@@ -26,7 +26,12 @@
         >
           Doctolib</a
         >
-        <!-- <font-awesome-icon :icon="['fab', 'fa-linkedin']" /> -->
+        <a
+          href="#"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          LinkedIn</a
+        >
       </div>
       <div class="text-white">
         {{ new Date().getFullYear() }} —

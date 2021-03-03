@@ -25,12 +25,19 @@
           /></v-btn>
         </template>
         <v-list>
-          <v-list-item v-for="(day, index) in times" :key="index">
+          <v-list-item
+            v-for="(day, index) in times"
+            :key="index"
+            class="hover:bg-gray-100 times"
+          >
             <v-list-item-title>{{ day.title }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
     </div>
+    <h4 v-show="(isOpen = false)">
+      Le cabinet reouvre {{ tomorrowDay }} à {{ tomorrowHour }} heure.
+    </h4>
     <h6><span>Adresse: </span>19 Rue Madame Dassy, 77100 Meaux</h6>
     <h6>
       <span>Moyens de Transports:</span>
@@ -40,7 +47,10 @@
         <li>Bus - Médiathèque (lignes 12, 3 et 69)</li>
       </ul>
     </h6>
-    <h6><span>Informations pratiques: </span>1er étage avec ascenseur</h6>
+    <h6>
+      <span>Informations d'accès: </span>Cabinet situé au 1er étage avec
+      ascenseur
+    </h6>
     <a
       href="https://www.google.fr/maps/place/19+Rue+Madame+Dassy,+77100+Meaux/@48.9552123,2.8778515,17z/data=!3m1!4b1!4m5!3m4!1s0x47e8a104aa1c7251:0x7c587a186f9a2b9b!8m2!3d48.9552088!4d2.8800402"
       class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-white hover:bg-indigo-50"
@@ -55,36 +65,38 @@ export default {
   data: () => ({
     times: [
       {
-        title: "Lundi: 8H-20H",
-        businessHours: ["Monday", 8.0, 20.0],
+        title: "Lundi: 8:00-20:00",
+        businessHours: ["Lundi", 8.0, 20.0],
       },
       {
-        title: "Mardi: 8H-20H",
-        businessHours: ["Tuesday", 8.0, 20.0],
+        title: "Mardi: 8:00-20:00",
+        businessHours: ["Mardi", 8.0, 20.0],
       },
       {
-        title: "Mercredi: 8H-20H",
-        businessHours: ["Wednesday", 8.0, 20.0],
+        title: "Mercredi: 8:00-20:00",
+        businessHours: ["Mercredi", 8.0, 20.0],
       },
       {
-        title: "Jeudi: 8H-20H",
-        businessHours: ["Thursday", 8.0, 20.0],
+        title: "Jeudi: 8:00-20:00",
+        businessHours: ["Jeudi", 8.0, 20.0],
       },
       {
-        title: "Vendredi: 8H-20H",
-        businessHours: ["Friday", 8.0, 20.0],
+        title: "Vendredi: 8:00-20:00",
+        businessHours: ["Vendredi", 8.0, 20.0],
       },
       {
-        title: "Samedi: 8H-20H ",
-        businessHours: ["Saturday", 8.0, 20.0],
+        title: "Samedi: 8:00-20:00",
+        businessHours: ["Samedi", 8.0, 20.0],
       },
       {
-        title: "Dimanche: 11H-15H",
-        businessHours: ["Sunday", 11.0, 15.0],
+        title: "Dimanche: 10:00-15:00",
+        businessHours: ["Dimanche", 10.0, 15.0],
       },
     ],
     offset: true,
     isOpen: null,
+    tomorrowDay: null,
+    tomorrowHour: null,
   }),
   methods: {
     openCheck() {
@@ -92,12 +104,19 @@ export default {
       var n = d.getDay();
       var now = d.getHours() + "." + d.getMinutes();
       var day = this.times[n - 1];
+      var nextDay = this.times[n];
       if (now > day.businessHours[1] && now < day.businessHours[2]) {
         console.log("We're open right now!");
         this.isOpen = !this.isOpen;
+        this.tomorrowDay = nextDay.businessHours[0];
+        this.tomorrowHour = nextDay.businessHours[1];
+        console.log(this.tomorrowDay);
       } else {
         console.log("Sorry, we're closed!");
         this.isOpen = !this.isOpen;
+        this.tomorrowDay = nextDay.businessHours[0];
+        this.tomorrowHour = nextDay.businessHours[1];
+        console.log(this.tomorrowDay);
       }
     },
   },

@@ -4,6 +4,8 @@ import router from "./router"
 import "./tailwind.css"
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import VueLazyLoad from 'vue-lazyload'
+import 'vue-image-lightbox/dist/vue-image-lightbox.min.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHeadSideMask, faWheelchair, faMoneyBillWave, faComment, faExclamationTriangle, faDoorOpen, faDoorClosed } from '@fortawesome/free-solid-svg-icons'
@@ -14,6 +16,7 @@ library.add(faHeadSideMask, faWheelchair, faMoneyBillWave, faComment, faExclamat
 library.add(faLinkedin)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(Vuetify)
+Vue.use(VueLazyLoad)
 
 Vue.config.productionTip = false
 new Vue({

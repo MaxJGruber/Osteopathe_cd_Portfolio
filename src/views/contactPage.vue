@@ -1,6 +1,7 @@
 <template>
   <div>
-    <LandingPage :info="infoContact" page="contact" />
+    <LandingPage :info="infoContact" :links="links" page="contact" />
+    <AttentionTab :message="message" />
     <ContactInfo />
     <PriceList />
     <Reimbursements />
@@ -14,6 +15,7 @@ import LandingPage from "../components/LandingPage";
 import ContactInfo from "../components/ContactInfo";
 import PriceList from "../components/PriceList";
 import Reimbursements from "../components/Reimbursements";
+import AttentionTab from "../components/AttentionTab";
 import PracticalInfo from "../components/PracticalInfo";
 import Footer from "../components/Footer";
 
@@ -22,6 +24,7 @@ export default {
   components: {
     LandingPage,
     ContactInfo,
+    AttentionTab,
     PriceList,
     PracticalInfo,
     Reimbursements,
@@ -40,6 +43,14 @@ export default {
         linkButton2: "mailto:charlesdumeige@outlook.fr?subject=Contact",
         image: require("../assets/photo-gallery/shooting9.jpg"),
       },
+      links: {
+        accueil: "Accueil",
+        presentations: "Présentations",
+        patients: "Patients",
+        contact: "Contact & Informations Pratiques",
+        galerie: "Galerie",
+      },
+      message: "Votre ostéopathe prend exceptionnellement des RDV le dimanche!",
     };
   },
 };

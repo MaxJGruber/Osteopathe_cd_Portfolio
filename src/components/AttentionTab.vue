@@ -25,7 +25,7 @@
           <p class="ml-3 font-medium text-white truncate">
             <span class="md:hidden"> We announced a new product! </span>
             <span class="hidden md:inline">
-              Votre ostéopathe prend des patients le dimanche
+              {{ message }}
             </span>
           </p>
         </div>
@@ -66,6 +66,9 @@
 export default {
   data() {
     return { open: true };
+  },
+  props: {
+    message: String,
   },
 };
 </script>
