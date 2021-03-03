@@ -2,22 +2,38 @@
   <footer>
     <div class="center">
       <div class="footer-nav">
-        <router-link to="/" class="nav-link"> Home</router-link>
-        <router-link to="/contact-page" class="nav-link"> Contact</router-link>
-        <router-link to="/photo-gallery" class="nav-link"> Galerie</router-link>
+        <router-link
+          to="/"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          Home</router-link
+        >
+        <router-link
+          to="/contact-page"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          Contact</router-link
+        >
+        <router-link
+          to="/photo-gallery"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          Galerie</router-link
+        >
         <a
           href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
-          class="nav-link"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
           Doctolib</a
         >
         <!-- <font-awesome-icon :icon="['fab', 'fa-linkedin']" /> -->
       </div>
-      <div>
+      <div class="text-white">
         {{ new Date().getFullYear() }} —
         <a
           href="https://www.linkedin.com/in/maximilian-j-gruber/"
           target="_blank"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
           ><strong>By Max Gruber</strong></a
         >
       </div>
@@ -39,11 +55,6 @@ footer {
   padding: 5px;
 }
 
-footer *,
-footer .center * {
-  color: white;
-}
-
 .center {
   display: flex;
   justify-content: center;
@@ -51,23 +62,8 @@ footer .center * {
   flex-direction: column;
 }
 
-.footer-nav .nav-link {
-  font-size: 1.15rem;
-  padding: 0.2em;
-  margin: 0.5em;
-}
-
-.footer-nav .nav-link:hover {
+.footer-links:hover {
   background-color: white;
   color: #3abfd6;
-  border-radius: 2em;
 }
-/* 
-.doctolib {
-  height: auto;
-  width: 5em;
-  display: inline;
-  margin: 0;
-  padding: 0;
-} */
 </style>

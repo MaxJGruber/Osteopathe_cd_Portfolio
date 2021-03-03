@@ -33,10 +33,18 @@ export default {
   background-color: #3abfd6;
 }
 
+.bg-logo-blue-nohover {
+  background-color: #3abfd6;
+}
+
 .bg-logo-blue-light {
   background-color: #c3f3fc;
 }
 .bg-logo-gray {
+  background-color: #21556d;
+}
+
+.bg-logo-gray-nohover {
   background-color: #21556d;
 }
 

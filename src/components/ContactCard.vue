@@ -1,19 +1,28 @@
 <template>
   <div class="contact-card">
     <h4
-      class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl"
+      class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl title-name"
     >
       Charles Dumeige
     </h4>
-    <h6><span>Adresse: </span>19 Rue Madame Dassy, 77100 Meaux</h6>
-    <div class="text-center" data-app>
-      <v-menu offset-y>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn color="#3abfd6" v-bind="attrs" v-on="on" id="timetable"
-            >Aujourdh'hui:&nbsp;
-            <span id="closed" v-show="(isOpen = false)"> FERME</span
-            ><span id="open" v-show="(isOpen = true)"> OUVERT</span></v-btn
-          >
+    <div class="business-hours-dropdown text-center" data-app>
+      <v-menu open-on-hover bottom offset-x>
+        <template v-slot:activator="{ on, attrs }"
+          ><span>Aujourd'hui: </span>
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            id="timetable-open"
+            v-show="(isOpen = true)"
+            >OUVERT
+            <font-awesome-icon icon="door-open" class="icon-open" /></v-btn
+          ><v-btn
+            v-bind="attrs"
+            v-on="on"
+            id="timetable-closed"
+            v-show="(isOpen = false)"
+            >FERME<font-awesome-icon icon="door-closed" class="icon-closed"
+          /></v-btn>
         </template>
         <v-list>
           <v-list-item v-for="(day, index) in times" :key="index">
@@ -22,6 +31,7 @@
         </v-list>
       </v-menu>
     </div>
+    <h6><span>Adresse: </span>19 Rue Madame Dassy, 77100 Meaux</h6>
     <h6>
       <span>Moyens de Transports:</span>
       <ul>
@@ -41,22 +51,6 @@
 </template>
 
 <script>
-// var weekdays = [
-//   ["Sunday", 9.3, 12.0, 15.3, 22.0],
-//   ["Monday", 8.3, 12.0, 15.3, 19.0],
-//   ["Tuesday", 8.3, 12.0, 15.3, 19.0],
-//   ["Wednesday", 8.3, 12.0, 15.3, 19.0],
-//   ["Thursday", 8.3, 12.0, 15.3, 19.0],
-//   ["Friday", 8.3, 11.3],
-//   ["Saturday"], // we are closed, sorry!
-// ];
-// var day = weekdays[n];
-
-// if (now > day[1] && now < day[2]) {
-//   console.log("We're open right now!");
-// } else {
-//   console.log("Sorry, we're closed!");
-// }
 export default {
   data: () => ({
     times: [
@@ -118,20 +112,27 @@ export default {
   margin-top: 15px;
 }
 
-#timetable {
+.title-name {
+  margin-bottom: 4%;
+}
+
+#timetable-open {
   color: white;
-}
-
-#closed {
   margin-top: 0;
-  color: red;
+  background-color: rgb(25, 163, 25);
 }
 
-#open {
+.icon-open,
+.icon-closed {
   margin-top: 0;
-  color: rgb(11, 240, 11);
+  margin-left: 7px;
 }
 
+#timetable-closed {
+  color: white;
+  margin-top: 0;
+  background-color: rgb(211, 58, 58);
+}
 #name {
   font-size: 2rem;
 }
@@ -140,11 +141,7 @@ span {
   font-weight: bolder;
 }
 
-.panel {
-  width: auto;
-  height: auto;
+.business-hours-dropdown {
   margin: 0;
-  padding: 0;
-  /* opacity: 0%; */
 }
 </style>

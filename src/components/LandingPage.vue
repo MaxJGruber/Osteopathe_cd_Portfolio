@@ -3,7 +3,7 @@
   <div class="relative bg-white overflow-hidden">
     <div class="max-w-8xl mx-auto">
       <div
-        class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
+        class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-3xl lg:w-full lg:pb-28 xl:pb-32"
       >
         <svg
           class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
@@ -15,7 +15,7 @@
           <polygon v-show="page === 'home'" points="50,0 100,0 50,100 0,100" />
         </svg>
 
-        <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+        <div class="relative pt-10 sm:px-6">
           <nav
             class="relative flex items-center justify-between sm:h-10 lg:justify-start"
             aria-label="Global"
@@ -25,8 +25,11 @@
             >
               <div class="flex items-center justify-between w-full md:w-auto">
                 <a href="#">
-                  <span class="sr-only">Workflow</span>
-                  <img class="h-8 w-auto sm:h-20" src="../assets/logo.png" />
+                  <span class="sr-only">logo</span>
+                  <img
+                    class="h-8 w-auto sm:h-20 logo"
+                    src="../assets/logo.png"
+                  />
                 </a>
                 <div class="-mr-2 flex items-center md:hidden">
                   <button
@@ -57,15 +60,13 @@
                 </div>
               </div>
             </div>
-            <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+            <div class="hidden md:block md:space-x-8">
               <a href="/" class="font-medium text-gray-500 hover:text-gray-900"
                 >Accueil</a
               >
-
               <a href="#" class="font-medium text-gray-500 hover:text-gray-900"
                 >L'Art du Métier</a
               >
-
               <a href="#" class="font-medium text-gray-500 hover:text-gray-900"
                 >Patients</a
               >
@@ -80,12 +81,6 @@
                 class="font-medium text-gray-500 hover:text-gray-900"
                 >Galerie</router-link
               >
-
-              <!-- <a
-                href="#"
-                class="font-medium text-indigo-600 hover:text-indigo-500"
-                >Log in</a
-              > -->
             </div>
           </nav>
         </div>
@@ -270,4 +265,10 @@ export default {
 </script>
 
 <style>
+.logo {
+  height: auto !important;
+  width: 15vw !important;
+  margin-left: 0;
+  padding-left: 0;
+}
 </style>

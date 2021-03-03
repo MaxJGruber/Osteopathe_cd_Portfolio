@@ -1,6 +1,7 @@
 <template>
   <div>
     <LandingPage :info="info" page="home" />
+    <AttentionTab />
     <Featured />
     <ContactInfo />
     <Hook />
@@ -14,6 +15,7 @@ import LandingPage from "../components/LandingPage.vue";
 import ContactInfo from "../components/ContactInfo";
 import Hook from "../components/Hook";
 import Featured from "../components/Featured.vue";
+import AttentionTab from "../components/AttentionTab";
 import Footer from "../components/Footer";
 
 export default {
@@ -24,6 +26,7 @@ export default {
     ContactInfo,
     Featured,
     Footer,
+    AttentionTab,
   },
   data: () => {
     return {

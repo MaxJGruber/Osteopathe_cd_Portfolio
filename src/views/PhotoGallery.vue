@@ -70,6 +70,7 @@ export default {
 
 .photo-grid {
   display: grid;
+  background-color: whitesmoke;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 10px;
   height: auto;
@@ -82,7 +83,7 @@ export default {
 }
 
 .pic {
-  width: 100% !important;
+  width: 70% !important;
   height: auto !important;
   padding: 10px;
 }

@@ -27,6 +27,7 @@ export default {
 
 <style>
 .contact-info-container {
+  padding-top: 3%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(413px, 1fr));

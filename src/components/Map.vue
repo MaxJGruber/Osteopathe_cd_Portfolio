@@ -43,7 +43,7 @@ export default {
 <style>
 .map-frame {
   height: 400px;
-  width: 400px;
+  width: 95%;
   border: 2px #3abfd6 solid;
 }
 </style>
