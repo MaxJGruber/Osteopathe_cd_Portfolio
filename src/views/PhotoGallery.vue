@@ -107,7 +107,6 @@ export default {
 }
 
 .pic:hover {
-  filter: grayscale(100%);
   transform: scale(1.1);
 }
 </style>

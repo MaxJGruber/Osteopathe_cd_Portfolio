@@ -264,7 +264,7 @@ export default {
 <style>
 .logo {
   height: auto !important;
-  width: 15vw !important;
+  width: 10vw !important;
   margin-left: 0;
   padding-left: 0;
 }
