@@ -47,7 +47,8 @@ export default {
         contact: "Contact & Informations Pratiques",
         galerie: "Galerie",
       },
-      message: "Votre ostéopathe prend exceptionnellement des RDV le dimanche!",
+      message:
+        "Les consultations continue à être prise en charge le dimanche, en cas d'urgence!",
     };
   },
 };

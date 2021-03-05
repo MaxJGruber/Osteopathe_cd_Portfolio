@@ -6,10 +6,16 @@
       :center="coordinatesCabinet"
       :zoom="15"
     >
-      <MglMarker :coordinates="coordinatesCabinet" color="blue" />
-      <MglMarker :coordinates="coordinatesBusMarche" color="yellow" />
-      <MglMarker :coordinates="coordinatesBusMediatheque" color="yellow" />
-      <MglMarker :coordinates="coordinatesTrain" color="yellow" />
+      <MglMarker :coordinates="coordinatesCabinet" color="blue"></MglMarker>
+      <MglMarker :coordinates="coordinatesBusMarche"
+        ><img src="../assets/bus-stop.png" slot="marker" class="map-icon" />
+      </MglMarker>
+      <MglMarker :coordinates="coordinatesBusMediatheque"
+        ><img src="../assets/bus-stop.png" slot="marker" class="map-icon"
+      /></MglMarker>
+      <MglMarker :coordinates="coordinatesTrain" color="yellow"
+        ><img src="../assets/train-stop.png" slot="marker" class="map-icon"
+      /></MglMarker>
     </MglMap>
   </div>
 </template>
@@ -45,5 +51,11 @@ export default {
   height: 400px;
   width: 95%;
   border: 2px #3abfd6 solid;
+}
+
+.map-icon {
+  width: 35px;
+  height: 35px;
+  opacity: 100%;
 }
 </style>

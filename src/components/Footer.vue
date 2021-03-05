@@ -22,12 +22,21 @@
         >
         <a
           href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
+          target="_blank"
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
           Doctolib</a
         >
         <a
+          href="https://www.pagesjaunes.fr/pros/59987222"
+          target="_blank"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          Pages Jaunes</a
+        >
+        <a
           href="#"
+          target="_blank"
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
           LinkedIn</a

@@ -23,7 +23,7 @@
             </svg>
           </span>
           <p class="ml-3 font-medium text-white truncate">
-            <span class="md:hidden"> We announced a new product! </span>
+            <span class="md:hidden"> {{ message }} </span>
             <span class="hidden md:inline">
               {{ message }}
             </span>
