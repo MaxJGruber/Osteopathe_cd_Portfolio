@@ -11,6 +11,8 @@
 </template>
 
 <script>
+// HOME PAGE 
+// PAGE RENDERED AT WEBSITE START
 import LandingPage from "../components/LandingPage.vue";
 import ContactInfo from "../components/ContactInfo";
 import Hook from "../components/Hook";
@@ -30,6 +32,7 @@ export default {
   },
   data: () => {
     return {
+      // data passed down as object to LANDING PAGE component which will be rendered with props
       info: {
         titlePart1: "Bienvenue sur le site de votre ostéopathe...",
         titlePart2: "Charles Dumeige",
@@ -47,6 +50,7 @@ export default {
         contact: "Contact & Informations Pratiques",
         galerie: "Galerie",
       },
+      // message passed down as prop to ATTENTIONTAB component 
       message:
         "Les consultations continue à être prise en charge le dimanche, en cas d'urgence!",
     };

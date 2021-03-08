@@ -251,6 +251,8 @@
 </template>
 
 <script>
+// Introduction component to page
+// Depending on props passsed down, the same langing page is rendered with respective components (HOME/ CONACT PAGE)
 export default {
   data() {
     return {

@@ -100,6 +100,7 @@
 </template>
 
 <script>
+// NAVBAR component is only rendered on Photo Gallery page!!!
 export default {
   data() {
     return {

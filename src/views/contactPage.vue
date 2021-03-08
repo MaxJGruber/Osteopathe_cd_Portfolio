@@ -32,6 +32,7 @@ export default {
   },
   data: () => {
     return {
+      // data passed down as object to LANDING PAGE component which will be rendered with props
       infoContact: {
         titlePart1: "Faîtes vous du bien en allant voir...",
         titlePart2: "Charles Dumeige",
@@ -50,6 +51,7 @@ export default {
         contact: "Contact & Informations Pratiques",
         galerie: "Galerie",
       },
+      // message passed down as prop to ATTENTIONTAB component 
       message:
         "Les consultations continue à être prise en charge le dimanche, en cas d'urgence!",
     };

@@ -63,6 +63,7 @@
 <script>
 export default {
   data: () => ({
+    // BUSINESS HOURS OF CABINET
     times: [
       {
         title: "Lundi: 8:00-20:00",
@@ -99,6 +100,7 @@ export default {
     tomorrowHour: null,
   }),
   methods: {
+    // FUNCTION rendering OPEN/CLOSED sign depending on time of day
     openCheck() {
       var d = new Date();
       var n = d.getDay();
@@ -121,6 +123,7 @@ export default {
     },
   },
   created() {
+    // Performs openCheck on page render
     this.openCheck();
   },
 };

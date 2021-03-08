@@ -1,3 +1,4 @@
+
 <template>
   <footer>
     <div class="center">
@@ -56,6 +57,7 @@
 </template>
 
 <script>
+// FOOTER component rendered on the bottom of every page 
 export default {
   data() {
     return { active: false };

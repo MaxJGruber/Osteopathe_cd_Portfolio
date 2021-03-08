@@ -1,3 +1,5 @@
+// API handler file to send from server to front the image URLs in folder on cloudinary
+
 import axios from "axios";
 const service = axios.create({
   baseURL: process.env.VUE_APP_BACKEND_URL,
@@ -15,7 +17,7 @@ function errorHandler(err) {
 export default {
   service,
 
-  // AUTHENTICATION API HANDLERS
+  // GET ALL IMAGES FROM CLOUDINARY FOLDER
   getPicUrls(endpoint) {
     return service
       .get(endpoint)

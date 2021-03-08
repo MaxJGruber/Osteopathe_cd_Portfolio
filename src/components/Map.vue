@@ -33,10 +33,10 @@ export default {
     return {
       accessToken: process.env.VUE_APP_MAPBOX_TOKEN, // your access token. Needed if you using Mapbox maps
       mapStyle: "mapbox://styles/mapbox/streets-v11", // your map style
-      coordinatesCabinet: [2.8800294692906894, 48.95519468914018],
-      coordinatesBusMarche: [2.8791945681925313, 48.955286120169596],
-      coordinatesBusMediatheque: [2.879068776900545, 48.95482287309044],
-      coordinatesTrain: [2.873683316474508, 48.95734050799616],
+      coordinatesCabinet: [2.8800294692906894, 48.95519468914018], // coordinates for cabinet
+      coordinatesBusMarche: [2.8791945681925313, 48.955286120169596], // coordinates for bus stop (MARCHE)
+      coordinatesBusMediatheque: [2.879068776900545, 48.95482287309044], // coordinates for bus stop (MEDIATHEQUE)
+      coordinatesTrain: [2.873683316474508, 48.95734050799616], // coordinates train stop
     };
   },
 

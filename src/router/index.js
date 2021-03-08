@@ -1,3 +1,5 @@
+// Vue router file which creates router system for website pages
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from "../views/Home.vue";

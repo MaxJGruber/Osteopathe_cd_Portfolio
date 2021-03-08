@@ -7,6 +7,9 @@
 </template>
 
 <script>
+// APP.vue is main page component through which all components are rendered
+// v-app is used to render Vuetify components correctly
+// router-view is used to render different pages of website (HOME / CONTACT PAGE / GALLERY / PRESENTATION / PATIENTS)
 import Home from "../src/views/Home";
 
 export default {

@@ -18,6 +18,8 @@
 </template>
 
 <script>
+// PHOTO GALLERY page which shows all pictures in a secure cloudinary folder
+
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import apiHandler from "../apiHandler";
@@ -44,12 +46,15 @@ export default {
     };
   },
   methods: {
+    // Method calling apihandler to get all pictures from cloudinary GET route on server-side
+    // URLs are then stored in the photos array that is lopped over in the page render
     getPics() {
       apiHandler
         .getPicUrls("/api/pics")
         .then((res) => (this.photos = res))
         .catch((err) => console.log(err));
     },
+    // FUNCTION to transform selected image to a full screen show
     zoom(linkTarget) {
       this.media = [
         {
@@ -63,6 +68,7 @@ export default {
     },
   },
   created() {
+    // Calling getPics method ar page render to get all photos
     this.getPics();
   },
 };
