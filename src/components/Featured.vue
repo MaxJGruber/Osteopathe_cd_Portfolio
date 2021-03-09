@@ -58,12 +58,49 @@
                 A l'écoute du patient
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                Une attitude active dans l’approche relationnelle ostéopathe et
-                patient.
+                Une attitude active dans l'approche relationnelle avec le
+                patient, toujours à l'écoute et disponible.
               </dd>
             </div>
           </div>
-
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
+              >
+                <!-- Heroicon name: outline/annotation -->
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <dt class="text-lg leading-6 font-medium text-gray-900">
+                Notifications Mobiles
+              </dt>
+              <dd class="mt-2 text-base text-gray-500">
+                Disponible par téléphone, email pour les contacts directs. Prise
+                de rendez-vous possible sur
+                <a
+                  href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
+                  id="docto-link"
+                  >doctolib.fr</a
+                >.
+              </dd>
+            </div>
+          </div>
           <div class="flex">
             <div class="flex-shrink-0">
               <div
@@ -92,9 +129,9 @@
                 "Un mal pour un bien"
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Suivant l'algie du patient, il se peut qu'il ressente des
+                douleurs durant la séance mais qui finissent par aboutir à un
+                sentiment de bien-être à la fin de la consultation.
               </dd>
             </div>
           </div>
@@ -127,44 +164,10 @@
                 Résultats rapides
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </dd>
-            </div>
-          </div>
-
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
-              >
-                <!-- Heroicon name: outline/annotation -->
-                <svg
-                  class="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-900">
-                Mobile notifications
-              </dt>
-              <dd class="mt-2 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Il faut en moyenne 2 à 3 jours de récupération après une séance
+                pour voir les douleurs s'atténuer complétement. Il s'agit d'une
+                moyenne générale, chacun ayant sa propre récupération soit
+                instantanée (24 heures) ou progressive (sous une semaine).
               </dd>
             </div>
           </div>
@@ -182,5 +185,10 @@ export default {};
 .type:hover {
   color: #3abfd6;
   font-weight: 900;
+}
+
+#docto-link:hover {
+  color: #3abfd6;
+  text-decoration: underline;
 }
 </style>

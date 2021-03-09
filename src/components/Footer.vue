@@ -33,7 +33,7 @@
           target="_blank"
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
-          Pages Jaunes</a
+          PagesJaunes & ses partenaires</a
         >
         <a
           href="#"
@@ -57,7 +57,7 @@
 </template>
 
 <script>
-// FOOTER component rendered on the bottom of every page 
+// FOOTER component rendered on the bottom of every page
 export default {
   data() {
     return { active: false };
