@@ -333,5 +333,5 @@ export default {
 </script>
 
 <style>
-@import "../lightbox.css";
+@import "../style/lightbox.css";
 </style>

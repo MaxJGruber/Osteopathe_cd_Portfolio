@@ -23,9 +23,9 @@
             </svg>
           </span>
           <p class="ml-3 font-medium text-white truncate">
-            <span class="md:hidden"> {{ message }} </span>
+            <span class="md:hidden"> {{ message.short }} </span>
             <span class="hidden md:inline">
-              {{ message }}
+              {{ message.long }}
             </span>
           </p>
         </div>

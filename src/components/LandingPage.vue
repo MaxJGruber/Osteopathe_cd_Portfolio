@@ -144,11 +144,11 @@
               aria-labelledby="main-menu"
             >
               <div class="px-2 pt-2 pb-3 space-y-1" role="none">
-                <a
-                  href="#"
+                <router-link
+                  to="/"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   role="menuitem"
-                  >{{ links.accueil }}</a
+                  >{{ links.accueil }}</router-link
                 >
 
                 <a
@@ -165,11 +165,17 @@
                   >{{ links.patients }}</a
                 >
 
-                <a
-                  href="#"
+                <router-link
+                  to="/contact-page"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   role="menuitem"
-                  >{{ links.contact }}</a
+                  >{{ links.contact }}</router-link
+                >
+                <router-link
+                  to="/photo-gallery"
+                  class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                  role="menuitem"
+                  >{{ links.galerie }}</router-link
                 >
               </div>
             </div>

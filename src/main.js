@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from "./router"
-import "./tailwind.css"
+import "./style/tailwind.css"
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import VueLazyLoad from 'vue-lazyload'

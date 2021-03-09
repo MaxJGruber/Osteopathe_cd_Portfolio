@@ -51,9 +51,12 @@ export default {
         contact: "Contact & Informations Pratiques",
         galerie: "Galerie",
       },
-      // message passed down as prop to ATTENTIONTAB component 
-      message:
-        "Les consultations continue à être prise en charge le dimanche, en cas d'urgence!",
+      // message passed down as prop to ATTENTIONTAB component
+      message: {
+        long:
+          "Les consultations continue à être prise en charge le dimanche, en cas d'urgence!",
+        short: "RDV d'urgence le dimanche",
+      },
     };
   },
 };
