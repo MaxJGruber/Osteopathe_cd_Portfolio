@@ -143,15 +143,9 @@ export default {};
 </script>
 
 <style>
-.svg-inline--fa.fa-w-16 {
-  width: 2em;
-}
-
+.svg-inline--fa.fa-w-16,
+.svg-inline--fa.fa-w-18,
 .svg-inline--fa.fa-w-20 {
-  width: 2em;
-}
-
-.svg-inline--fa.fa-w-18 {
   width: 2em;
 }
 

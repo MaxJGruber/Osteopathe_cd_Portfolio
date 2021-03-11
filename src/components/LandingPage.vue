@@ -12,7 +12,10 @@
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          <polygon v-show="page === 'home'" points="50,0 100,0 50,100 0,100" />
+          <polygon
+            v-show="page !== 'contact'"
+            points="50,0 100,0 50,100 0,100"
+          />
         </svg>
 
         <div class="relative pt-10 sm:px-6">
@@ -61,15 +64,15 @@
               </div>
             </div>
             <div class="hidden md:block md:space-x-8">
-              <a
-                href="/"
+              <router-link
+                to="/"
                 class="font-medium text-gray-500 hover:text-gray-900"
-                >{{ links.accueil }}</a
+                >{{ links.accueil }}</router-link
               >
-              <a
-                href="#"
+              <router-link
+                to="/presentations"
                 class="font-medium text-gray-500 hover:text-gray-900"
-                >{{ links.presentations }}</a
+                >{{ links.presentations }}</router-link
               >
               <a
                 href="#"
@@ -200,7 +203,7 @@
               {{ info.introPara }}
             </p>
             <div
-              v-show="page === 'home'"
+              v-show="page"
               class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
             >
               <div class="rounded-md shadow">
@@ -217,28 +220,6 @@
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10"
                 >
                   {{ info.button2 }}
-                </a>
-              </div>
-            </div>
-            <div
-              v-show="page === 'contact'"
-              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
-            >
-              <div class="rounded-md shadow">
-                <a
-                  href="tel:06 38 69 77 16"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-logo-blue md:py-4 md:text-lg md:px-10"
-                >
-                  Appelez le 06 38 69 77 16
-                </a>
-              </div>
-              <div class="mt-3 sm:mt-0 sm:ml-3">
-                <a
-                  href="mailto:charlesdumeige@outlook.fr?subject=Contact"
-                  target="_blank"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10"
-                >
-                  Contactez par mail
                 </a>
               </div>
             </div>
