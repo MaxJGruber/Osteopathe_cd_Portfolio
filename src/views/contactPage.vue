@@ -54,7 +54,7 @@ export default {
       // message passed down as prop to ATTENTIONTAB component
       message: {
         long:
-          "Les consultations continue à être prise en charge le dimanche, en cas d'urgence!",
+          "Les consultations continuent à être prise en charge le dimanche, en cas d'urgence!",
         short: "RDV d'urgence le dimanche",
       },
     };
