@@ -1,8 +1,10 @@
 <template>
   <div>
-    <ExtendedNavbar />
+    <ExtendedNavbar :page="'presentations'" />
     <div class="presentation-pic-cover"></div>
     <AttentionTab :message="message1" />
+    <Disclaimer />
+    <hr />
     <AboutRight :segment="osteoBusiness" />
     <hr />
     <AboutLeft :segment="osteoAboutClient" />
@@ -14,6 +16,7 @@
 
 <script>
 import ExtendedNavbar from "../components/ExtendedNavbar.vue";
+import Disclaimer from "../components/Disclaimer";
 import AboutRight from "../components/About-Right";
 import AboutLeft from "../components/About-Left";
 import AttentionTab from "../components/AttentionTab";
@@ -22,6 +25,7 @@ import Footer from "../components/Footer";
 export default {
   components: {
     ExtendedNavbar,
+    Disclaimer,
     AboutRight,
     AboutLeft,
     AttentionTab,

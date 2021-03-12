@@ -1,8 +1,10 @@
 <template>
   <div>
-    <ExtendedNavbar />
+    <ExtendedNavbar :page="'patients'" />
     <div class="patients-pic-cover"></div>
     <AttentionTab :message="message1" />
+    <Disclaimer />
+    <hr />
     <AboutRight :segment="nourissons" />
     <hr />
     <AboutLeft :segment="enfants" />
@@ -18,6 +20,7 @@
 
 <script>
 import ExtendedNavbar from "../components/ExtendedNavbar";
+import Disclaimer from "../components/Disclaimer";
 import AboutRight from "../components/About-Right";
 import AboutLeft from "../components/About-Left";
 import AttentionTab from "../components/AttentionTab";
@@ -26,6 +29,7 @@ import Footer from "../components/Footer";
 export default {
   components: {
     ExtendedNavbar,
+    Disclaimer,
     AboutRight,
     AboutLeft,
     AttentionTab,

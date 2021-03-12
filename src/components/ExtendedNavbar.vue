@@ -6,14 +6,12 @@
         class="flex justify-between items-center border-b-2 border-gray-100 py-5 md:justify-start md:space-x-10"
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="#">
-            <span class="sr-only">Workflow</span>
-            <img
-              class="h-8 w-auto nav-logo sm:h-10"
-              src="../assets/logo.png"
-              alt=""
-            />
-          </a>
+          <span class="sr-only">Workflow</span>
+          <img
+            class="h-8 w-auto nav-logo sm:h-10"
+            src="../assets/logo.png"
+            alt=""
+          />
         </div>
         <div class="-mr-2 -my-2 md:hidden">
           <button
@@ -87,7 +85,7 @@
               To: "opacity-0 translate-y-1"
           -->
             <div
-              v-show="openPresentations"
+              v-show="openPresentations && page === 'presentations'"
               class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
             >
               <div
@@ -210,6 +208,69 @@
               </div>
             </div>
           </div>
+          <div
+            v-show="openPresentations && page !== 'presentations'"
+            class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+          >
+            <div
+              class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
+            >
+              <div
+                class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
+              >
+                <router-link
+                  to="/presentations"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/chart-bar -->
+                  <font-awesome-icon icon="hand-sparkles" />
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      L'ostéopathie
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      Apprenez un peu plus sur l'art de l'ostéopathie.
+                    </p>
+                  </div>
+                </router-link>
+
+                <router-link
+                  to="/presentations"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/cursor-click -->
+                  <font-awesome-icon icon="user-md" />
+
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      L'ostéopathe
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      Apprenez un peu plus sur Charles Dumeige et ses
+                      preatiques.
+                    </p>
+                  </div>
+                </router-link>
+
+                <router-link
+                  to="/presentations"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/shield-check -->
+                  <font-awesome-icon icon="school" />
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      La profession
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      Apprenez un peu plus sur ce que ça prend de devenir
+                      ostéopathe.
+                    </p>
+                  </div>
+                </router-link>
+              </div>
+            </div>
+          </div>
 
           <div class="relative">
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
@@ -253,7 +314,7 @@
               To: "opacity-0 translate-y-1"
           -->
             <div
-              v-show="openPatients"
+              v-show="openPatients && page === 'patients'"
               class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
             >
               <div
@@ -263,7 +324,7 @@
                   class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
                 >
                   <a
-                    href="#enceinte"
+                    href="#nourissons"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/support -->
@@ -397,6 +458,105 @@
               </div>
             </div>
           </div>
+          <div
+            v-show="openPatients && page !== 'patients'"
+            class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
+          >
+            <div
+              class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
+            >
+              <div
+                class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
+              >
+                <router-link
+                  to="/patients"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/support -->
+                  <font-awesome-icon icon="baby" />
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      Les nourissons
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      A la naissance, le nourrisson a déjà subit d'importantes
+                      contraintes sur l'ensemble de son corps.
+                    </p>
+                  </div>
+                </router-link>
+
+                <router-link
+                  to="/patients"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/bookmark-alt -->
+                  <font-awesome-icon icon="child" />
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      Les enfants et adolescents
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      On peut retrouver chez l’enfant des motifs de consultation
+                      plus spécifiques tel que des troubles de la concentration
+                      et du sommeil.
+                    </p>
+                  </div>
+                </router-link>
+
+                <router-link
+                  to="/patients"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/calendar -->
+                  <font-awesome-icon icon="female" />
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      Les femmes enceintes
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      La femme enceinte peut souffrir de tout type de mal-être
+                      dû principalement à la grossesse.
+                    </p>
+                  </div>
+                </router-link>
+
+                <router-link
+                  to="/patients"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/shield-check -->
+                  <font-awesome-icon icon="blind" />
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      Les adultes et séniors
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      Le patient le plus général peut souffrir de stress,
+                      mauvaises positions, faux mouvements, traumatismes...
+                    </p>
+                  </div>
+                </router-link>
+                <router-link
+                  to="/patients"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/shield-check -->
+                  <font-awesome-icon icon="running" />
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      Les sportifs
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      Le sportif peut aussi avoir des douleurs particulières dû
+                      à la forte activité physique. Mais aussi, il peut avoir
+                      besoin d'un bilan avant une activité.
+                    </p>
+                  </div>
+                </router-link>
+              </div>
+            </div>
+          </div>
+
           <router-link
             to="/contact-page"
             class="text-base font-medium text-white"
@@ -593,6 +753,7 @@ export default {
       openPresentations: false,
     };
   },
+  props: { page: String },
   methods: {
     open(tab) {
       if (tab === "openPatients") {
