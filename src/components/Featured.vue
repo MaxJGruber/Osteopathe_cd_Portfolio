@@ -198,7 +198,7 @@ export default {};
   background-color: #3abfd6;
   padding: 1%;
   border-radius: 0.5em;
-  color: whitesmoke;
+  color: white;
 }
 
 .patients-link:hover {

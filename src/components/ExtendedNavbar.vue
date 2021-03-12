@@ -48,12 +48,14 @@
           <div class="relative">
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
             <button
-              v-on:click="openPresentations = !openPresentations"
+              v-on:click="open('open')"
               type="button"
               class="text-white group bg-logo-blue-nohover rounded-md inline-flex items-center text-base font-medium focus:outline-none"
               aria-expanded="false"
             >
-              <span class="text-white">Présentations</span>
+              <router-link to="/presentations">
+                <span class="text-white">Présentations</span>
+              </router-link>
               <!--
               Heroicon name: solid/chevron-down
 
@@ -95,7 +97,7 @@
                   class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
                 >
                   <a
-                    href="#"
+                    href="#osteopathie"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/chart-bar -->
@@ -111,7 +113,7 @@
                   </a>
 
                   <a
-                    href="#"
+                    href="#osteopathe"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/cursor-click -->
@@ -129,7 +131,7 @@
                   </a>
 
                   <a
-                    href="#"
+                    href="#profession"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/shield-check -->
@@ -212,12 +214,14 @@
           <div class="relative">
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
             <button
-              v-on:click="openPatients = !openPatients"
+              v-on:click="open('openPatients')"
               type="button"
               class="text-white group bg-logo-blue-nohover rounded-md inline-flex items-center text-base font-medium focus:outline-none"
               aria-expanded="false"
             >
-              <span class="text-white">Patients</span>
+              <router-link to="/patients"
+                ><span class="text-white">Patients</span></router-link
+              >
               <!--
               Heroicon name: solid/chevron-down
 
@@ -259,7 +263,7 @@
                   class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
                 >
                   <a
-                    href="#"
+                    href="#enceinte"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/support -->
@@ -276,7 +280,7 @@
                   </a>
 
                   <a
-                    href="#"
+                    href="#enfants"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/bookmark-alt -->
@@ -294,7 +298,7 @@
                   </a>
 
                   <a
-                    href="#"
+                    href="#enceinte"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/calendar -->
@@ -311,7 +315,7 @@
                   </a>
 
                   <a
-                    href="#"
+                    href="#adultes"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/shield-check -->
@@ -327,7 +331,7 @@
                     </div>
                   </a>
                   <a
-                    href="#"
+                    href="#sportifs"
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/shield-check -->
@@ -396,7 +400,7 @@
           <router-link
             to="/contact-page"
             class="text-base font-medium text-white"
-            >Contact & Informations Pratiques
+            >Contact & Informations
           </router-link>
           <router-link
             to="/photo-gallery"
@@ -501,12 +505,12 @@
                 <!-- Heroicon name: outline/view-grid -->
 
                 <span class="ml-3 text-base font-medium text-gray-900">
-                  Contact & Informations Pratiques
+                  Contact & Informations
                 </span>
               </a>
 
-              <a
-                href="#"
+              <router-link
+                to="/photo-gallery"
                 class="-m-3 p-3 items-center rounded-md hover:bg-gray-50"
               >
                 <!-- Heroicon name: outline/refresh -->
@@ -514,7 +518,7 @@
                 <span class="ml-3 text-base font-medium text-gray-900">
                   Galerie
                 </span>
-              </a>
+              </router-link>
             </nav>
           </div>
         </div>
@@ -582,12 +586,27 @@
 
 <script>
 export default {
-  data() {
+  data: () => {
     return {
       openMobileMenu: false,
       openPatients: false,
       openPresentations: false,
     };
+  },
+  methods: {
+    open(tab) {
+      if (tab === "openPatients") {
+        if (this.openPresentations === true) {
+          this.openPresentations = !this.openPresentations;
+        }
+        return (this.openPatients = !this.openPatients);
+      } else {
+        if (this.openPatients === true) {
+          this.openPatients = !this.openPatients;
+        }
+        return (this.openPresentations = !this.openPresentations);
+      }
+    },
   },
 };
 </script>

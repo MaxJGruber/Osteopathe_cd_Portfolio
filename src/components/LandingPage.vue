@@ -71,10 +71,10 @@
                 class="font-medium text-gray-500 hover:text-gray-900"
                 >{{ links.presentations }}</router-link
               >
-              <a
-                href="#"
+              <router-link
+                to="/patients"
                 class="font-medium text-gray-500 hover:text-gray-900"
-                >{{ links.patients }}</a
+                >{{ links.patients }}</router-link
               >
 
               <router-link
@@ -151,18 +151,18 @@
                   >{{ links.accueil }}</router-link
                 >
 
-                <a
-                  href="#"
+                <router-link
+                  to="/presentations"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   role="menuitem"
-                  >{{ links.presentations }}</a
+                  >{{ links.presentations }}</router-link
                 >
 
-                <a
-                  href="#"
+                <router-link
+                  to="patients"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   role="menuitem"
-                  >{{ links.patients }}</a
+                  >{{ links.patients }}</router-link
                 >
 
                 <router-link
@@ -189,7 +189,8 @@
             <h1
               class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
             >
-              <span class="block xl:inline">{{ info.titlePart1 }}</span>
+              <span class="block xl:inline">{{ info.titlePart1 }}</span
+              ><br v-show="page === 'contact'" />
               <span class="block text-logo-blue xl:inline">
                 {{ info.titlePart2 }}</span
               >

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 bg-gray-50 contact-info-comp">
+  <div class="py-12 bg-white contact-info-comp">
     <h2 class="text-base text-logo-blue font-semibold tracking-wide uppercase">
       Horaires & Accès
     </h2>

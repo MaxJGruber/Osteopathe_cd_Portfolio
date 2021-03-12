@@ -1,19 +1,23 @@
 <template>
   <div>
     <ExtendedNavbar />
-    <div class="presentation-pic-cover"></div>
+    <div class="patients-pic-cover"></div>
     <AttentionTab :message="message1" />
-    <AboutRight :segment="osteoBusiness" />
+    <AboutRight :segment="nourissons" />
     <hr />
-    <AboutLeft :segment="osteoAboutClient" />
+    <AboutLeft :segment="enfants" />
     <hr />
-    <AboutRight :segment="osteoAboutJob" />
+    <AboutRight :segment="femmesEnceintes" />
+    <hr />
+    <AboutLeft :segment="adultes" />
+    <hr />
+    <AboutRight :segment="sportifs" />
     <Footer />
   </div>
 </template>
 
 <script>
-import ExtendedNavbar from "../components/ExtendedNavbar.vue";
+import ExtendedNavbar from "../components/ExtendedNavbar";
 import AboutRight from "../components/About-Right";
 import AboutLeft from "../components/About-Left";
 import AttentionTab from "../components/AttentionTab";
@@ -33,9 +37,9 @@ export default {
         long: "En cas d'urgence, veuillez appeler le 15.",
         short: "En cas d'urgence, appelez le 15.",
       },
-      osteoBusiness: {
-        id: "osteopathie",
-        title: "L'ostéopathie: l'art du métier",
+      nourissons: {
+        id: "nourissons",
+        title: "Les nourissons",
         intro: `L'ostéopathie est une pratique manuelle traitant les pertes de
             mobilité des structures corporelles tel que les articulations
             musculo-squelettiques, les viscères, les tissus... Les techniques de
@@ -45,9 +49,9 @@ export default {
             l'autorégulation de celui-ci.`,
         img: require("../assets/photo-gallery/shooting2.jpg"),
       },
-      osteoAboutClient: {
-        id: "osteopathe",
-        title: "L'ostéopathe: Charles Dumeige",
+      enfants: {
+        id: "enfants",
+        title: "Les enfants & adolescents",
         intro: `L'ostéopathie est une pratique manuelle traitant les pertes de
             mobilité des structures corporelles tel que les articulations
             musculo-squelettiques, les viscères, les tissus... Les techniques de
@@ -55,11 +59,35 @@ export default {
             respects des barrières anatomiques et physiologiques du corps.
             L'objectif est de réguler l'homéostasie du corps et de permettre
             l'autorégulation de celui-ci.`,
-        img: require("../assets/photo-gallery/shooting3.jpg"),
+        img: require("../assets/photo-gallery/shooting11.jpg"),
       },
-      osteoAboutJob: {
-        id: "profession",
-        title: "La profession",
+      femmesEnceintes: {
+        id: "enceinte",
+        title: "Les femmes enceintes",
+        intro: `L'ostéopathie est une pratique manuelle traitant les pertes de
+            mobilité des structures corporelles tel que les articulations
+            musculo-squelettiques, les viscères, les tissus... Les techniques de
+            manipulation permettent de corriger les dysfonctions dans les
+            respects des barrières anatomiques et physiologiques du corps.
+            L'objectif est de réguler l'homéostasie du corps et de permettre
+            l'autorégulation de celui-ci.`,
+        img: require("../assets/photo-gallery/shooting5.jpg"),
+      },
+      adultes: {
+        id: "adultes",
+        title: "Les adultes & séniors",
+        intro: `L'ostéopathie est une pratique manuelle traitant les pertes de
+            mobilité des structures corporelles tel que les articulations
+            musculo-squelettiques, les viscères, les tissus... Les techniques de
+            manipulation permettent de corriger les dysfonctions dans les
+            respects des barrières anatomiques et physiologiques du corps.
+            L'objectif est de réguler l'homéostasie du corps et de permettre
+            l'autorégulation de celui-ci.`,
+        img: require("../assets/photo-gallery/shooting12.jpg"),
+      },
+      sportifs: {
+        id: "sportifs",
+        title: "Les sportifs",
         intro: `L'ostéopathie est une pratique manuelle traitant les pertes de
             mobilité des structures corporelles tel que les articulations
             musculo-squelettiques, les viscères, les tissus... Les techniques de
@@ -75,8 +103,8 @@ export default {
 </script>
 
 <style>
-.presentation-pic-cover {
-  background-image: url("../assets/photo-gallery/shooting12.jpg");
+.patients-pic-cover {
+  background-image: url("../assets/photo-gallery/shooting14.jpg");
   background-size: cover;
   background-position: center;
   height: 50vh;

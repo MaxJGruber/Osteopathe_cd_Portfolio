@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 bg-gray-100 center-comp">
+  <div class="py-12 bg-white center-comp">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-15">
       <div class="lg:text-center">
         <h2

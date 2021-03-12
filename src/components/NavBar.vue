@@ -47,7 +47,7 @@
               <a
                 href="#"
                 class="text-white nav-photo-gallery px-3 py-2 rounded-md text-sm font-medium"
-                >L'Art du Métier</a
+                >Présentations</a
               >
               <a
                 href="#"
@@ -57,7 +57,7 @@
               <router-link
                 to="/contact-page"
                 class="text-white nav-photo-gallery px-3 py-2 rounded-md text-sm font-medium"
-                >Contact & Informations Pratiques</router-link
+                >Contact & Informations</router-link
               >
               <router-link
                 to="/photo-gallery"
@@ -82,7 +82,7 @@
         <a
           href="#"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >L'Art du Métier</a
+          >Présentations</a
         >
         <a
           href="#"
@@ -92,7 +92,7 @@
         <router-link
           to="/contact-page"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Contact & Informations Pratiques</router-link
+          >Contact & Informations</router-link
         >
       </div>
     </div>

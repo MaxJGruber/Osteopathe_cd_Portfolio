@@ -68,7 +68,7 @@ export default {
     return { open: true };
   },
   props: {
-    message: String,
+    message: Object,
   },
 };
 </script>
