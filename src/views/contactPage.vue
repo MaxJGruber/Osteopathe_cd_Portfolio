@@ -34,27 +34,27 @@ export default {
     return {
       // data passed down as object to LANDING PAGE component which will be rendered with props
       infoContact: {
-        titlePart1: "Faîtes vous du bien en allant voir...",
+        titlePart1: "Un ostéopathe pas loin de chez vous...",
         titlePart2: "Charles Dumeige",
         introPara:
-          "Installé depuis 2019 dans son cabinet à Meaux (Dept 77), Charles Dumeige, ostéopathe D.O est à votre écoute et se charge de soulager vos douleurs musculo-squelettiques.",
+          "Situé dans le centre de Meaux, le cabinet est situé à 5 minutes de la gare de Meaux, à 2 minutes de la médiathèque et de la place du marché et est facilement joignable par la D360. Les prises de RDV sont uniquement disponible sur doctolib.fr.",
         button1: "Appelez le 06 38 69 77 16",
         linkbutton1: "tel:06 38 69 77 16",
         button2: "Contactez par mail",
-        linkButton2: "mailto:charlesdumeige@outlook.fr?subject=Contact",
+        linkbutton2: "mailto:charlesdumeige@outlook.fr?subject=Contact",
         image: require("../assets/photo-gallery/shooting9.jpg"),
       },
       links: {
         accueil: "Accueil",
         presentations: "Présentations",
         patients: "Patients",
-        contact: "Contact & Informations Pratiques",
+        contact: "Contact & Informations",
         galerie: "Galerie",
       },
       // message passed down as prop to ATTENTIONTAB component
       message: {
         long:
-          "Les consultations continuent à être prise en charge le dimanche, en cas d'urgence!",
+          "Les consultations continuent d'être prise en charge le dimanche, en cas d'urgence!",
         short: "RDV d'urgence le dimanche",
       },
     };

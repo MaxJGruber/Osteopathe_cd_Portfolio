@@ -3,8 +3,8 @@
     <LandingPage :info="info" :links="links" page="home" />
     <AttentionTab :message="message" />
     <Featured />
-    <ContactInfo />
     <Hook />
+    <ContactInfo />
     <Footer />
     <!-- <div class="elfsight-app-1b9ea368-a2a5-4b67-a658-806a9bbba15e review"></div> -->
   </div>
@@ -41,19 +41,20 @@ export default {
         button1: "Prendre Contact",
         linkbutton1: "/contact-page",
         button2: "Apprenez Plus",
-        image: require("../assets/Osteo1.jpg"),
+        linkbutton2: "/presentations",
+        image: require("../assets/intro-pic.jpeg"),
       },
       links: {
         accueil: "Accueil",
         presentations: "Présentations",
         patients: "Patients",
-        contact: "Contact & Informations Pratiques",
+        contact: "Contact & Informations",
         galerie: "Galerie",
       },
       // message passed down as prop to ATTENTIONTAB component
       message: {
         long:
-          "Les consultations continuent à être prise en charge le dimanche, en cas d'urgence!",
+          "Les consultations continuent d'être prise en charge le dimanche, en cas d'urgence!",
         short: "RDV d'urgence le dimanche",
       },
     };

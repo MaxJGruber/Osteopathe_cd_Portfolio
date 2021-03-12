@@ -12,13 +12,10 @@
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          <polygon
-            v-show="page !== 'contact'"
-            points="50,0 100,0 50,100 0,100"
-          />
+          <polygon points="50,0 100,0 50,100 0,100" />
         </svg>
 
-        <div class="relative pt-10 sm:px-6">
+        <div class="relative pt-10 sm:pl-6 lg:pl-0">
           <nav
             class="relative flex items-center justify-between sm:h-10 lg:justify-start"
             aria-label="Global"
@@ -206,7 +203,15 @@
               v-show="page"
               class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
             >
-              <div class="rounded-md shadow">
+              <div v-show="page === 'contact'" class="rounded-md shadow">
+                <a
+                  v-bind:href="info.linkbutton1"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-logo-blue md:py-4 md:text-lg md:px-10"
+                >
+                  {{ info.button1 }}
+                </a>
+              </div>
+              <div v-show="page === 'home'" class="rounded-md shadow">
                 <router-link
                   v-bind:to="info.linkbutton1"
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-logo-blue md:py-4 md:text-lg md:px-10"
@@ -214,13 +219,21 @@
                   {{ info.button1 }}
                 </router-link>
               </div>
-              <div class="mt-3 sm:mt-0 sm:ml-3">
+              <div v-show="page === 'contact'" class="mt-3 sm:mt-0 sm:ml-3">
                 <a
-                  href="#"
+                  v-bind:href="info.linkbutton2"
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10"
                 >
                   {{ info.button2 }}
                 </a>
+              </div>
+              <div v-show="page === 'home'" class="mt-3 sm:mt-0 sm:ml-3">
+                <router-link
+                  v-bind:to="info.linkbutton2"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10"
+                >
+                  {{ info.button2 }}
+                </router-link>
               </div>
             </div>
           </div>

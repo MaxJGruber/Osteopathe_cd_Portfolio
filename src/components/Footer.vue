@@ -3,13 +3,13 @@
   <footer>
     <div class="center">
       <div class="footer-nav">
-        <router-link
-          to="/"
+        <a
+          href="/"
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
-          Home</router-link
+          Accueil</a
         >
-        <router-link
+        <!-- <router-link
           to="/contact-page"
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
@@ -20,7 +20,7 @@
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
           Galerie</router-link
-        >
+        > -->
         <a
           href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
           target="_blank"
@@ -33,7 +33,7 @@
           target="_blank"
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
-          PagesJaunes & ses partenaires</a
+          PagesJaunes</a
         >
         <a
           href="#"
@@ -41,6 +41,20 @@
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
           LinkedIn</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          FaceBook</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          Instagram</a
         >
       </div>
       <div class="text-white">

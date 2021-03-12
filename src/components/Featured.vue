@@ -8,14 +8,17 @@
           L'Ostéopathie
         </h2>
         <p
-          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          class="mt-6 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
         >
           Générale - Viscérale - Crânienne
         </p>
-        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+        <p class="mt-10 mb-10 max-w-2xl text-lg text-gray-500 lg:mx-auto">
           Dans son Cabinet, M. Dumeige prend en charge tout type de patient.
         </p>
-        <p
+        <router-link to="/patients" target="_blank" class="patients-link">
+          Apprenez plus sur les patients pris en charge.
+        </router-link>
+        <!-- <p
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl"
         >
           <span class="type">Nourissons</span> -
@@ -23,10 +26,10 @@
           <span class="type">Femmes Enceintes</span> -
           <span class="type">Adultes & Séniors</span> -
           <span class="type">Sportifs</span>
-        </p>
+        </p> -->
       </div>
 
-      <div class="mt-10">
+      <div class="mt-12">
         <dl
           class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-4 md:gap-y-4"
         >
@@ -189,5 +192,18 @@ export default {};
 #docto-link:hover {
   color: #3abfd6;
   text-decoration: underline;
+}
+
+.patients-link {
+  background-color: #3abfd6;
+  padding: 1%;
+  border-radius: 0.5em;
+  color: whitesmoke;
+}
+
+.patients-link:hover {
+  background-color: white;
+  color: #3abfd6;
+  box-shadow: 1px 1px 12px #555;
 }
 </style>

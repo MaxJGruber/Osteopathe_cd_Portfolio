@@ -83,7 +83,7 @@
             </div>
             <div class="ml-4 center">
               <dt class="text-lg leading-6 font-medium text-gray-900">
-                Accessibles aux handicapés
+                Accessible aux handicapés
               </dt>
               <!-- <dd class="mt-2 text-base text-gray-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
