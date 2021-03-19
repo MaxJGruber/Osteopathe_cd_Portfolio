@@ -72,5 +72,9 @@ export default {
   background-color: #3abfd6;
 }
 
+.pre-formatted {
+  white-space: pre-wrap;
+}
+
 /* ------------------------------------------------- */
 </style>

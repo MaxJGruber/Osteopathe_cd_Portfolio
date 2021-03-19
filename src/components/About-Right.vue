@@ -35,7 +35,7 @@
             <span class="block xl:inline">{{ segment.subtext1Title }}</span>
           </h1>
           <p
-            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4"
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
           >
             {{ segment.subtext1 }}
           </p>
@@ -83,6 +83,7 @@ export default {
 .about {
   height: auto;
 }
+
 
 .grid {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
