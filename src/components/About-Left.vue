@@ -12,7 +12,7 @@
               <span class="block xl:inline">{{ segment.title }}</span>
             </h1>
             <p
-              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-md sm:max-w-xl md:mt-5 md:text-lg"
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-md sm:max-w-xl md:mt-5 md:text-lg pre-formatted"
             >
               {{ segment.intro }}
             </p>
@@ -37,7 +37,7 @@
             <span class="block xl:inline">{{ segment.subtext1Title }}</span>
           </h1>
           <p
-            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4"
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
           >
             {{ segment.subtext1 }}
           </p>
@@ -50,7 +50,7 @@
             <span class="block xl:inline">{{ segment.subtext2Title }}</span>
           </h1>
           <p
-            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4"
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
           >
             {{ segment.subtext2 }}
           </p>
@@ -63,7 +63,7 @@
             <span class="block xl:inline">{{ segment.subtext3Title }}</span>
           </h1>
           <p
-            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4"
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
           >
             {{ segment.subtext3 }}
           </p>
