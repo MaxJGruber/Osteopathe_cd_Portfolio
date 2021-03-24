@@ -3,6 +3,14 @@
   <nav class="bg-logo-blue-nohover">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
+        <div class="flex justify-start lg:w-0 lg:flex-1">
+          <span class="sr-only">Workflow</span>
+          <img
+            class="h-8 w-auto nav-logo sm:h-10"
+            src="../assets/logo.png"
+            alt=""
+          />
+        </div>
         <div class="absolute inset-y-0 left-0 flex items-center">
           <span class="sr-only">Open main menu</span>
           <!-- Icon when menu is closed. -->

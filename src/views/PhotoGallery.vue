@@ -1,7 +1,8 @@
 <template>
   <div>
     <NavBar />
-    <div class="photo-grid pt-5">
+    <PhotoGalleryIntro />
+    <div class="photo-grid p-5">
       <div v-for="(img, key) in photos" :key="key" class="pic-container">
         <button v-on:click="zoom(img)" @click="lightboxOn = !lightboxOn">
           <img :src="img" class="pic" alt="pic" />
@@ -24,12 +25,14 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import apiHandler from "../apiHandler";
 import LightBox from "../components/LightBox";
+import PhotoGalleryIntro from "../components/Photo-Gallery-Intro";
 
 export default {
   components: {
     NavBar,
     Footer,
     LightBox,
+    PhotoGalleryIntro,
   },
   data() {
     return {

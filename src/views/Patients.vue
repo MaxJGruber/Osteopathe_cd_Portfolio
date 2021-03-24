@@ -13,7 +13,9 @@
     <hr />
     <AboutLeft :segment="adultes" />
     <hr />
-    <AboutRight :segment="sportifs" />
+    <AboutRight :segment="seniors" />
+    <hr />
+    <AboutLeft :segment="sportifs" />
     <Footer />
   </div>
 </template>
@@ -26,11 +28,12 @@ import AboutLeft from "../components/About-Left";
 import AttentionTab from "../components/AttentionTab";
 import Footer from "../components/Footer";
 
-import { baby} from "../PatientsFolder/baby"
-import { children} from "../PatientsFolder/children"
-import { pregnant} from "../PatientsFolder/pregnant"
-import { adults} from "../PatientsFolder/adults"
-import { sports} from "../PatientsFolder/sports"
+import { baby } from "../PatientsFolder/baby";
+import { children } from "../PatientsFolder/children";
+import { pregnant } from "../PatientsFolder/pregnant";
+import { adults } from "../PatientsFolder/adults";
+import { seniors } from "../PatientsFolder/seniors";
+import { sports } from "../PatientsFolder/sports";
 
 export default {
   components: {
@@ -51,6 +54,7 @@ export default {
       enfants: children,
       femmesEnceintes: pregnant,
       adultes: adults,
+      seniors: seniors,
       sportifs: sports,
     };
   },

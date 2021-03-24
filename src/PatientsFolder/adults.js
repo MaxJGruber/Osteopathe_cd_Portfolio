@@ -1,6 +1,6 @@
 export const adults = {
     id: "adultes",
-    title: "La prise en charge ostéopathique des adultes & séniors",
+    title: "La prise en charge ostéopathique des adultes",
     intro: `L'ostéopathie est une pratique manuelle traitant les pertes de
         mobilité des structures corporelles tel que les articulations
         musculo-squelettiques, les viscères, les tissus... Les techniques de

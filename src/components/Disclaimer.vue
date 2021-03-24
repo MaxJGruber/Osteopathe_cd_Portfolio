@@ -13,7 +13,7 @@
           L’ostéopathie ne se substitue pas aux traitements médicaux.<br />
           Seul votre médecin peut envisager de les modifier ou de les suspendre.
         </h1>
-        <p class="mt-10 mb-10 max-w-4xl text-md text-gray-500 lg:mx-auto">
+        <p class="mt-10 mb-10 max-w-6xl text-md text-gray-500 lg:mx-auto">
           Dans le cadre de maladies graves telles que les maladies organiques ou
           dégénératives (cancer, sclérose en plaque, arthrose…), les maladies
           génétiques (mucoviscidose, myopathie…), les maladies infectieuses

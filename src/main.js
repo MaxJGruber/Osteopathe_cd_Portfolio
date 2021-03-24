@@ -9,12 +9,12 @@ import 'vue-image-lightbox/dist/vue-image-lightbox.min.css'
 
 // Importing fontawesome icons
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHeadSideMask, faWheelchair, faMoneyBillWave, faComment, faHandSparkles, faSchool, faRunning, faFemale, faBlind, faChild, faBaby, faUserMd, faExclamationTriangle, faDoorOpen, faDoorClosed } from '@fortawesome/free-solid-svg-icons'
+import { faHeadSideMask, faWheelchair, faMoneyBillWave, faComment, faHandSparkles, faSchool, faWalking, faRunning, faFemale, faBlind, faChild, faBaby, faUserMd, faExclamationTriangle, faDoorOpen, faDoorClosed } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Adding fontawesome icons after importing them 
-library.add(faHeadSideMask, faWheelchair, faMoneyBillWave, faComment, faHandSparkles, faSchool, faRunning, faFemale, faBlind, faChild, faBaby, faUserMd, faExclamationTriangle, faDoorOpen, faDoorClosed)
+library.add(faHeadSideMask, faWheelchair, faMoneyBillWave, faComment, faHandSparkles, faSchool, faWalking, faRunning, faFemale, faBlind, faChild, faBaby, faUserMd, faExclamationTriangle, faDoorOpen, faDoorClosed)
 library.add(faLinkedin)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

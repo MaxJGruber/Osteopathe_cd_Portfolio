@@ -18,15 +18,6 @@
         <router-link to="/patients" target="_blank" class="patients-link">
           Apprenez plus sur les patients pris en charge.
         </router-link>
-        <!-- <p
-          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl"
-        >
-          <span class="type">Nourissons</span> -
-          <span class="type">Enfants & Adolescents</span> -
-          <span class="type">Femmes Enceintes</span> -
-          <span class="type">Adultes & Séniors</span> -
-          <span class="type">Sportifs</span>
-        </p> -->
       </div>
 
       <div class="mt-12">

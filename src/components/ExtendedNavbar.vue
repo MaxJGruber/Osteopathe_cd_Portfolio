@@ -380,14 +380,32 @@
                     class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                   >
                     <!-- Heroicon name: outline/shield-check -->
-                    <font-awesome-icon icon="blind" />
+                    <font-awesome-icon icon="walking" />
                     <div class="ml-4">
                       <p class="text-base font-medium text-gray-900">
-                        Les adultes et séniors
+                        Les adultes
                       </p>
                       <p class="mt-1 text-sm text-gray-500">
                         Le patient le plus général peut souffrir de stress,
                         mauvaises positions, faux mouvements, traumatismes...
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    href="#seniors"
+                    class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                  >
+                    <!-- Heroicon name: outline/shield-check -->
+                    <font-awesome-icon icon="blind" />
+                    <div class="ml-4">
+                      <p class="text-base font-medium text-gray-900">
+                        Les séniors
+                      </p>
+                      <p class="mt-1 text-sm text-gray-500">
+                        De la vie active à la retraite, le sénior va devoir
+                        faire face un changement de rythme inévitable et il
+                        n'est pas rare, en effet, de voir apparaître de nouveaux
+                        symptômes.
                       </p>
                     </div>
                   </a>
@@ -408,7 +426,9 @@
                       </p>
                     </div>
                   </a>
+                  
                 </div>
+                
                 <!-- <div class="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
                   <div>
                     <h3
@@ -457,7 +477,9 @@
                 </div> -->
               </div>
             </div>
+            
           </div>
+          
           <div
             v-show="openPatients && page !== 'patients'"
             class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
@@ -528,11 +550,28 @@
                   <font-awesome-icon icon="blind" />
                   <div class="ml-4">
                     <p class="text-base font-medium text-gray-900">
-                      Les adultes et séniors
+                      Les adultes
                     </p>
                     <p class="mt-1 text-sm text-gray-500">
                       Le patient le plus général peut souffrir de stress,
                       mauvaises positions, faux mouvements, traumatismes...
+                    </p>
+                  </div>
+                </router-link>
+                <router-link
+                  to="/patients"
+                  class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <!-- Heroicon name: outline/shield-check -->
+                  <font-awesome-icon icon="walking" />
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      Les séniors
+                    </p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      De la vie active à la retraite, le sénior va devoir faire
+                      face un changement de rythme inévitable et il n'est pas
+                      rare, en effet, de voir apparaître de nouveaux symptômes.
                     </p>
                   </div>
                 </router-link>
@@ -728,9 +767,14 @@
               href="#"
               class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
             >
-              Les adultes & séniors
+              Les adultes
             </a>
-
+            <a
+              href="#"
+              class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
+            >
+              Les séniors
+            </a>
             <a
               href="#"
               class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
@@ -787,6 +831,7 @@ export default {
 .svg-inline--fa.fa-w-14,
 .svg-inline--fa.fa-w-12,
 .svg-inline--fa.fa-w-20,
+.svg-inline--fa.fa-w-10,
 .svg-inline--fa.fa-w-8,
 .svg-inline--fa.fa-w-13 {
   width: 1.5em;
