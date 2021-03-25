@@ -30,6 +30,12 @@
           class="sm:text-center lg:text-left xl:mt-10"
         >
           <h1
+            v-show="segment.babyTitle"
+            class="text-xl tracking-tight font-bold text-logo-gray sm:text-5xl md:text-xl my-5"
+          >
+            <span class="block xl:inline">{{ segment.babyTitle }}</span>
+          </h1>
+          <h1
             class="text-lg tracking-tight font-bold text-logo-gray sm:text-5xl md:text-lg"
           >
             <span class="block xl:inline">{{ segment.subtext1Title }}</span>
@@ -83,7 +89,6 @@ export default {
 .about {
   height: auto;
 }
-
 
 .grid {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
