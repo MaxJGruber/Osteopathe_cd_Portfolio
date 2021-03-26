@@ -14,5 +14,5 @@ Les coliques: Motifs bénins mais très embêtants pour votre bébé, elles disp
 En cas de trouble du sommeil, l'ostéopathie pourra aider votre bébé à mieux dormir et avoir un sommeil réparateur en travaillant sur ces sphères. Les cas d'otites peuvent être également pris en charge.
     
 Il est conseillé de consulter votre ostéopathe dans le mois après l'accouchement, que ce soit par voie basse ou césarienne et quelque soit sa durée. Un suivi pédiatrique est indispensable en parallèle.`,
-    img: require("../assets/photo-gallery/shooting11.jpg"),
+    img: require("../assets/photo-gallery/baby-image.jpg"),
 }

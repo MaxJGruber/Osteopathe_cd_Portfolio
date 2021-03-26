@@ -7,5 +7,6 @@ export const children = {
 Il est recommandé de consulter une fois par an maximum, en fonction des besoins de l'enfant (bien rester attentif à ses plaintes et anticiper l'apparition de douleurs associées). Un parent devra être obligatoirement présent lors de la consultation et des conseils lui seront donnés également pour sensibiliser à surveiller l'évolution de la croissance de l'enfant. En effet, il devra surveiller l'évolution des courbures rachidiennes afin de détecter des possibles apparition de scoliose, pour qu'une prise en charge multidisciplinaire adaptée soit mise en place avant un stade trop avancé (séances de kinésithérapeute fortement recommandées à ce moment là en complément). L'ostéopathie participe à l'efficacité et à la stabilité du traitement. `,
     subtext3: `La vie de l'enfant et adolescents est mouvementée, elle est sujet à la pratique d'activités sportives, où ils peuvent subir des traumatismes et chutes à répétition. Suites à cela, il peut y avoir des tensions tissulaires qui restent et peuvent se réveiller plus tard à cause de la mémoire traumatique.\n 
 Pour que la croissance se fasse plus harmonieuse, et aider le corps à se rétablir face aux traumatismes, un suivi ostéopathique régulier est important lors d'une pratique d'activité sportive régulière ou une activité source de micro-traumatismes (rugby, arts martiaux, équitation).`,
-    img: require("../assets/photo-gallery/shooting5.jpg"),
+    img: require("../assets/photo-gallery/child-1.jpg"),
+    img2: require("../assets/photo-gallery/child-2.jpg"),
 }

@@ -42,7 +42,7 @@ export default {
         linkbutton1: "tel:06 38 69 77 16",
         button2: "Contactez par mail",
         linkbutton2: "mailto:charlesdumeige@outlook.fr?subject=Contact",
-        image: require("../assets/photo-gallery/shooting9.jpg"),
+        image: require("../assets/photo-gallery/shooting11.jpg"),
       },
       links: {
         accueil: "Accueil",

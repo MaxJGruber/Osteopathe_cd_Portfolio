@@ -11,5 +11,5 @@ Votre ostéopathe Charles Dumeige a connaissance d'une multitude de sports et de
     subtext2: `Un bon équilibre corporel permet de mieux gérer ces sursollicitations face aux efforts demandés, ce qui entraînera une meilleure récupération. La séance favorise un bon fonctionnement physiologique indispensable au sportif, il pourra également libérer les structures liées à la respiration en travaillant sur les diaphragmes ou les muscles inspirateurs.\n
 Une bonne séance de rééquilibration juste avant une compétition favorise les performances afin d'obtenir de meilleurs résultats, en plus du suivi régulier.\n
 Votre ostéopathe Charles Dumeige a traité de nombreux sportifs de tout type pendant des stages lors de compétitions à visée nationale et européenne.`,
-    img: require("../assets/photo-gallery/shooting11.jpg"),
+    img: require("../assets/photo-gallery/sportsman.jpg"),
 }

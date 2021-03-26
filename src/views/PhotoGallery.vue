@@ -67,7 +67,6 @@ export default {
           srcset: linkTarget, // for responsive images
         },
       ];
-      console.log(this.lightboxOn);
     },
   },
   created() {

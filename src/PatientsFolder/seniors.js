@@ -9,5 +9,6 @@ Votre ostéopathe Charles Dumeige vous prendra en charge le mieux possible et re
     subtext2Title: `L'ostéopathie pour les troubles des autres sphères du corps.`,
     subtext2: `Tout comme le système musculo-ligamentaire, les organes mous du système viscéral peuvent perdre en mobilité et entraîner un perte d'élasticité de leurs fascias associés. Dès lors, le système digestif sera moins performant et peut entraîner des désordres.\nIl peut en résulter un trouble du transit, ballonnements, et autres douleurs viscérales et de leurs vertèbres associées.\n
 Votre ostéopathe Charles Dumeige travaillera sur les tissus de cette sphère pour regagner en mobilité intrinsèque qui aura pour conséquence un meilleur fonctionnement digestif. Les autres sphères du corps pourront être travaillées avec le même objectif (crânienne, thoracique, pelvienne...).`,
-    img: require("../assets/photo-gallery/shooting12.jpg"),
+    img: require("../assets/photo-gallery/senior-1.jpg"),
+    img2: require("../assets/photo-gallery/senior-2.jpg"),
 }

@@ -5,8 +5,8 @@
     <Featured />
     <Hook />
     <ContactInfo />
+    <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div>
     <Footer />
-    <!-- <div class="elfsight-app-1b9ea368-a2a5-4b67-a658-806a9bbba15e review"></div> -->
   </div>
 </template>
 

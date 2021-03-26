@@ -63,7 +63,7 @@ export default {
 
 <style>
 .patients-pic-cover {
-  background-image: url("../assets/photo-gallery/shooting14.jpg");
+  background-image: url("../assets/photo-gallery/patients-banner-pic.jpg");
   background-size: cover;
   background-position: center;
   height: 50vh;

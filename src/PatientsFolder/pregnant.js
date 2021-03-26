@@ -11,5 +11,5 @@ Dans ces cas, il est recommandé de consulter durant la grossesse, chaque trimes
 
 Durant la phase de grossesse, le corps de la femme enceinte change constamment et même après l'accouchement il subit encore des modifications sur les mêmes sphères évoquées précédemment et il peut y avoir des douleurs persistantes. Il est recommandé de consulter un mois après la naissance ou après la rééducation périnéale (sans se substituer d'un suivi gynéco-obstétrical).`,
     subtext3: `Votre ostéopathe Charles Dumeige prend en charge les premières consultations de femmes enceintes ainsi que les suivis de grossesse.`,
-    img: require("../assets/photo-gallery/shooting11.jpg"),
+    img: require("../assets/photo-gallery/pregnant.jpg"),
 }

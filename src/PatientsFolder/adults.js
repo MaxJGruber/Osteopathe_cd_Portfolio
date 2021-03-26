@@ -8,5 +8,6 @@ export const adults = {
         respects des barrières anatomiques et physiologiques du corps.
         L'objectif est de réguler l'homéostasie du corps et de permettre
         l'autorégulation de celui-ci.`,
-    img: require("../assets/photo-gallery/shooting12.jpg"),
+    img: require("../assets/photo-gallery/adult-1.jpg"),
+    img2: require("../assets/photo-gallery/adult-2.jpg"),
 }
