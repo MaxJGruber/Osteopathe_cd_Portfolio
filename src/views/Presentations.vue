@@ -8,7 +8,7 @@
     <AboutRight :segment="osteoBusiness" />
     <hr />
     <AboutLeft :segment="osteoAboutClient" />
-    <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div>
+    <!-- <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div> -->
     <hr />
     <AboutRight :segment="osteoAboutJob" />
     <Footer />

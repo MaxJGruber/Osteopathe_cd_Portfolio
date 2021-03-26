@@ -12,8 +12,9 @@
         >
           Générale - Viscérale - Crânienne
         </p>
-        <p class="mt-10 mb-10 max-w-2xl text-lg text-gray-500 lg:mx-auto">
-          Dans son Cabinet, M. Dumeige prend en charge tout type de patient.
+        <p class="mt-10 mb-10 max-w-4xl text-lg text-gray-500 lg:mx-auto">
+          Dans son cabinet ou à domicile, Charles Dumeige prend en charge tout
+          type de patient.
         </p>
         <router-link to="/patients" target="_blank" class="patients-link">
           Apprenez plus sur les patients pris en charge.
@@ -154,13 +155,14 @@
                 Notifications Mobiles
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                Disponible par téléphone, email pour les contacts directs. Prise
-                de rendez-vous possible sur
+                Disponible par téléphone & email pour les contacts directs.
+                Prise de rendez-vous possible sur
                 <a
                   href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
                   id="docto-link"
                   >doctolib.fr</a
-                >.
+                ><br />
+                <span id="extra">Au cabinet ou à domicile.</span>
               </dd>
             </div>
           </div>
@@ -196,5 +198,10 @@ export default {};
   background-color: white;
   color: #3abfd6;
   box-shadow: 1px 1px 12px #555;
+}
+
+#extra {
+  font-size: 0.8em;
+  font-weight: bolder;
 }
 </style>

@@ -12,14 +12,14 @@
               alt=""
             />
           </div>
-          <div class="sm:text-center lg:text-right">
+          <div class="sm:text-center lg:pl-9">
             <h1
               class="text-xl tracking-tight font-bold text-logo-gray sm:text-5xl md:text-xl"
             >
               <span class="block xl:inline">{{ segment.title }}</span>
             </h1>
             <p
-              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-md sm:max-w-xl sm:mr-0 sm:ml-auto md:mt-5 md:text-lg pre-formatted"
+              class="mt-3 text-gray-500 lg:text-left sm:mt-5 sm:text-md sm:max-w-xl md:mt-5 md:text-lg pre-formatted"
             >
               {{ segment.intro }}
             </p>
@@ -46,18 +46,33 @@
             {{ segment.subtext1 }}
           </p>
         </div>
-        <div v-show="segment.subtext2" class="sm:text-center lg:text-left mt-8">
-          <h1
-            v-show="segment.subtext2Title"
-            class="text-lg tracking-tight font-bold text-logo-gray sm:text-5xl md:text-lg"
+        <div class="grid" :class="segment.img2 ? 'mt-8' : ''">
+          <div
+            v-show="segment.subtext2"
+            :class="!segment.img2 ? 'mt-8' : ''"
+            class="sm:text-center lg:text-left"
           >
-            <span class="block xl:inline">{{ segment.subtext2Title }}</span>
-          </h1>
-          <p
-            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
-          >
-            {{ segment.subtext2 }}
-          </p>
+            <h1
+              v-show="segment.subtext2Title"
+              class="text-lg tracking-tight font-bold text-logo-gray sm:text-5xl md:text-lg"
+            >
+              <span class="block xl:inline">{{ segment.subtext2Title }}</span>
+            </h1>
+            <p
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+            >
+              {{ segment.subtext2 }}
+            </p>
+          </div>
+          <div v-show="segment.img2">
+            <div class="about-pic-frame">
+              <img
+                class="h-auto w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full about-pic"
+                :src="segment.img2"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
         <div v-show="segment.subtext3" class="sm:text-center lg:text-left mt-8">
           <h1
@@ -92,8 +107,8 @@ export default {
 
 .grid {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  /* margin-right: 10px;
-  margin-left: 10px; */
+  /* grid-template-columns: 45% 55%; */
+  grid-gap: 10px;
 }
 
 .about-pic-frame {
@@ -101,10 +116,8 @@ export default {
   display: flex;
 }
 .about-pic {
-  justify-content: center;
-  align-items: center;
   width: auto;
-  height: 325px;
+  height: auto;
   border-radius: 0.5em;
   border: 2px solid #3abfd6;
 }

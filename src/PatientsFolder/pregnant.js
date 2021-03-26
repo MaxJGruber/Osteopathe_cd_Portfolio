@@ -1,7 +1,8 @@
 export const pregnant = {
     id: "enceinte",
     title: "La prise en charge ostéopathique de la femme enceinte",
-    intro: `Durant la grossesse, le corps s'adapte en fonction du développement de l'enfant in utéro. Cela aura un impact sur les forces réparties dans le corps au niveau des charnières, des vertèbres pivot ainsi que sur les courbures (lordoses, cyphoses). Le bassin aussi se modèle et d'autres changements mécaniques et physiologiques se manifestent. L'ostéopathie est recommandée pour rééquilibrer le corps face à ces changements, en utilisant des techniques adaptées en fonction des trimestres de grossesse.`,
+    intro: `Durant la grossesse, le corps s'adapte en fonction du développement de l'enfant in utéro. Cela aura un impact sur les forces réparties dans le corps au niveau des charnières, des vertèbres pivot ainsi que sur les courbures (lordoses, cyphoses).\n
+    Le bassin aussi se modèle et d'autres changements mécaniques et physiologiques se manifestent. L'ostéopathie est recommandée pour rééquilibrer le corps face à ces changements, en utilisant des techniques adaptées en fonction des trimestres de grossesse.`,
     subtext1Title: `L'ostéopathie durant la grossesse et prévenir l'apparition de douleurs.`,
     subtext1: `Parfois le corps n'arrive pas à s'adapter face à ces changements et les douleurs apparaissent. Elles peuvent être sous-jacentes à des adaptations avant la grossesse qui se décompensent à un moment donné de cette dernière. En général, il s'agit de douleurs au niveau lombaire, de sciatalgies et de douleurs au niveau du bassin (sacrum-coccyx). Il peut y avoir des également des dysfonctionnements sur la sphère viscérale (troubles du transit, ballonnements, douleurs abdominales) et sur la sphère crânienne (céphalées, migraines).
 

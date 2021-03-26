@@ -192,7 +192,7 @@
               >
             </h1>
             <p
-              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 pre-formatted"
             >
               {{ info.introPara }}
             </p>
@@ -263,7 +263,7 @@ export default {
 <style>
 .logo {
   height: auto !important;
-  width: 10vw !important;
+  width: 8vw !important;
   margin-left: 0;
   padding-left: 0;
 }

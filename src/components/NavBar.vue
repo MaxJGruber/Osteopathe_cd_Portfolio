@@ -1,8 +1,8 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <nav class="bg-logo-blue-nohover">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
+  <nav class="relative bg-logo-blue-nohover">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center justify-between py-5">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <span class="sr-only">Workflow</span>
           <img
@@ -49,27 +49,27 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <router-link
                 to="/"
-                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-sm font-medium"
+                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-base font-medium"
                 >Accueil</router-link
               >
-              <a
-                href="#"
-                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-sm font-medium"
-                >Présentations</a
+              <router-link
+                to="/presentations"
+                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-base font-medium"
+                >Présentations</router-link
               >
-              <a
-                href="#"
-                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-sm font-medium"
-                >Patients</a
+              <router-link
+                to="/patients"
+                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-base font-medium"
+                >Patients</router-link
               >
               <router-link
                 to="/contact-page"
-                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-sm font-medium"
+                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-base font-medium"
                 >Contact & Informations</router-link
               >
               <router-link
                 to="/photo-gallery"
-                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-sm font-medium"
+                class="text-white nav-photo-gallery px-3 py-2 rounded-md text-base font-medium"
                 >Galerie</router-link
               >
             </div>
@@ -87,15 +87,15 @@
           class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
           >Accueil</router-link
         >
-        <a
-          href="#"
+        <router-link
+          to="/presentations"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Présentations</a
+          >Présentations</router-link
         >
-        <a
-          href="#"
+        <router-link
+          to="/patients"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Patients</a
+          >Patients</router-link
         >
         <router-link
           to="/contact-page"
@@ -122,5 +122,10 @@ export default {
 .nav-photo-gallery:hover {
   background-color: white;
   color: #3abfd6;
+}
+
+.nav-logo {
+  height: 4em;
+  border-radius: 0.5em;
 }
 </style>
