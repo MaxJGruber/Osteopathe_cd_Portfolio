@@ -60,6 +60,7 @@
           >
             <h1
               v-show="segment.subtext2Title"
+              :class="segment.subtext2Title ? 'mb-5' : ''"
               class="text-lg tracking-tight font-bold text-logo-gray sm:text-5xl md:text-lg"
             >
               <span class="block xl:inline">{{ segment.subtext2Title }}</span>
