@@ -24,7 +24,7 @@
             </div>
             <div class="ml-4 center">
               <dt class="text-lg leading-6 font-medium text-gray-900">
-                Consultation d'ostéopathie
+                Consultation générale d'ostéopathie
               </dt>
               <!-- <dd class="mt-2 text-base text-gray-500">
                 Une attitude active dans l’approche relationnelle ostéopathe et

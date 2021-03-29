@@ -15,10 +15,13 @@
           N'hesitez pas à suivre les actualités de Charles Dumeige sur les
           réseaux sociaux (Google, Instagram, YouTube, LinkedIn)
         </p>
-        <router-link to="/patients" target="_blank" class="patients-link">
-          Apprenez plus sur les patients pris en charge.
-        </router-link>
+        <!-- <router-link to="/patients" target="_blank" class=""> -->
+          <i class="fab fa-google icon"></i>
+        <!-- </router-link> -->
       </div>
     </div>
   </div>
 </template>
+<style scoped>
+
+</style>

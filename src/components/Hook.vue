@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-50">
     <div
-      class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between"
+      class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:flex lg:items-center lg:justify-between"
     >
       <h2
         class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
@@ -9,7 +9,7 @@
         <span class="block">Assez entendu?</span>
         <span class="block text-logo-blue">Prenez rendez-vous.</span>
       </h2>
-      <div class="mt-8 push-left flex lg:mt-0 lg:flex-shrink-0">
+      <div class="mt-8 lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
           <a
             href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"

@@ -18,7 +18,7 @@
         <a
           href="https://www.osteopathie.org/mutuelles.html"
           target="_blank"
-          class="reimbursements-link"
+          class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10"
         >
           <strong>Voir les mutuelles qui remboursent</strong>
         </a>

@@ -5,7 +5,7 @@
     <Featured />
     <Hook />
     <ContactInfo />
-    <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div>
+    <!-- <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div> -->
     <Footer />
   </div>
 </template>
@@ -54,7 +54,7 @@ export default {
       // message passed down as prop to ATTENTIONTAB component
       message: {
         long:
-          "Les consultations continuent d'être prise en charge le dimanche, en cas d'urgence!",
+          "Les consultations continuent d'être prises en charge le dimanche, en cas d'urgence!",
         short: "RDV d'urgence le dimanche",
       },
     };

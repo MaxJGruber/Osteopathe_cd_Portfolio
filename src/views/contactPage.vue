@@ -35,9 +35,9 @@ export default {
       // data passed down as object to LANDING PAGE component which will be rendered with props
       infoContact: {
         titlePart1: "Un ostéopathe pas loin de chez vous...",
-        titlePart2: "Charles Dumeige",
+        titlePart2: "Au cabinet ou à domicile",
         introPara:
-          "Situé dans le centre de Meaux, le cabinet est situé à 5 minutes de la gare de Meaux, à 2 minutes de la médiathèque et de la place du marché et est facilement joignable par la D360. Les prises de RDV sont uniquement disponible sur doctolib.fr.",
+          "Situé dans le centre de Meaux, le cabinet est situé à 5 minutes de la gare de Meaux, à 2 minutes de la médiathèque et de la place du marché et est facilement joignable par la D360.\nLes prises de RDV sont uniquement disponible sur doctolib.fr.",
         button1: "Appelez le 06 38 69 77 16",
         linkbutton1: "tel:06 38 69 77 16",
         button2: "Contactez par mail",
@@ -54,7 +54,7 @@ export default {
       // message passed down as prop to ATTENTIONTAB component
       message: {
         long:
-          "Les consultations continuent d'être prise en charge le dimanche, en cas d'urgence!",
+          "Les consultations continuent d'être prises en charge le dimanche, en cas d'urgence!",
         short: "RDV d'urgence le dimanche",
       },
     };

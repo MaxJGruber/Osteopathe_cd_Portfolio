@@ -22,6 +22,7 @@ import AboutRight from "../components/About-Right";
 import AboutLeft from "../components/About-Left";
 import AttentionTab from "../components/AttentionTab";
 import Footer from "../components/Footer";
+
 import {osteopathie} from "../PresentationsFolder/Osteopathie";
 import {practioner} from "../PresentationsFolder/Practioner";
 import {profession} from "../PresentationsFolder/Profession";
