@@ -112,13 +112,11 @@ export default {
         this.isOpen = !this.isOpen;
         this.tomorrowDay = nextDay.businessHours[0];
         this.tomorrowHour = nextDay.businessHours[1];
-        console.log(this.tomorrowDay);
       } else {
         console.log("Sorry, we're closed!");
         this.isOpen = !this.isOpen;
         this.tomorrowDay = nextDay.businessHours[0];
         this.tomorrowHour = nextDay.businessHours[1];
-        console.log(this.tomorrowDay);
       }
     },
   },
