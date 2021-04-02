@@ -23,5 +23,13 @@ export default {
       .get(endpoint)
       .then((res) => res.data)
       .catch(errorHandler);
+  },
+
+  getTimeTable(endpoint) {
+    return service.get(endpoint).then((res) => res.data).catch(errorHandler)
+  },
+
+  editTimeTable(endpoint, data) {
+    return service.patch(endpoint, data).then(res => res.data).catch(errorHandler)
   }
 }

@@ -30,7 +30,10 @@
             :key="index"
             class="hover:bg-gray-100 times"
           >
-            <v-list-item-title>{{ day.title }}</v-list-item-title>
+            <v-list-item-title
+              ><strong>{{ day.day }}</strong
+              >: {{ day.openingTime }}-{{ day.closingTime }}
+            </v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -61,39 +64,12 @@
 </template>
 
 <script>
+import apiHandler from "../apiHandler";
+
 export default {
   data: () => ({
     // BUSINESS HOURS OF CABINET
-    times: [
-      {
-        title: "Lundi: 8:00-20:00",
-        businessHours: ["Lundi", 8.0, 20.0],
-      },
-      {
-        title: "Mardi: 8:00-20:00",
-        businessHours: ["Mardi", 8.0, 20.0],
-      },
-      {
-        title: "Mercredi: 8:00-20:00",
-        businessHours: ["Mercredi", 8.0, 20.0],
-      },
-      {
-        title: "Jeudi: 8:00-20:00",
-        businessHours: ["Jeudi", 8.0, 20.0],
-      },
-      {
-        title: "Vendredi: 8:00-20:00",
-        businessHours: ["Vendredi", 8.0, 20.0],
-      },
-      {
-        title: "Samedi: 8:00-20:00",
-        businessHours: ["Samedi", 8.0, 20.0],
-      },
-      {
-        title: "Dimanche: 10:00-15:00",
-        businessHours: ["Dimanche", 10.0, 15.0],
-      },
-    ],
+    times: [],
     offset: true,
     isOpen: null,
     tomorrowDay: null,
@@ -107,21 +83,35 @@ export default {
       var now = d.getHours() + "." + d.getMinutes();
       var day = this.times[n - 1];
       var nextDay = this.times[n];
-      if (now > day.businessHours[1] && now < day.businessHours[2]) {
+      var openingHours = day.openingTime.split(":")[0];
+      var closingHours = day.closingTime.split(":")[0];
+      if (now > Number(openingHours) && now < Number(closingHours)) {
         console.log("We're open right now!");
         this.isOpen = !this.isOpen;
-        this.tomorrowDay = nextDay.businessHours[0];
-        this.tomorrowHour = nextDay.businessHours[1];
+        // this.tomorrowDay = nextDay.day;
+        // this.tomorrowHour = nextDay.openingTime[0];
       } else {
         console.log("Sorry, we're closed!");
         this.isOpen = !this.isOpen;
-        this.tomorrowDay = nextDay.businessHours[0];
-        this.tomorrowHour = nextDay.businessHours[1];
+        this.tomorrowDay = nextDay.day;
+        this.tomorrowHour = nextDay.openingTime[0];
       }
     },
   },
   created() {
     // Performs openCheck on page render
+    apiHandler
+      .getTimeTable("/api/timetable/all")
+      .then((res) => {
+        Object.values(res[0]).map((elem) =>
+          res[0]._id === elem || res[0].__v === elem
+            ? ""
+            : this.times.push(elem)
+        );
+      })
+      .catch((error) => console.log(error));
+  },
+  updated() {
     this.openCheck();
   },
 };
