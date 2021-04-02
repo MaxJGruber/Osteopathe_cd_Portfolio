@@ -1,12 +1,12 @@
 <template>
-  <div class="contact-card sm:mb-5">
+  <div class="contact-card sm:mb-5 lg:my-2">
     <h4
-      class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl title-name"
+      class="mt-5 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl title-name"
     >
       Charles Dumeige
     </h4>
-    <div class="business-hours-dropdown text-center" data-app>
-      <v-menu open-on-hover bottom offset-x>
+    <div class="mt-5 business-hours-dropdown text-center" data-app>
+      <v-menu open-on-click top offset-y>
         <template v-slot:activator="{ on, attrs }"
           ><span>Aujourd'hui: </span>
           <v-btn
@@ -24,15 +24,41 @@
             >FERME<font-awesome-icon icon="door-closed" class="icon-closed"
           /></v-btn>
         </template>
-        <v-list>
+        <v-list
+          class="grid-timetable"
+          width="950"
+          max-width="950"
+          max-height="550"
+          dense="true"
+          rounded="true"
+          outlined
+        >
           <v-list-item
             v-for="(day, index) in times"
             :key="index"
-            class="hover:bg-gray-100 times"
+            class="day-times"
           >
-            <v-list-item-title
-              ><strong>{{ day.day }}</strong
-              >: {{ day.openingTime }}-{{ day.closingTime }}
+            <v-list-item-title class=""
+              ><div class="mt-2 text-lg">
+                <strong>{{ day.day }}</strong>
+              </div>
+              <div class="mt-2">
+                <strong>Secrétariat:</strong>&nbsp;{{ day.secretaryTimes }}
+              </div>
+              <hr />
+              <div class="mt-2">
+                <strong>RDV au cabinet:</strong>&nbsp;{{
+                  day.morningOfficeTimes
+                }}
+                //
+                {{ day.afternoonOfficeTimes }}
+              </div>
+              <hr />
+              <div class="mt-2">
+                <strong>RDV à Domicile:</strong>&nbsp;{{ day.morningHomeTimes }}
+                //
+                {{ day.afternoonHomeTimes }}
+              </div>
             </v-list-item-title>
           </v-list-item>
         </v-list>
@@ -83,13 +109,12 @@ export default {
       var now = d.getHours() + "." + d.getMinutes();
       var day = this.times[n - 1];
       var nextDay = this.times[n];
-      var openingHours = day.openingTime.split(":")[0];
-      var closingHours = day.closingTime.split(":")[0];
-      if (now > Number(openingHours) && now < Number(closingHours)) {
+      var secretaryHours = day.secretaryTimes.split("-");
+      var openingTime = secretaryHours[0].split(":")[0];
+      var closingTime = secretaryHours[1].split(":")[0];
+      if (now > Number(openingTime) && now < Number(closingTime)) {
         console.log("We're open right now!");
         this.isOpen = !this.isOpen;
-        // this.tomorrowDay = nextDay.day;
-        // this.tomorrowHour = nextDay.openingTime[0];
       } else {
         console.log("Sorry, we're closed!");
         this.isOpen = !this.isOpen;
@@ -118,7 +143,8 @@ export default {
 </script>
 
 <style scoped>
-.contact-card * {
+.contact-card > *,
+.contact-card li {
   margin-top: 15px;
 }
 
@@ -153,5 +179,19 @@ span {
 
 .business-hours-dropdown {
   margin: 0;
+}
+
+.grid-timetable {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+
+.day-times:hover {
+  background-color: #3abfd6;
+}
+
+.day-times:hover > * {
+  color: white;
 }
 </style>

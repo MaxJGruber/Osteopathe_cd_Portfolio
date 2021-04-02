@@ -6,9 +6,7 @@ const TimeTableModel = require("./Model/TimeTable")
 router.post("/create", async (req, res, next) => {
     try {
         // TimeTable gets created in MongoDB with information added by admin
-        console.log(req.body)
         const createdTimeTable = await TimeTableModel.create(req.body);
-        console.log(createdTimeTable)
         res.status(201).json(createdTimeTable);
     } catch (err) {
         res.status(500).json(err);
