@@ -7,10 +7,11 @@ L'Ostéopathie est soutenue par l'Organisation Mondiale de la Santé au titre de
     intro2: `L'Ostéopathie est une médecine universelle qui s'adresse aussi bien aux adultes qu'aux enfants ou encore aux séniors.\n
 Elle ne prétend pas tout solutionner en matière de Santé mais soulage un grand nombre de troubles fonctionnels. Le praticien se réserve le droit d'orienter à tout moment vers un autre professionnel de santé, si besoin.`,
     intro3: `L'Ostéopathie connaît un vaste champs d'application dans de nombreux domaines:`,
-    intro4: `Le système locomoteur et orthopédique: maux de dos, cervicalgies, lumbago, tendinopathies, douleurs intercostales, scolioses, douleurs des membres supérieurs et inférieurs.`,
+    intro4Title: `Le système locomoteur et orthopédique:`,
+    intro4TitleText: `Maux de dos, cervicalgies, lumbago, tendinopathies, douleurs intercostales, scolioses, douleurs des membres supérieurs et inférieurs.`,
     intro4Title1: `Le système neurologique (Ostéopathie crânienne):`,
     intro4Title1Text: `Céphalées, migraines, tout type de névralgies, sciatiques et cruralgies.`,
-    intro4Title2: `Le système digestif avec (Ostéopathie viscérale):`,
+    intro4Title2: `Le système digestif (Ostéopathie viscérale):`,
     intro4Title2Text: `Ballonnements, troubles du transit, gastrites et Reflux-Gastro-Œsophagiens.`,
     intro4Title3: `Le système cardio-vasculaire:`,
     intro4Title3Text: `Troubles circulatoires, oppressions et palpitations.`,
