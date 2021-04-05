@@ -101,24 +101,5 @@ export default {
 </script>
 
 <style>
-.about {
-  height: auto;
-}
 
-.grid {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  /* grid-template-columns: 45% 55%; */
-  grid-gap: 10px;
-}
-
-.about-pic-frame {
-  width: fit-content;
-  display: flex;
-}
-.about-pic {
-  width: auto;
-  height: auto;
-  border-radius: 0.5em;
-  border: 2px solid #3abfd6;
-}
 </style>

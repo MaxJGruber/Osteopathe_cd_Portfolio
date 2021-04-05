@@ -19,11 +19,22 @@
           </div>
           <div class="flex justify-center">
             <div class="about-pic-frame">
-              <img
-                class="h-auto w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full about-pic"
-                :src="segment.img"
-                alt=""
-              />
+              <div
+                :class="
+                  segment.id === 'practioner' ? 'flex justify-center' : ''
+                "
+              >
+                <img
+                  :class="
+                    segment.id === 'practioner'
+                      ? 'w-1/2 lg:w-1/2'
+                      : 'w-full lg:w-full'
+                  "
+                  class="object-cover sm:h-72 md:h-96 lg:h-full about-pic"
+                  :src="segment.img"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -100,7 +111,4 @@ export default {
 </script>
 
 <style>
-.about {
-  height: auto;
-}
 </style>
