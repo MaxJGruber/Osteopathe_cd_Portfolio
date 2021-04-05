@@ -25,9 +25,72 @@
             </p>
           </div>
         </div>
-       
+        <div class="sm:text-center lg:text-left">
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            {{ segment.intro2 }}
+          </p>
+        </div>
+        <div class="sm:text-center lg:text-left">
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            {{ segment.intro3 }}
+          </p>
+        </div>
+        <div class="sm:text-center lg:text-left">
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            {{ segment.intro4 }}
+          </p>
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            <strong>{{ segment.intro4Title1 }}</strong
+            >&nbsp;{{ segment.intro4Title1Text }}
+          </p>
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            <strong>{{ segment.intro4Title2 }}</strong
+            >&nbsp;{{ segment.intro4Title2Text }}
+          </p>
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            <strong>{{ segment.intro4Title3 }}</strong
+            >&nbsp;{{ segment.intro4Title3Text }}
+          </p>
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            <strong>{{ segment.intro4Title4 }}</strong
+            >&nbsp;{{ segment.intro4Title4Text }}
+          </p>
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            <strong>{{ segment.intro4Title5 }}</strong
+            >&nbsp;{{ segment.intro4Title5Text }}
+          </p>
+          <p
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
+          >
+            <strong>{{ segment.intro4Title6 }}</strong
+            >&nbsp;{{ segment.intro4Title6Text }}
+          </p>
+        </div>
+         <div class="sm:text-center mt-10">
+            <h1
+              class="text-lg tracking-tight font-bold text-logo-gray sm:text-5xl md:text-lg"
+            >
+              <span class="block xl:inline">{{ segment.mainSubtextTitle }}</span>
+            </h1>
+         </div>
         <div
-          class="mt-12 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-4 md:gap-y-8"
+          class="mt-7 space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-4 md:gap-y-8"
         >
           <div class="sm:text-center">
             <h1
