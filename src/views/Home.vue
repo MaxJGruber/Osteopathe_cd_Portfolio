@@ -5,6 +5,7 @@
     <Featured />
     <Hook />
     <ContactInfo />
+    <Calendar />
     <!-- <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div> -->
     <Footer />
   </div>
@@ -18,6 +19,7 @@ import ContactInfo from "../components/ContactInfo";
 import Hook from "../components/Hook";
 import Featured from "../components/Featured.vue";
 import AttentionTab from "../components/AttentionTab";
+import Calendar from "../components/Calendar";
 import Footer from "../components/Footer";
 
 export default {
@@ -28,6 +30,7 @@ export default {
     ContactInfo,
     Featured,
     Footer,
+    Calendar,
     AttentionTab,
   },
   data: () => {

@@ -3,6 +3,7 @@
     <LandingPage :info="infoContact" :links="links" page="contact" />
     <AttentionTab :message="message" />
     <ContactInfo />
+    <Calendar />
     <PriceList />
     <Reimbursements />
     <PracticalInfo />
@@ -13,6 +14,7 @@
 <script>
 import LandingPage from "../components/LandingPage";
 import ContactInfo from "../components/ContactInfo";
+import Calendar from "../components/Calendar";
 import PriceList from "../components/PriceList";
 import Reimbursements from "../components/Reimbursements";
 import AttentionTab from "../components/AttentionTab";
@@ -24,6 +26,7 @@ export default {
   components: {
     LandingPage,
     ContactInfo,
+    Calendar,
     AttentionTab,
     PriceList,
     PracticalInfo,
