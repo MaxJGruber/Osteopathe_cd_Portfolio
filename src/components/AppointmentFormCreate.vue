@@ -1,12 +1,11 @@
 <template>
   <div class="form">
-    <v-form @submit.prevent="modifyTimeSlot(timeslot._id, inputs)">
+    <v-form @submit.prevent="confirmCreation">
       <v-container>
         <v-col cols="12">
           <v-text-field
             label="Nom de l'événement"
             type="text"
-            :placeholder="timeslot.name"
             v-model="inputs.name"
           ></v-text-field>
         </v-col>
@@ -24,13 +23,11 @@
             <v-text-field
               label="Début"
               type="text"
-              :placeholder="getOnlyTime(timeslot.start)"
               v-model="inputs.start"
             ></v-text-field>
             <v-text-field
               label="Fin"
               type="text"
-              :placeholder="getOnlyTime(timeslot.end)"
               v-model="inputs.end"
             ></v-text-field>
           </v-col>
@@ -46,19 +43,15 @@
             </div>
           </div>
         </div>
-        <v-btn type="submit" id="modify"> Modifier </v-btn>&nbsp;&nbsp;
-        <v-btn @click="$emit('delete-timeslot')" type="button" id="delete">
-          Supprimer
-        </v-btn>
+        <v-btn type="submit" id="confirm"> Valider </v-btn>
       </v-container></v-form
     >
   </div>
 </template>
-
 <script>
 import apiHandler from "../apiHandler";
 export default {
-  name: "AppointmentForm",
+  name: "AppointmentFormCreate",
   data() {
     return {
       types: ["Cabinet", "Domicile", "Secretariat", "Autre"],
@@ -81,31 +74,11 @@ export default {
     };
   },
   props: {
-    timeslot: Object,
-  },
-  created() {
-    this.inputs.name = this.timeslot.name;
-    this.inputs.day = this.timeslot.day;
-    this.inputs.start = this.getOnlyTime(this.timeslot.start);
-    this.inputs.end = this.getOnlyTime(this.timeslot.end);
-    this.inputs.type = this.timeslot.type;
+    timeslots: Array,
   },
   methods: {
-    getOnlyTime(date) {
-      if (date === undefined) {
-        return;
-      } else if (!date.includes(" ")) {
-        return this.timeslot.day;
-      }
-      if (date.includes(" ")) {
-        const dateAndTime = date.split(" ");
-        return dateAndTime[1];
-      } else {
-        return date;
-      }
-    },
     getCorrectTimeInput(input) {
-      switch (this.timeslot.day) {
+      switch (this.inputs.day) {
         case "lundi":
           return "2021-04-05 " + input;
         case "mardi":
@@ -122,7 +95,7 @@ export default {
           return "2021-04-11 " + input;
       }
     },
-    modifyTimeSlot() {
+    confirmCreation() {
       if (!this.inputs.start.includes("-")) {
         const formattedStart = this.getCorrectTimeInput(this.inputs.start);
         this.inputs.start = formattedStart;
@@ -132,50 +105,18 @@ export default {
         this.inputs.end = formattedEnd;
       }
       apiHandler
-        .editTimeSlot(`/api/timetable/${this.timeslot._id}/edit`, this.inputs)
+        .createTimeSlot("/api/timetable/create", this.inputs)
         .then((res) => console.log(res))
         .catch((error) => console.log(error));
+      this.timeslots.push(this.inputs);
     },
   },
 };
 </script>
-
-<style>
-.form {
-  border-radius: 0.5em;
-  border: 3px solid gray;
-  width: 400px;
-}
-
-.select-area {
-  display: flex;
-  justify-content: center;
-}
-
-.select {
-  border: 1px solid black;
-  border-radius: 0.5em;
-  height: 2em;
-  width: 8em;
-}
-.form-grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.radio-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-#modify {
-  background-color: royalblue;
-  color: white;
-}
-#delete {
-  background-color: rgb(212, 6, 6);
+<style scoped>
+#confirm {
+  background-color: green;
   color: white;
 }
 </style>
+

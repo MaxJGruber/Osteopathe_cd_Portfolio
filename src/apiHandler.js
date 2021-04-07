@@ -29,6 +29,10 @@ export default {
     return service.get(endpoint).then((res) => res.data).catch(errorHandler)
   },
 
+  createTimeSlot(endpoint, data) {
+    return service.post(endpoint, data).then(res => res.data).catch(errorHandler)
+  },
+
   editTimeSlot(endpoint, data) {
     return service.patch(endpoint, data).then(res => res.data).catch(errorHandler)
   },

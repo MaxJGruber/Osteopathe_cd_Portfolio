@@ -56,7 +56,7 @@ export default {
     apiHandler
       .getTimeTable("/api/timetable/all")
       .then((res) => {
-        // console.log(res);
+        console.log(res);
         this.events = res;
       })
       .catch((error) => console.log(error));
@@ -85,7 +85,7 @@ export default {
         case "Secretariat":
           return "#FFD700";
         case "Autre":
-          return "red";
+          return "#ea4335";
       }
     },
     getEventTextColor(event) {

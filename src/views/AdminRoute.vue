@@ -4,6 +4,13 @@
     <router-link to="/"
       ><strong>RETOURNER A LA PAGE D'ACCEUIL</strong></router-link
     >
+    <div class="mt-5 flex items-center justify-center post">
+      <h1><strong>Créer un nouvel interval:</strong></h1>
+      <AppointmentFormCreate :timeslots="timeslots" />
+    </div>
+    <div class="mt-5">
+      <h1><strong>Modifier un interval:</strong></h1>
+    </div>
     <div class="grid-timeslots mx-5 mt-5">
       <div v-for="(timeslot, index) in timeslots" :key="index">
         <AppointmentForm
@@ -18,10 +25,12 @@
 <script>
 import apiHandler from "../apiHandler";
 import AppointmentForm from "../components/AppointmentForm";
+import AppointmentFormCreate from "../components/AppointmentFormCreate";
 
 export default {
   components: {
     AppointmentForm,
+    AppointmentFormCreate,
   },
   data() {
     return {
@@ -76,5 +85,9 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 10px;
+}
+
+.post {
+  flex-direction: column;
 }
 </style>
