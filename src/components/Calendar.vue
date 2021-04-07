@@ -56,7 +56,7 @@ export default {
     apiHandler
       .getTimeTable("/api/timetable/all")
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         this.events = res;
       })
       .catch((error) => console.log(error));
@@ -76,11 +76,24 @@ export default {
     updateTime() {
       setInterval(() => this.cal.updateTimes(), 60 * 1000);
     },
-    getEventColor() {
-      return "#3abfd6";
+    getEventColor(event) {
+      switch (event.type) {
+        case "Cabinet":
+          return "#3abfd6";
+        case "Domicile":
+          return "#21556d";
+        case "Secretariat":
+          return "#FFD700";
+        case "Autre":
+          return "red";
+      }
     },
-    getEventTextColor() {
-      return "#FFFFFF";
+    getEventTextColor(event) {
+      if (event.type === "Secretariat") {
+        return "black";
+      } else {
+        return "#FFFFFF";
+      }
     },
   },
 };

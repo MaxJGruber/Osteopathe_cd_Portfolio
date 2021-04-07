@@ -18,7 +18,6 @@ router.get("/all", async (req, res, next) => {
     try {
         // GET all TimeTable from MongoDB
         const allTimes = await TimeTableModel.find();
-        console.log(allTimes)
         res.status(200).json(allTimes);
     } catch (err) {
         res.status(500).json(err);
@@ -43,5 +42,15 @@ router.patch(
         }
     }
 );
+
+router.delete("/:id/delete", async (req, res, next) => {
+    try {
+        await TimeTableModel.findByIdAndDelete(req.params.id);
+        res.sendStatus(200);
+    } catch (error) {
+        res.status(500).json(error);
+        next(error);
+    }
+})
 
 module.exports = router;

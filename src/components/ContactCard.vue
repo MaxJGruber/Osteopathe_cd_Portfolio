@@ -136,9 +136,9 @@ export default {
       })
       .catch((error) => console.log(error));
   },
-  updated() {
-    this.openCheck();
-  },
+  // updated() {
+  //   this.openCheck();
+  // },
 };
 </script>
 

@@ -56,7 +56,11 @@
               v-show="segment.subtext2Title"
               class="text-lg tracking-tight font-bold text-logo-gray sm:text-5xl md:text-lg"
             >
-              <span class="block xl:inline">{{ segment.subtext2Title }}</span>
+              <span class="block xl:inline"
+                ><i v-show="segment.id === 'profession'">{{
+                  segment.subtext2Title
+                }}</i></span
+              >
             </h1>
             <p
               class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-md lg:mr-4 pre-formatted"
@@ -101,5 +105,4 @@ export default {
 </script>
 
 <style>
-
 </style>

@@ -68,4 +68,22 @@ export default {
   background-position: center;
   height: 50vh;
 }
+.about {
+  height: auto;
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 10px;
+}
+
+.about-pic-frame {
+  width: fit-content;
+  display: flex;
+}
+.about-pic {
+  height: auto;
+  border-radius: 0.5em;
+  border: 2px solid #3abfd6;
+}
 </style>

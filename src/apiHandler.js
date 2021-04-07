@@ -29,7 +29,11 @@ export default {
     return service.get(endpoint).then((res) => res.data).catch(errorHandler)
   },
 
-  editTimeTable(endpoint, data) {
+  editTimeSlot(endpoint, data) {
     return service.patch(endpoint, data).then(res => res.data).catch(errorHandler)
+  },
+
+  deleteTimeSlot(endpoint) {
+    return service.delete(endpoint).then(res => res.data).catch(errorHandler)
   }
 }

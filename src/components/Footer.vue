@@ -36,7 +36,7 @@
           PagesJaunes</a
         >
         <a
-          href="#"
+          href="https://www.linkedin.com/in/charles-dumeige-osteopathe/"
           target="_blank"
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >

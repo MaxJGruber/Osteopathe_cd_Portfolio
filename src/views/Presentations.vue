@@ -7,10 +7,10 @@
     <hr />
     <PresentationsAboutRight :segment="osteopathie" />
     <hr />
-    <AboutLeft :segment="practioner" />
+    <PresentationsAboutLeft :segment="practioner" />
     <!-- <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div> -->
     <hr />
-    <PresentationsAboutRight :segment="profession" />
+    <AboutRight :segment="profession" />
     <Footer />
   </div>
 </template>
@@ -19,20 +19,22 @@
 import ExtendedNavbar from "../components/ExtendedNavbar.vue";
 import Disclaimer from "../components/Disclaimer";
 import PresentationsAboutRight from "../components/Presentations-About-Right";
-import AboutLeft from "../components/About-Left";
+import PresentationsAboutLeft from "../components/Presentations-About-Left";
+import AboutRight from "../components/About-Right";
 import AttentionTab from "../components/AttentionTab";
 import Footer from "../components/Footer";
 
-import {osteopathie} from "../PresentationsFolder/Osteopathie";
-import {practioner} from "../PresentationsFolder/Practioner";
-import {profession} from "../PresentationsFolder/Profession";
+import { osteopathie } from "../PresentationsFolder/Osteopathie";
+import { practioner } from "../PresentationsFolder/Practioner";
+import { profession } from "../PresentationsFolder/Profession";
 
 export default {
   components: {
     ExtendedNavbar,
     Disclaimer,
     PresentationsAboutRight,
-    AboutLeft,
+    AboutRight,
+    PresentationsAboutLeft,
     AttentionTab,
     Footer,
   },

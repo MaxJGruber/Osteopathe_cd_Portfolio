@@ -24,10 +24,10 @@ const routes = [
     path: "/patients", name: "Patients", component: () =>
       import(/* webpackChunkName: "photo-gallery" */ "../views/Patients.vue")
   },
-  // {
-  //   path: "/admin-route", name: "Admin", component: () =>
-  //     import(/* webpackChunkName: "photo-gallery" */ "../views/AdminRoute.vue")
-  // }
+  {
+    path: "/admin-route", name: "Admin", component: () =>
+      import(/* webpackChunkName: "photo-gallery" */ "../views/AdminRoute.vue")
+  }
 ];
 
 const router = new VueRouter({

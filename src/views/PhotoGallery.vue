@@ -97,7 +97,7 @@ export default {
   display: grid;
   background-color: whitesmoke;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 20px;
   height: auto;
 }
 
