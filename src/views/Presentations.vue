@@ -65,6 +65,12 @@ export default {
   grid-gap: 10px;
 }
 
+#grid-client {
+  display: grid;
+  grid-template-columns: 55% repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 10px;
+}
+
 .about-pic-frame {
   width: fit-content;
   display: flex;

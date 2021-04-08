@@ -11,17 +11,47 @@
           Decouvrez en image Charles Dumeige en action dans son cabinet pour
           exercer différentes techniques qui relèvent de l'ostéopathie.
         </p>
+        <div class="links-social-media">
+          <a
+            href="https://www.google.com/search?q=charles+dumeige"
+            target="_blank"
+            class=""
+          >
+            <i class="fab fa-google icon"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/charles-dumeige-osteopathe/"
+            target="_blank"
+            class=""
+          >
+            <i class="fab fa-linkedin icon"></i>
+          </a>
+        </div>
         <p class="mt-10 mb-10 max-w-6xl text-lg text-gray-500 lg:mx-auto">
           N'hesitez pas à suivre les actualités de Charles Dumeige sur les
           réseaux sociaux (Google, Instagram, YouTube, LinkedIn)
         </p>
-        <!-- <router-link to="/patients" target="_blank" class=""> -->
-          <i class="fab fa-google icon"></i>
-        <!-- </router-link> -->
       </div>
     </div>
   </div>
 </template>
 <style scoped>
+.links-social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links-social-media .icon {
+  margin: 0 10px;
+}
 
+.links-social-media .fa-google {
+  font-size: 2em;
+  color: #21556d;
+}
+
+.links-social-media .fa-linkedin {
+  font-size: 2.2em;
+  color: #21556d;
+}
 </style>

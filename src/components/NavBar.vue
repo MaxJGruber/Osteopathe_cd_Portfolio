@@ -2,8 +2,8 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <nav class="relative bg-logo-blue-nohover">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center justify-between py-5">
-        <div class="flex justify-start lg:w-0 lg:flex-1">
+      <div class="flex justify-between items-center py-5">
+        <div class="flex justify-start lg:w-0">
           <span class="sr-only">Workflow</span>
           <img
             class="h-8 w-auto nav-logo sm:h-10"
