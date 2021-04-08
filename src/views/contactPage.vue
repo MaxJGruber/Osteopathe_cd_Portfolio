@@ -1,7 +1,7 @@
 <template>
   <div>
     <LandingPage :info="infoContact" :links="links" page="contact" />
-    <AttentionTab :message="message" />
+    <AttentionTab :page="`Page de contact`" />
     <ContactInfo />
     <Calendar />
     <PriceList />
@@ -53,12 +53,6 @@ export default {
         patients: "Patients",
         contact: "Contact & Informations",
         galerie: "Galerie",
-      },
-      // message passed down as prop to ATTENTIONTAB component
-      message: {
-        long:
-          "Les consultations continuent d'être prises en charge le dimanche, en cas d'urgence!",
-        short: "RDV d'urgence le dimanche",
       },
     };
   },

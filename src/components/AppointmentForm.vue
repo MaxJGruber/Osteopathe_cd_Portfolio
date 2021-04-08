@@ -1,8 +1,8 @@
 <template>
-  <div class="form">
+  <div>
     <v-form @submit.prevent="modifyTimeSlot(timeslot._id, inputs)">
-      <v-container>
-        <v-col cols="12">
+      <v-container class="form my-5">
+        <v-col cols="3">
           <v-text-field
             label="Nom de l'événement"
             type="text"
@@ -19,14 +19,16 @@
             </option>
           </select>
         </div>
-        <div class="form-grid">
-          <v-col cols="10">
+        <div class="times">
+          <v-col cols="5">
             <v-text-field
               label="Début"
               type="text"
               :placeholder="getOnlyTime(timeslot.start)"
               v-model="inputs.start"
             ></v-text-field>
+          </v-col>
+          <v-col cols="5">
             <v-text-field
               label="Fin"
               type="text"
@@ -34,24 +36,35 @@
               v-model="inputs.end"
             ></v-text-field>
           </v-col>
-          <div class="radio-group">
-            <div v-for="(type, index) in types" :key="index">
-              <input
-                type="radio"
-                :checked="inputs.appointmentType === type"
-                :value="type"
-                v-model="inputs.type"
-              />&nbsp;
-              <label :for="type">{{ type }}</label>
-            </div>
-          </div>
         </div>
-        <v-btn type="submit" id="modify"> Modifier </v-btn>&nbsp;&nbsp;
-        <v-btn @click="$emit('delete-timeslot')" type="button" id="delete">
-          Supprimer
-        </v-btn>
-      </v-container></v-form
-    >
+        <div class="select-area">
+          <p>Type:</p>
+          &nbsp;&nbsp;
+          <select v-model="inputs.type" class="select mx-5">
+            <option v-for="(type, index) in types" :value="type" :key="index">
+              {{ type }}
+            </option>
+          </select>
+        </div>
+        <!-- <div class="radio-group">
+          <div v-for="(type, index) in types" :key="index">
+            <input
+              type="radio"
+              :checked="inputs.appointmentType === type"
+              :value="type"
+              v-model="inputs.type"
+            />&nbsp;
+            <label :for="type">{{ type }}</label>
+          </div>
+        </div> -->
+        <div class="button-group">
+          <v-btn type="submit" id="modify">
+            <font-awesome-icon icon="edit" /> </v-btn
+          >&nbsp;&nbsp;
+          <v-btn @click="$emit('delete-timeslot')" type="button" id="delete">
+            <font-awesome-icon icon="trash-alt" />
+          </v-btn></div></v-container
+    ></v-form>
   </div>
 </template>
 
@@ -141,41 +154,5 @@ export default {
 </script>
 
 <style>
-.form {
-  border-radius: 0.5em;
-  border: 3px solid gray;
-  width: 400px;
-}
 
-.select-area {
-  display: flex;
-  justify-content: center;
-}
-
-.select {
-  border: 1px solid black;
-  border-radius: 0.5em;
-  height: 2em;
-  width: 8em;
-}
-.form-grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.radio-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-#modify {
-  background-color: royalblue;
-  color: white;
-}
-#delete {
-  background-color: rgb(212, 6, 6);
-  color: white;
-}
 </style>

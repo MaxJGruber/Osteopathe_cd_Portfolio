@@ -39,5 +39,17 @@ export default {
 
   deleteTimeSlot(endpoint) {
     return service.delete(endpoint).then(res => res.data).catch(errorHandler)
-  }
+  },
+
+  getMessages(endpoint) {
+    return service.get(endpoint).then((res) => res.data).catch(errorHandler)
+  },
+
+  getOneMessage(endpoint) {
+    return service.get(endpoint).then((res) => res.data).catch(errorHandler)
+  },
+
+  editMessage(endpoint, data) {
+    return service.patch(endpoint, data).then(res => res.data).catch(errorHandler)
+  },
 }

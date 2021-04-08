@@ -1,7 +1,7 @@
 <template>
   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-    <a
-      href="#osteopathie"
+    <button
+      v-on:click="gotToSection('#osteopathie')"
       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
     >
       <!-- Heroicon name: outline/chart-bar -->
@@ -12,10 +12,10 @@
           Apprenez un peu plus sur l'art de l'ostéopathie.
         </p>
       </div>
-    </a>
+    </button>
 
-    <a
-      href="#osteopathe"
+    <button
+      v-on:click="gotToSection('#practioner')"
       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
     >
       <!-- Heroicon name: outline/cursor-click -->
@@ -24,25 +24,27 @@
       <div class="ml-4">
         <p class="text-base font-medium text-gray-900">L'ostéopathe</p>
         <p class="mt-1 text-sm text-gray-500">
-          Apprenez un peu plus sur Charles Dumeige et ses preatiques.
+          Apprenez un peu plus sur Charles Dumeige et ses pratiques.
         </p>
       </div>
-    </a>
+    </button>
 
-    <a
-      href="#profession"
+    <button
+      v-on:click="gotToSection('#profession')"
       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
     >
       <!-- Heroicon name: outline/shield-check -->
       <font-awesome-icon icon="school" />
       <div class="ml-4">
-        <p class="text-base font-medium text-gray-900">La profession</p>
+        <p class="text-base font-medium text-gray-900">
+          Les valeurs de la profession
+        </p>
         <p class="mt-1 text-sm text-gray-500">
-          Apprenez un peu plus sur ce que ça prend de devenir ostéopathe.
+          Quelques mots sur les valeurs de l'ostéopathie selon Charles Dumeige.
         </p>
       </div>
-    </a>
-    <div
+    </button>
+    <!-- <div
       class="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8"
     >
       <div class="flow-root">
@@ -51,7 +53,7 @@
           target="_blank"
           class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
         >
-          <!-- Heroicon name: outline/play -->
+          Heroicon name: outline/play
           <svg
             class="flex-shrink-0 h-6 w-6 text-gray-400"
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +84,7 @@
           to="/contact-page"
           class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
         >
-          <!-- Heroicon name: outline/phone -->
+          Heroicon name: outline/phone
           <svg
             class="flex-shrink-0 h-6 w-6 text-gray-400"
             xmlns="http://www.w3.org/2000/svg"
@@ -101,12 +103,18 @@
           <span class="ml-3">Contact</span>
         </router-link>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    gotToSection(element) {
+      document.querySelector(element).scrollIntoView({ behavior: "smooth" });
+    },
+  },
+};
 </script>
 
 <style>

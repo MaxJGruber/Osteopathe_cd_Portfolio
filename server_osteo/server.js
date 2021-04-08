@@ -11,6 +11,7 @@ const logger = require('morgan');
 const cloudinaryRouter = require("./cloudinaryConfig")
 
 const TimeTableRouter = require("./TimeTable.router")
+const MessageRouter = require("./Message.router")
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -26,6 +27,7 @@ app.use(cors(corsOptions));
 
 app.use("/", cloudinaryRouter)
 app.use("/api/timetable", TimeTableRouter)
+app.use("/api/message", MessageRouter)
 //here we are configuring dist to serve app files
 app.use('/', serveStatic(path.join(__dirname, '../dist')))
 // this * route is to serve project on different page routes except root `/`

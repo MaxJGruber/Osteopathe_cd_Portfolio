@@ -2,7 +2,7 @@
   <div>
     <ExtendedNavbar :page="'patients'" />
     <div class="patients-pic-cover"></div>
-    <AttentionTab :message="message1" />
+    <AttentionTab :page="`Page des patients`" />
     <Disclaimer />
     <hr />
     <AboutRight :segment="nourissons" />
@@ -46,10 +46,6 @@ export default {
   },
   data: () => {
     return {
-      message1: {
-        long: "En cas d'urgence, veuillez appeler le 15.",
-        short: "En cas d'urgence, appelez le 15.",
-      },
       nourissons: baby,
       enfants: children,
       femmesEnceintes: pregnant,

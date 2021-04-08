@@ -3,37 +3,49 @@
     <div>
       <div class="mt-6">
         <nav class="grid gap-y-8">
-          <a href="#" class="-m-3 p-3 items-center rounded-md hover:bg-gray-50">
+          <router-link
+            to="/"
+            class="-m-3 p-3 items-center rounded-md hover:bg-gray-50"
+          >
             <!-- Heroicon name: outline/chart-bar -->
 
             <span class="ml-3 text-base font-medium text-gray-900">
               Accueil
             </span>
-          </a>
+          </router-link>
 
-          <a href="#" class="-m-3 p-3 items-center rounded-md hover:bg-gray-50">
+          <router-link
+            to="/presentations"
+            class="-m-3 p-3 items-center rounded-md hover:bg-gray-50"
+          >
             <!-- Heroicon name: outline/cursor-click -->
 
             <span class="ml-3 text-base font-medium text-gray-900">
               Présentations
             </span>
-          </a>
+          </router-link>
 
-          <a href="#" class="-m-3 p-3 items-center rounded-md hover:bg-gray-50">
+          <router-link
+            to="/patients"
+            class="-m-3 p-3 items-center rounded-md hover:bg-gray-50"
+          >
             <!-- Heroicon name: outline/shield-check -->
 
             <span class="ml-3 text-base font-medium text-gray-900">
               Patients
             </span>
-          </a>
+          </router-link>
 
-          <a href="#" class="-m-3 p-3 items-center rounded-md hover:bg-gray-50">
+          <router-link
+            to="/contact-age"
+            class="-m-3 p-3 items-center rounded-md hover:bg-gray-50"
+          >
             <!-- Heroicon name: outline/view-grid -->
 
             <span class="ml-3 text-base font-medium text-gray-900">
               Contact & Informations
             </span>
-          </a>
+          </router-link>
 
           <router-link
             to="/photo-gallery"
@@ -48,73 +60,41 @@
         </nav>
       </div>
     </div>
-    <div class="py-6 px-5 space-y-6">
+    <div class="py-6 space-y-6">
       <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-        <a
-          href="#"
+        <button
+          v-on:click="gotToSection('#osteopathie')"
           class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
         >
-          L'ostéopathie
-        </a>
+          L'ostéopathie: l'art du métier
+        </button>
 
-        <a
-          href="#"
+        <button
+          v-on:click="gotToSection('#practioner')"
           class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
         >
-          L'ostéopathe
-        </a>
+          L'ostéopathe: Charles Dumeige
+        </button>
 
-        <a
-          href="#"
+        <button
+          v-on:click="gotToSection('#profession')"
           class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
         >
-          La profession
-        </a>
-
-        <a
-          href="#"
-          class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
-        >
-          Les nourissons
-        </a>
-
-        <a
-          href="#"
-          class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
-        >
-          Les enfants & adolescents
-        </a>
-        <a
-          href="#"
-          class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
-        >
-          Les femmes enceintes
-        </a>
-        <a
-          href="#"
-          class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
-        >
-          Les adultes
-        </a>
-        <a
-          href="#"
-          class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
-        >
-          Les séniors
-        </a>
-        <a
-          href="#"
-          class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"
-        >
-          Les sportifs
-        </a>
+          Les valeurs de la profession selon Charles Dumeige
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    gotToSection(element) {
+      document.querySelector(element).scrollIntoView({ behavior: "smooth" });
+    },
+  },
+};
 </script>
 
 <style>

@@ -1,8 +1,8 @@
 <template>
-  <div class="form">
-    <v-form @submit.prevent="confirmCreation">
-      <v-container>
-        <v-col cols="12">
+  <div>
+    <v-form @submit="confirmCreation">
+      <v-container class="form">
+        <v-col cols="3">
           <v-text-field
             label="Nom de l'événement"
             type="text"
@@ -18,31 +18,43 @@
             </option>
           </select>
         </div>
-        <div class="form-grid">
-          <v-col cols="10">
+        <div class="times">
+          <v-col cols="5">
             <v-text-field
               label="Début"
               type="text"
               v-model="inputs.start"
             ></v-text-field>
+          </v-col>
+          <v-col cols="5">
             <v-text-field
               label="Fin"
               type="text"
               v-model="inputs.end"
             ></v-text-field>
           </v-col>
-          <div class="radio-group">
-            <div v-for="(type, index) in types" :key="index">
-              <input
-                type="radio"
-                :checked="inputs.appointmentType === type"
-                :value="type"
-                v-model="inputs.type"
-              />&nbsp;
-              <label :for="type">{{ type }}</label>
-            </div>
-          </div>
         </div>
+        <div class="select-area">
+          <p>Type:</p>
+          &nbsp;&nbsp;
+          <select v-model="inputs.type" class="select mx-5">
+            <option v-for="(type, index) in types" :value="type" :key="index">
+              {{ type }}
+            </option>
+          </select>
+        </div>
+        <!-- <div class="radio-group">
+          <div v-for="(type, index) in types" :key="index">
+            <input
+              type="radio"
+              :checked="inputs.appointmentType === type"
+              :value="type"
+              v-model="inputs.type"
+            />&nbsp;
+            <label :for="type">{{ type }}</label>
+          </div>
+        </div> -->
+
         <v-btn type="submit" id="confirm"> Valider </v-btn>
       </v-container></v-form
     >
@@ -114,9 +126,6 @@ export default {
 };
 </script>
 <style scoped>
-#confirm {
-  background-color: green;
-  color: white;
-}
+
 </style>
 

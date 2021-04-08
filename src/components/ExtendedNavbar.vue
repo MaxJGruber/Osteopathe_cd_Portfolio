@@ -97,7 +97,7 @@
           </div>
           <div
             v-show="openPresentations && page !== 'presentations'"
-            class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+            class="mt-8 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-full lg:-translate-y-"
           >
             <div
               class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
@@ -161,7 +161,7 @@
 
           <div
             v-show="openPatients && page !== 'patients'"
-            class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
+            class="mt-8 absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
           >
             <div
               class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
@@ -205,7 +205,7 @@
       <div
         class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50"
       >
-        <div class="pt-5 pb-6 px-5">
+        <div class="pt-5 pb-6 pr-5">
           <div class="flex items-center justify-between">
             <div>
               <img class="h-8 w-auto" src="../assets/logo.png" alt="Workflow" />
@@ -288,6 +288,17 @@ export default {
       }
     },
   },
+  updated() {
+    if (this.openPresentations === true) {
+      setTimeout(() => {
+        this.openPresentations = false;
+      }, 3000);
+    } else if (this.openPatients === true) {
+      setTimeout(() => {
+        this.openPatients = false;
+      }, 5000);
+    }
+  },
 };
 </script>
 
@@ -298,9 +309,6 @@ export default {
 }
 
 .mobile-sub-nav {
-  -webkit-box-shadow: 0px 10px 5px 0px rgba(194, 192, 194, 1);
-  -moz-box-shadow: 0px 10px 5px 0px rgba(194, 192, 194, 1);
-  box-shadow: 0px 10px 5px 0px rgba(194, 192, 194, 1);
   border-radius: 0.5em;
 }
 .svg-inline--fa.fa-w-14,

@@ -27,6 +27,10 @@ const routes = [
   {
     path: "/admin-route", name: "Admin", component: () =>
       import(/* webpackChunkName: "photo-gallery" */ "../views/AdminRoute.vue")
+  },
+  {
+    path: "/legal-notes", name: "Legal", component: () =>
+      import(/* webpackChunkName: "photo-gallery" */ "../views/LegalNotes.vue")
   }
 ];
 

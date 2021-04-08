@@ -23,9 +23,9 @@
             </svg>
           </span>
           <p class="ml-3 font-medium text-white truncate">
-            <span class="md:hidden"> {{ message.short }} </span>
+            <span class="md:hidden"> {{ message.contentShort }} </span>
             <span class="hidden md:inline">
-              {{ message.long }}
+              {{ message.content }}
             </span>
           </p>
         </div>
@@ -63,12 +63,37 @@
 </template>
 
 <script>
+import apiHandler from "../apiHandler";
 export default {
-  data() {
-    return { open: true };
-  },
   props: {
-    message: Object,
+    page: String,
+  },
+  data() {
+    return { open: true, message: "" };
+  },
+  created() {
+    let pageName = "";
+    switch (this.page) {
+      case "Page d'accueil":
+        pageName = "Page d'accueil";
+        break;
+      case "Page de contact":
+        pageName = "Page de contact";
+        break;
+      case "Page des présentations":
+        pageName = "Page des présentations";
+        break;
+      case "Page des patients":
+        pageName = "Page des patients";
+        break;
+    }
+    apiHandler
+      .getOneMessage(`/api/message/${pageName}/message`)
+      .then((res) => {
+        // console.log(res);
+        this.message = res;
+      })
+      .catch((error) => console.log(error));
   },
 };
 </script>

@@ -6,12 +6,12 @@
       Charles Dumeige
     </h4>
     <div class="mt-5 business-hours-dropdown text-center" data-app>
-      <v-menu open-on-click top offset-y>
+      <v-menu>
         <template v-slot:activator="{ on, attrs }"
-          ><span>Aujourd'hui: </span>
+          ><span>Actuellement: </span>
           <v-btn
             v-bind="attrs"
-            v-on="on"
+            v-on:click="gotToSection('#calendar')"
             id="timetable-open"
             v-show="(isOpen = true)"
             >OUVERT
@@ -24,48 +24,12 @@
             >FERME<font-awesome-icon icon="door-closed" class="icon-closed"
           /></v-btn>
         </template>
-        <v-list
-          class="grid-timetable"
-          width="950"
-          max-width="950"
-          max-height="550"
-          dense="true"
-          rounded="true"
-          outlined
-        >
-          <v-list-item
-            v-for="(day, index) in times"
-            :key="index"
-            class="day-times"
-          >
-            <v-list-item-title class=""
-              ><div class="mt-2 text-lg">
-                <strong>{{ day.day }}</strong>
-              </div>
-              <div class="mt-2">
-                <strong>Secrétariat:</strong>&nbsp;{{ day.secretaryTimes }}
-              </div>
-              <hr />
-              <div class="mt-2">
-                <strong>RDV au cabinet:</strong>&nbsp;{{
-                  day.morningOfficeTimes
-                }}
-                //
-                {{ day.afternoonOfficeTimes }}
-              </div>
-              <hr />
-              <div class="mt-2">
-                <strong>RDV à Domicile:</strong>&nbsp;{{ day.morningHomeTimes }}
-                //
-                {{ day.afternoonHomeTimes }}
-              </div>
-            </v-list-item-title>
-          </v-list-item>
-        </v-list>
       </v-menu>
     </div>
     <h4 v-show="(isOpen = false)">
-      Le cabinet reouvre {{ tomorrowDay }} à {{ tomorrowHour }} heure.
+      Le cabinet reouvre <strong>{{ tomorrowDay }}</strong> à
+      <strong>{{ tomorrowHour }}</strong
+      >.
     </h4>
     <h6><span>Adresse: </span>19 Rue Madame Dassy, 77100 Meaux</h6>
     <h6>
@@ -109,36 +73,42 @@ export default {
       var now = d.getHours() + "." + d.getMinutes();
       var day = this.times[n - 1];
       var nextDay = this.times[n];
-      var secretaryHours = day.secretaryTimes.split("-");
-      var openingTime = secretaryHours[0].split(":")[0];
-      var closingTime = secretaryHours[1].split(":")[0];
-      if (now > Number(openingTime) && now < Number(closingTime)) {
+      if (now > this.formatTime(day)[0] && now < this.formatTime(day)[1]) {
         console.log("We're open right now!");
         this.isOpen = !this.isOpen;
       } else {
         console.log("Sorry, we're closed!");
         this.isOpen = !this.isOpen;
         this.tomorrowDay = nextDay.day;
-        this.tomorrowHour = nextDay.openingTime[0];
+        this.tomorrowHour = this.formatTime(nextDay)[0].replace(".", ":");
       }
+    },
+    formatTime(targetDay) {
+      var hoursFromString = targetDay.name.split(" ");
+      var workingHours = hoursFromString[1].split("-");
+      var formattedWorkingHours = workingHours.map((elem) =>
+        elem.replace(":", ".")
+      );
+      return formattedWorkingHours;
+    },
+    gotToSection(element) {
+      document.querySelector(element).scrollIntoView({ behavior: "smooth" });
     },
   },
   created() {
-    // Performs openCheck on page render
     apiHandler
       .getTimeTable("/api/timetable/all")
       .then((res) => {
-        Object.values(res[0]).map((elem) =>
-          res[0]._id === elem || res[0].__v === elem
-            ? ""
-            : this.times.push(elem)
-        );
+        for (let i = 0; i < res.length; i++) {
+          if (res[i].type === "Secretariat") {
+            this.times.push(res[i]);
+          }
+        }
+        // Performs openCheck on page render
+        this.openCheck();
       })
       .catch((error) => console.log(error));
   },
-  // updated() {
-  //   this.openCheck();
-  // },
 };
 </script>
 
@@ -185,7 +155,6 @@ span {
   display: grid;
   grid-template-columns: 33% 33% 33%;
 }
-
 
 .day-times:hover {
   background-color: #3abfd6;

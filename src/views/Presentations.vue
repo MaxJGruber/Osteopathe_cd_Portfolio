@@ -2,7 +2,7 @@
   <div>
     <ExtendedNavbar :page="'presentations'" />
     <div class="presentation-pic-cover"></div>
-    <AttentionTab :message="message1" />
+    <AttentionTab :page="`Page des présentations`" />
     <Disclaimer />
     <hr />
     <PresentationsAboutRight :segment="osteopathie" />
@@ -40,10 +40,6 @@ export default {
   },
   data: () => {
     return {
-      message1: {
-        long: "En cas d'urgence, veuillez appeler le 15.",
-        short: "En cas d'urgence, appelez le 15.",
-      },
       osteopathie: osteopathie,
       practioner: practioner,
       profession: profession,

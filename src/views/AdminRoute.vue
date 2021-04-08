@@ -2,8 +2,14 @@
   <div class="mt-5">
     <h1>ADMIN MODIFICATIONS PAGE</h1>
     <router-link to="/"
-      ><strong>RETOURNER A LA PAGE D'ACCEUIL</strong></router-link
+      ><strong>RETOURNER A LA PAGE D'ACCUEIL</strong></router-link
     >
+    <div class="my-5">
+      <h1><strong>Modifier un message:</strong></h1>
+      <div v-for="(message, index) in messages" :key="index">
+        <MessageForm :message="message" />
+      </div>
+    </div>
     <div class="mt-5 flex items-center justify-center post">
       <h1><strong>Créer un nouvel interval:</strong></h1>
       <AppointmentFormCreate :timeslots="timeslots" />
@@ -26,16 +32,18 @@
 import apiHandler from "../apiHandler";
 import AppointmentForm from "../components/AppointmentForm";
 import AppointmentFormCreate from "../components/AppointmentFormCreate";
+import MessageForm from "../components/MessageForm";
 
 export default {
   components: {
     AppointmentForm,
     AppointmentFormCreate,
+    MessageForm,
   },
   data() {
     return {
       timeslots: [],
-      sortedTimeSlots: [],
+      messages: [],
       order: [
         "lundi",
         "mardi",
@@ -52,7 +60,7 @@ export default {
       console.log(id);
       apiHandler
         .deleteTimeSlot(`/api/timetable/${id}/delete`)
-        .then((res) => console.log(res))
+        .then()
         .catch((error) => console.log(error));
       this.timeslots.splice(key, 1);
     },
@@ -61,8 +69,14 @@ export default {
     apiHandler
       .getTimeTable("/api/timetable/all")
       .then((res) => {
-        console.log(">>>>>", res);
         this.timeslots = res;
+      })
+      .catch((error) => console.log(error));
+
+    apiHandler
+      .getMessages("/api/message/all")
+      .then((res) => {
+        this.messages = res;
       })
       .catch((error) => console.log(error));
   },
@@ -71,7 +85,6 @@ export default {
       apiHandler
         .getTimeTable("/api/timetable/all")
         .then((res) => {
-          console.log(">>>>>", res);
           this.timeslots = res;
         })
         .catch((error) => console.log(error));
@@ -81,12 +94,51 @@ export default {
 </script>
 
 <style>
-.grid-timeslots {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 10px;
+.form {
+  border-radius: 0.5em;
+  border: 3px solid gray;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
+.form > .select-area {
+  margin: 0 1em;
+  display: flex;
+}
+
+.times {
+  display: flex;
+  justify-content: center;
+}
+
+.select {
+  border: 1px solid black;
+  border-radius: 0.5em;
+  height: 2em;
+  width: 8em;
+}
+.button-group {
+  display: flex;
+}
+.button-group > * {
+  margin: 0 10px;
+}
+
+#modify {
+  background-color: royalblue;
+  color: white;
+}
+#delete {
+  background-color: rgb(212, 6, 6);
+  color: white;
+}
+#confirm {
+  background-color: green;
+  color: white;
+}
 .post {
   flex-direction: column;
 }

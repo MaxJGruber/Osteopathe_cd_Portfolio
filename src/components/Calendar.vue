@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row id="calendar">
     <v-col>
       <v-sheet height="500">
         <v-calendar
@@ -52,11 +52,9 @@ export default {
     this.updateTime();
   },
   created() {
-    // Performs openCheck on page render
     apiHandler
       .getTimeTable("/api/timetable/all")
       .then((res) => {
-        console.log(res);
         this.events = res;
       })
       .catch((error) => console.log(error));

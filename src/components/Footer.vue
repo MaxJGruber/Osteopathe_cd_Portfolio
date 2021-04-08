@@ -42,7 +42,7 @@
         >
           LinkedIn</a
         >
-        <a
+        <!-- <a
           href="#"
           target="_blank"
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
@@ -55,6 +55,12 @@
           class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
         >
           Instagram</a
+        > -->
+        <router-link
+          to="/legal-notes"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          Mentions Légales</router-link
         >
       </div>
       <div class="text-white">
