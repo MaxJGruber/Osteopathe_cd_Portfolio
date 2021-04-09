@@ -42,7 +42,7 @@
           -->
         </div>
         <div
-          class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+          class="flex items-center justify-center sm:items-stretch sm:justify-start"
         >
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
