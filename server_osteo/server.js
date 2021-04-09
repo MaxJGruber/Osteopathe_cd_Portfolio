@@ -10,6 +10,7 @@ const logger = require('morgan');
 // link to cloudinary router file
 const cloudinaryRouter = require("./cloudinaryConfig")
 
+const AdminRouter = require("./Admin.router")
 const TimeTableRouter = require("./TimeTable.router")
 const MessageRouter = require("./Message.router")
 
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
 const corsOptions = { origin: process.env.VUE_APP_FRONTEND_URL, credentials: true };
 app.use(cors(corsOptions));
 
+app.use("/api/admin", AdminRouter)
 app.use("/", cloudinaryRouter)
 app.use("/api/timetable", TimeTableRouter)
 app.use("/api/message", MessageRouter)

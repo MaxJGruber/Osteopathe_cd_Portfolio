@@ -4,25 +4,31 @@
     <router-link to="/"
       ><strong>RETOURNER A LA PAGE D'ACCUEIL</strong></router-link
     >
-    <div class="my-5">
-      <h1><strong>Modifier un message:</strong></h1>
-      <div v-for="(message, index) in messages" :key="index">
-        <MessageForm :message="message" />
+    <div v-show="isLoggedIn === false" class="my-5">
+      <h1><strong>Sign In:</strong></h1>
+      <AdminSignin @signin="signin" :order="order" />
+    </div>
+    <div v-show="isLoggedIn === true">
+      <div class="my-5">
+        <h1><strong>Modifier un message:</strong></h1>
+        <div v-for="(message, index) in messages" :key="index">
+          <MessageForm :message="message" />
+        </div>
       </div>
-    </div>
-    <div class="mt-5 flex items-center justify-center post">
-      <h1><strong>Créer un nouvel interval:</strong></h1>
-      <AppointmentFormCreate :timeslots="timeslots" />
-    </div>
-    <div class="mt-5">
-      <h1><strong>Modifier un interval:</strong></h1>
-    </div>
-    <div class="grid-timeslots mx-5 mt-5">
-      <div v-for="(timeslot, index) in timeslots" :key="index">
-        <AppointmentForm
-          :timeslot="timeslot"
-          @delete-timeslot="deleteTimeSlot(timeslot._id, index)"
-        />
+      <div class="mt-5 flex items-center justify-center post">
+        <h1><strong>Créer un nouvel interval:</strong></h1>
+        <AppointmentFormCreate :timeslots="timeslots" />
+      </div>
+      <div class="mt-5">
+        <h1><strong>Modifier un interval:</strong></h1>
+      </div>
+      <div class="grid-timeslots mx-5 mt-5">
+        <div v-for="(timeslot, index) in timeslots" :key="index">
+          <AppointmentForm
+            :timeslot="timeslot"
+            @delete-timeslot="deleteTimeSlot(timeslot._id, index)"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -33,26 +39,21 @@ import apiHandler from "../apiHandler";
 import AppointmentForm from "../components/AppointmentForm";
 import AppointmentFormCreate from "../components/AppointmentFormCreate";
 import MessageForm from "../components/MessageForm";
+import AdminSignin from "../components/AdminSignin";
 
 export default {
   components: {
     AppointmentForm,
     AppointmentFormCreate,
     MessageForm,
+    AdminSignin,
   },
   data() {
     return {
       timeslots: [],
       messages: [],
-      order: [
-        "lundi",
-        "mardi",
-        "mercredi",
-        "jeudi",
-        "vendredi",
-        "samedi",
-        "dimanche",
-      ],
+      isLoggedIn: false,
+      order: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
     };
   },
   methods: {
@@ -64,8 +65,39 @@ export default {
         .catch((error) => console.log(error));
       this.timeslots.splice(key, 1);
     },
+    signin(data) {
+      console.log(">>>>>", data);
+      apiHandler
+        .adminSignin("/api/admin/signin", data)
+        .then((res) => {
+          this.isLoggedIn = true;
+          console.log(res);
+          console.log(this.isLoggedIn);
+        })
+        .catch((error) => console.log(error));
+    },
+    shuffle(array) {
+      var currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    },
   },
   created() {
+    this.order = this.shuffle(this.order);
     apiHandler
       .getTimeTable("/api/timetable/all")
       .then((res) => {

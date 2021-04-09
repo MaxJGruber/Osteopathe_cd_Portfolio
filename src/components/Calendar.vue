@@ -1,7 +1,7 @@
 <template>
   <v-row id="calendar">
     <v-col>
-      <v-sheet height="500">
+      <v-sheet height="750">
         <v-calendar
           ref="calendar"
           v-model="value"
@@ -13,8 +13,8 @@
           locale="fr"
           start="2021-04-05"
           :weekdays="[1, 2, 3, 4, 5, 6, 0]"
-          :first-interval="6"
-          :interval-count="16"
+          :first-interval="7"
+          :interval-count="14"
         >
           <template v-slot:day-label-header="{}">{{ "" }}</template>
           <template v-slot:day-body="{ date, week }">

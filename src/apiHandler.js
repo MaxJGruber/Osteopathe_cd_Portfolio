@@ -52,4 +52,8 @@ export default {
   editMessage(endpoint, data) {
     return service.patch(endpoint, data).then(res => res.data).catch(errorHandler)
   },
+
+  adminSignin(endpoint, data) {
+    return service.post(endpoint, data).then(res => res.data).catch(errorHandler)
+  }
 }

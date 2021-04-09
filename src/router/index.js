@@ -10,7 +10,7 @@ const routes = [
   { path: "/", name: "Home", component: Home },
   {
     path: "/contact-page", name: "Contact-page", component: () =>
-      import(/* webpackChunkName: "contact" */ "../views/contactPage.vue")
+      import(/* webpackChunkName: "contact-page" */ "../views/contactPage.vue")
   },
   {
     path: "/photo-gallery", name: "Photo-Gallery", component: () =>
@@ -18,19 +18,19 @@ const routes = [
   },
   {
     path: "/presentations", name: "Presentations", component: () =>
-      import(/* webpackChunkName: "photo-gallery" */ "../views/Presentations.vue")
+      import(/* webpackChunkName: "presentations" */ "../views/Presentations.vue")
   },
   {
     path: "/patients", name: "Patients", component: () =>
-      import(/* webpackChunkName: "photo-gallery" */ "../views/Patients.vue")
+      import(/* webpackChunkName: "patients" */ "../views/Patients.vue")
   },
   {
     path: "/admin-route", name: "Admin", component: () =>
-      import(/* webpackChunkName: "photo-gallery" */ "../views/AdminRoute.vue")
+      import(/* webpackChunkName: "admin-route" */ "../views/AdminRoute.vue")
   },
   {
     path: "/legal-notes", name: "Legal", component: () =>
-      import(/* webpackChunkName: "photo-gallery" */ "../views/LegalNotes.vue")
+      import(/* webpackChunkName: "legal-notes" */ "../views/LegalNotes.vue")
   }
 ];
 

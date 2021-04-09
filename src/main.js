@@ -21,6 +21,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(Vuetify)
 Vue.use(VueLazyLoad)
 
+Vue.config.devtools = false
+
 Vue.config.productionTip = false
 new Vue({
   vuetify: new Vuetify(),
