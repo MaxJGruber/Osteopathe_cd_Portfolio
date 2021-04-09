@@ -12,7 +12,7 @@
               <span class="block xl:inline">{{ segment.title }}</span>
             </h1>
             <p
-              class="mt-4 text-base text-gray-500 sm:mt-6 sm:text-md md:mt-6 md:text-lg pre-formatted"
+              class="mt-4 sm:max-w-lg text-base text-gray-500 sm:mt-6 sm:text-md md:mt-6 md:text-lg pre-formatted"
             >
               {{ segment.intro }}
             </p>

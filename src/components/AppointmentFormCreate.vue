@@ -2,7 +2,7 @@
   <div>
     <v-form @submit="confirmCreation">
       <v-container class="form">
-        <v-col cols="3">
+        <v-col cols="3" >
           <v-text-field
             label="Nom de l'événement"
             type="text"
@@ -126,6 +126,5 @@ export default {
 };
 </script>
 <style scoped>
-
 </style>
 

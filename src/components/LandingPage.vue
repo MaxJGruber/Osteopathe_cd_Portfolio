@@ -13,13 +13,13 @@
           <polygon points="50,0 100,0 50,100 0,100" />
         </svg>
 
-        <div class="relative pt-10 sm:pl-6 lg:pl-0">
+        <div class="relative pt-10 sm:pl-6 lg:pl-0 ">
           <nav
             class="relative flex items-center justify-between sm:h-10 lg:justify-start"
             aria-label="Global"
           >
             <div
-              class="flex px-8 items-center flex-grow flex-shrink-0 lg:flex-grow-0 lg:px-0"
+              class="flex px-8 items-center flex-grow flex-shrink-0 lg:flex-grow-0 lg:px-0 "
             >
               <div class="flex items-center justify-between w-full md:w-auto">
                 <span class="sr-only">logo</span>
@@ -177,9 +177,9 @@
         </div>
 
         <main
-          class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+          class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 "
         >
-          <div class="sm:text-center lg:text-left">
+          <div class="sm:text-center lg:text-left mobile-margin">
             <h1
               class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
             >

@@ -62,6 +62,12 @@
         >
           Mentions Légales</router-link
         >
+        <router-link
+          to="/admin-route"
+          class="text-white footer-links px-2 py-1 rounded-md text-sm font-medium"
+        >
+          Admin</router-link
+        >
       </div>
       <div class="text-white">
         {{ new Date().getFullYear() }} —

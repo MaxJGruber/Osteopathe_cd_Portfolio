@@ -1,33 +1,35 @@
 <template>
   <div class="mt-5">
-    <h1>ADMIN MODIFICATIONS PAGE</h1>
-    <router-link to="/"
-      ><strong>RETOURNER A LA PAGE D'ACCUEIL</strong></router-link
-    >
-    <div v-show="isLoggedIn === false" class="my-5">
-      <h1><strong>Sign In:</strong></h1>
-      <AdminSignin @signin="signin" :order="order" />
-    </div>
-    <div v-show="isLoggedIn === true">
-      <div class="my-5">
-        <h1><strong>Modifier un message:</strong></h1>
-        <div v-for="(message, index) in messages" :key="index">
-          <MessageForm :message="message" />
+    <div class="mobile-margin">
+      <h1>ADMIN MODIFICATIONS PAGE</h1>
+      <router-link to="/"
+        ><strong>RETOURNER A LA PAGE D'ACCUEIL</strong></router-link
+      >
+      <div v-show="isLoggedIn === false" class="my-5">
+        <h1><strong>Sign In:</strong></h1>
+        <AdminSignin @signin="signin" :order="order" />
+      </div>
+      <div v-show="isLoggedIn === true">
+        <div class="my-5">
+          <h1><strong>Modifier un message:</strong></h1>
+          <div v-for="(message, index) in messages" :key="index">
+            <MessageForm :message="message" />
+          </div>
         </div>
-      </div>
-      <div class="mt-5 flex items-center justify-center post">
-        <h1><strong>Créer un nouvel interval:</strong></h1>
-        <AppointmentFormCreate :timeslots="timeslots" />
-      </div>
-      <div class="mt-5">
-        <h1><strong>Modifier un interval:</strong></h1>
-      </div>
-      <div class="grid-timeslots mx-5 mt-5">
-        <div v-for="(timeslot, index) in timeslots" :key="index">
-          <AppointmentForm
-            :timeslot="timeslot"
-            @delete-timeslot="deleteTimeSlot(timeslot._id, index)"
-          />
+        <div class="mt-5 flex items-center justify-center post">
+          <h1><strong>Créer un nouvel interval:</strong></h1>
+          <AppointmentFormCreate :timeslots="timeslots" />
+        </div>
+        <div class="mt-5">
+          <h1><strong>Modifier un interval:</strong></h1>
+        </div>
+        <div class="grid-timeslots mx-5 mt-5">
+          <div v-for="(timeslot, index) in timeslots" :key="index">
+            <AppointmentForm
+              :timeslot="timeslot"
+              @delete-timeslot="deleteTimeSlot(timeslot._id, index)"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -134,10 +136,11 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .form > .select-area {
-  margin: 0 1em;
+  /* margin: 0 1em; */
   display: flex;
 }
 
@@ -149,8 +152,6 @@ export default {
 .select {
   border: 1px solid black;
   border-radius: 0.5em;
-  height: 2em;
-  width: 8em;
 }
 .button-group {
   display: flex;
@@ -173,5 +174,37 @@ export default {
 }
 .post {
   flex-direction: column;
+}
+
+@media screen and (max-device-width: 430px) {
+
+  .button-group #confirm {
+    font-size: 0.5em;
+    height: 25px;
+    widows: auto;
+  }
+
+  .form {
+    border-radius: 0.5em;
+    border: 3px solid gray;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .form {
+    border-radius: 0.5em;
+    border: 3px solid gray;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 </style>

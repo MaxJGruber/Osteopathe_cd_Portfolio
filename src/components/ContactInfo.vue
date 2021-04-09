@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 bg-white contact-info-comp">
+  <div class="py-10 pb-2 bg-white contact-info-comp">
     <h2 class="text-base text-logo-blue font-semibold tracking-wide uppercase">
       Horaires & Accès
     </h2>
@@ -30,7 +30,7 @@ export default {
   padding-top: 3%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 10px;
 }
 

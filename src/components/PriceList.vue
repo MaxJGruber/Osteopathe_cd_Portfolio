@@ -77,7 +77,7 @@
         </dl>
       </div>
     </div>
-    <p class="mt-10 max-w-2xl text-sm text-gray-500 lg:mx-auto">
+    <p class="mt-10 max-w-2xl text-sm text-gray-500 lg:mx-auto mobile-margin">
       Ces honoraires vous sont communiqués à titre indicatif par le praticien.
       Ils peuvent varier selon le type de soins finalement réalisés en cabinet,
       le nombre de consultations et les actes additionnels nécessaires. En cas

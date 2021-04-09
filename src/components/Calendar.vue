@@ -1,33 +1,46 @@
 <template>
-  <v-row id="calendar">
-    <v-col>
-      <v-sheet height="750">
-        <v-calendar
-          ref="calendar"
-          v-model="value"
-          type="week"
-          color="#3abfd6"
-          :events="events"
-          :event-color="getEventColor"
-          :event-text-color="getEventTextColor"
-          locale="fr"
-          start="2021-04-05"
-          :weekdays="[1, 2, 3, 4, 5, 6, 0]"
-          :first-interval="7"
-          :interval-count="14"
-        >
-          <template v-slot:day-label-header="{}">{{ "" }}</template>
-          <template v-slot:day-body="{ date, week }">
-            <div
-              class="v-current-time"
-              :class="{ first: date === week[0].date }"
-              :style="{ top: nowY }"
-            ></div>
-          </template>
-        </v-calendar>
-      </v-sheet>
-    </v-col>
-  </v-row>
+  <div class="calendar-frame">
+    <div id="legend">
+      <p>RDV au cabinet:</p>
+      <div id="cabinet" class="color"></div>
+      <p>RDV à domicile:</p>
+      <div id="domicile" class="color"></div>
+      <p>Secrétariat:</p>
+      <div id="secretariat" class="color"></div>
+      <p>Autre:</p>
+      <div id="autre" class="color"></div>
+    </div>
+    <div id="calendar">
+      <v-row id="calendar">
+        <v-col>
+          <v-sheet height="750">
+            <v-calendar
+              ref="calendar"
+              v-model="value"
+              type="week"
+              :events="events"
+              :event-color="getEventColor"
+              :event-text-color="getEventTextColor"
+              locale="fr"
+              start="2021-04-05"
+              :weekdays="[1, 2, 3, 4, 5, 6, 0]"
+              :first-interval="7"
+              :interval-count="14"
+            >
+              <template v-slot:day-label-header="{}">{{ "" }}</template>
+              <template v-slot:day-body="{ date, week }">
+                <div
+                  class="v-current-time"
+                  :class="{ first: date === week[0].date }"
+                  :style="{ top: nowY }"
+                ></div>
+              </template>
+            </v-calendar>
+          </v-sheet>
+        </v-col>
+      </v-row>
+    </div>
+  </div>
 </template>
 <script>
 import apiHandler from "../apiHandler";
@@ -83,7 +96,7 @@ export default {
         case "Secretariat":
           return "#FFD700";
         case "Autre":
-          return "#ea4335";
+          return "rgb(150, 41, 150)";
       }
     },
     getEventTextColor(event) {
@@ -105,26 +118,64 @@ export default {
   right: 0;
   pointer-events: none;
 }
-.my-event {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  border-radius: 2px;
-  background-color: #1867c0;
-  color: #ffffff;
-  border: 1px solid #1867c0;
-  font-size: 12px;
-  padding: 3px;
-  cursor: pointer;
-  margin-bottom: 1px;
-  left: 4px;
-  margin-right: 8px;
-  position: relative;
+#legend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.my-event.with-time {
-  position: absolute;
-  right: 4px;
-  margin-right: 0px;
+#legend > * {
+  margin: auto 5px;
+}
+
+#legend .color {
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid black;
+}
+
+#secretariat {
+  background-color: #ffd700;
+}
+#domicile {
+  background-color: #21556d;
+}
+#cabinet {
+  background-color: #3abfd6;
+}
+#autre {
+  background-color: rgb(150, 41, 150);
+}
+.calendar-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 450px) {
+  #calendar {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 430px) {
+  #calendar {
+    width: 100%;
+  }
+  #legend > p {
+    font-size: 0.7em;
+  }
+
+  #legend {
+    margin-top: 2%;
+  }
 }
 </style>

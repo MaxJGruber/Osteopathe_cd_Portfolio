@@ -2,14 +2,13 @@
   <div>
     <v-form @submit.prevent="$emit('signin', logins)">
       <v-container class="form signin">
-        <v-col cols="3" class="mx-5">
+        <v-col cols="5" class="mx-0 px-0">
           <v-text-field
             label="identifiant"
             type="text"
             v-model="logins.username"
           ></v-text-field>
         </v-col>
-        <div>{{ logins.pin }}</div>
         <div class="pin-grid">
           <button
             v-for="index in order"
@@ -19,23 +18,6 @@
           >
             {{ index }}
           </button>
-          <!-- <div>
-            <button type="button" @click="logins.pin += '1'">1</button>
-            <button type="button" @click="logins.pin += '2'">2</button>
-            <button type="button" @click="logins.pin += '3'">3</button>
-          </div>
-          <div>
-            <button type="button" @click="logins.pin += '4'">4</button>
-            <button type="button" @click="logins.pin += '5'">5</button>
-            <button type="button" @click="logins.pin += '6'">6</button>
-          </div>
-          <div>
-            <button type="button" @click="logins.pin += '7'">7</button>
-            <button type="button" @click="logins.pin += '8'">8</button>
-            <button type="button" @click="logins.pin += '9'">9</button>
-          </div>
-          <div> -->
-          <!-- </div> -->
           <button
             type="button"
             @click="logins.pin = logins.pin.slice(0, logins.pin.length - 1)"
@@ -45,8 +27,9 @@
 
           <button type="button" @click="logins.pin = ''">C</button>
         </div>
-
-        <v-btn type="submit" id="confirm" class="mx-12"> Valider </v-btn>
+        <div class="button-group">
+          <v-btn type="submit" id="confirm" class="mx-12"> Valider </v-btn>
+        </div>
       </v-container></v-form
     >
   </div>
@@ -70,14 +53,14 @@ export default {
 
 <style>
 .signin {
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .pin-grid {
   display: grid;
-  grid-template-columns: 40px 40px 40px;
+  grid-template-columns: 33% 33% 33%;
   grid-auto-rows: auto;
   grid-gap: 10px;
-  margin: 2em;
+  margin: auto 2em;
 }
 
 .pin-grid > div > * {
@@ -86,7 +69,7 @@ export default {
   align-items: center;
   border: 1px solid gray;
   border-radius: 2em;
-  height: 40px;
-  width: 40px;
+  height: 33%;
+  width: 33%;
 }
 </style>

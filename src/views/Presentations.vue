@@ -3,14 +3,16 @@
     <ExtendedNavbar :page="'presentations'" />
     <div class="presentation-pic-cover"></div>
     <AttentionTab :page="`Page des présentations`" />
-    <Disclaimer />
-    <hr />
-    <PresentationsAboutRight :segment="osteopathie" />
-    <hr />
-    <PresentationsAboutLeft :segment="practioner" />
-    <!-- <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div> -->
-    <hr />
-    <AboutRight :segment="profession" />
+    <div class="mobile-margin">
+      <Disclaimer />
+      <hr />
+      <PresentationsAboutRight :segment="osteopathie" />
+      <hr />
+      <PresentationsAboutLeft :segment="practioner" />
+      <!-- <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div> -->
+      <hr />
+      <AboutRight :segment="profession" />
+    </div>
     <Footer />
   </div>
 </template>
@@ -61,13 +63,13 @@ export default {
 }
 
 .grid {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 10px;
 }
 
 #grid-client {
   display: grid;
-  grid-template-columns: 55% repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: 65% 35%;
   grid-gap: 10px;
 }
 
@@ -79,5 +81,11 @@ export default {
   height: auto;
   border-radius: 0.5em;
   border: 2px solid #3abfd6;
+}
+
+@media screen and (min-width: 400px) {
+  #grid-client {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 }
 </style>

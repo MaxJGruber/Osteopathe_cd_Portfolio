@@ -3,7 +3,7 @@ export const baby = {
     title: "La prise en charge ostéopathique des nourissons",
     intro: `L'accouchement est un moment important pour les structures corporelles de votre bébé. Elles subissent de nombreuses contraintes au niveau du crâne et bassin notamment avec ou sans utilisation d'instruments pour aider à l'accouchement (forceps, ventouses...).\n
     Votre ostéopathe Charles Dumeige prend en charge les nourrissons pour tout type de motifs (essentiellement crânien ou viscéral). Il faudra un certificat de non contre indication à l'ostéopathie pour les bébés de moins de 6 mois.`,
-    babyTitle: `Les motifs de consultation pour votre nourrisson.`,
+    babyTitle: `Les motifs de consultation pour votre nourrisson`,
     subtext1Title: `Les principales indications:`,
     subtext1: `Les plagiocéphalies et torticolis: Il s'agit d'une asymétrie crânienne, apparaissant chez l'enfant durant la grossesse ou dans les premières semaines de vie. Cette déformation du crâne se caractérise par un aplatissement asymétrique arrière ou latéral de la tête. Dans 75% des cas, cette déformation sera accompagnée d'un torticolis.\n
 Ce dernier se caractérise par la tête du bébé tournée du même côté que la plagiocéphalie. Le torticolis peut engendrer des douleurs pour le nourrisson, des difficultés à la position du coucher ou encore des troubles de la succion en cas d'allaitement notamment.\n

@@ -54,7 +54,10 @@ export default {
     getPics() {
       apiHandler
         .getPicUrls("/api/pics")
-        .then((res) => (this.photos = res))
+        .then((res) => {
+          console.log(res);
+          this.photos = res;
+        })
         .catch((err) => console.log(err));
     },
     // FUNCTION to transform selected image to a full screen show

@@ -76,5 +76,11 @@ export default {
   white-space: pre-wrap;
 }
 
+@media screen and (min-width: 400px) {
+  .mobile-margin {
+    margin: auto 1.5rem;
+  }
+}
+
 /* ------------------------------------------------- */
 </style>

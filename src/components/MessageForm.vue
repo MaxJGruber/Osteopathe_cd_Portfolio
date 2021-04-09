@@ -1,11 +1,11 @@
 <template>
   <div>
     <v-form @submit.prevent="validateMessage">
-      <v-container class="form my-5">
+      <v-container class="form message my-5">
         <div class="">
           <h1>{{ message.location }}</h1>
         </div>
-        <div class="form">
+        <div class="form message">
           <v-col cols="10" class="mx-10">
             <v-text-field
               label="Contenu (Message normal)"

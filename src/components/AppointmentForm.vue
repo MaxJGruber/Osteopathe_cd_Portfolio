@@ -46,17 +46,6 @@
             </option>
           </select>
         </div>
-        <!-- <div class="radio-group">
-          <div v-for="(type, index) in types" :key="index">
-            <input
-              type="radio"
-              :checked="inputs.appointmentType === type"
-              :value="type"
-              v-model="inputs.type"
-            />&nbsp;
-            <label :for="type">{{ type }}</label>
-          </div>
-        </div> -->
         <div class="button-group">
           <v-btn type="submit" id="modify">
             <font-awesome-icon icon="edit" /> </v-btn
@@ -154,5 +143,4 @@ export default {
 </script>
 
 <style>
-
 </style>

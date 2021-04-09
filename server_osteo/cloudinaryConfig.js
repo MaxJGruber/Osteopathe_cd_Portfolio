@@ -13,7 +13,7 @@ cloudinary.config({
 
 // GET route to get ALL pictures from client-folder (right now call limit is set at 30 but can be brought up to 100)
 router.get("/api/pics", async (req, res) => {
-    const allPicObjs = await cloudinary.api.resources({ max_results: 30 },);
+    const allPicObjs = await cloudinary.api.resources({ max_results: 30, quality: 20 },);
     const picsArray = allPicObjs.resources.map((picDetails) => picDetails.secure_url)
     console.log(picsArray)
     res.status(200).json(picsArray)

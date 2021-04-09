@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-card sm:mb-5 lg:my-2">
+  <div class="contact-card sm:mb-5 lg:my-2 mobile-margin">
     <h4
       class="mt-5 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl title-name"
     >
@@ -11,7 +11,7 @@
           ><span>Actuellement: </span>
           <v-btn
             v-bind="attrs"
-            v-on:click="gotToSection('#calendar')"
+            v-on:click="gotToSection('.calendar-frame')"
             id="timetable-open"
             v-show="(isOpen = true)"
             >OUVERT

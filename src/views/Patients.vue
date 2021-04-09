@@ -3,19 +3,21 @@
     <ExtendedNavbar :page="'patients'" />
     <div class="patients-pic-cover"></div>
     <AttentionTab :page="`Page des patients`" />
-    <Disclaimer />
-    <hr />
-    <AboutRight :segment="nourissons" />
-    <hr />
-    <AboutLeft :segment="enfants" />
-    <hr />
-    <AboutRight :segment="femmesEnceintes" />
-    <hr />
-    <AboutLeft :segment="adultes" />
-    <hr />
-    <AboutRight :segment="seniors" />
-    <hr />
-    <AboutLeft :segment="sportifs" />
+    <div class="mobile-margin">
+      <Disclaimer />
+      <hr />
+      <AboutRight :segment="nourissons" />
+      <hr />
+      <AboutLeft :segment="enfants" />
+      <hr />
+      <AboutRight :segment="femmesEnceintes" />
+      <hr />
+      <AboutLeft :segment="adultes" />
+      <hr />
+      <AboutRight :segment="seniors" />
+      <hr />
+      <AboutLeft :segment="sportifs" />
+    </div>
     <Footer />
   </div>
 </template>
@@ -69,7 +71,7 @@ export default {
 }
 
 .grid {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 10px;
 }
 
@@ -81,5 +83,11 @@ export default {
   height: auto;
   border-radius: 0.5em;
   border: 2px solid #3abfd6;
+}
+
+@media screen and (min-width: 400px) {
+  .mobile-margin {
+    margin: auto 2rem;
+  }
 }
 </style>
