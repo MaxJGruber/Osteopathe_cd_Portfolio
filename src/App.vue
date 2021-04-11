@@ -78,7 +78,7 @@ export default {
 
 @media screen and (min-width: 400px) {
   .mobile-margin {
-    margin: auto 1.5rem;
+    margin: auto 1.2rem;
   }
 }
 

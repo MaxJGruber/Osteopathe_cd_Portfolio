@@ -21,7 +21,7 @@
             <div class="about-pic-frame">
               <div class="flex justify-center">
                 <img
-                  class="object-cover sm:h-72 md:h-96 lg:h-full w-1/2 lg:w-1/2 about-pic"
+                  class="h-50 object-cover sm:h-72 md:h-96 lg:h-full w-1/2 lg:w-1/2 about-pic"
                   :src="segment.img"
                   alt=""
                 />

@@ -55,7 +55,7 @@ export default {
   background-image: url("../assets/photo-gallery/shooting12.jpg");
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 20rem;
 }
 
 .about {
@@ -63,7 +63,7 @@ export default {
 }
 
 .grid {
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 10px;
 }
 
@@ -75,17 +75,27 @@ export default {
 
 .about-pic-frame {
   width: fit-content;
-  display: flex;
+  max-height: 100%;
+  /* display: flex; */
 }
 .about-pic {
-  height: auto;
   border-radius: 0.5em;
   border: 2px solid #3abfd6;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 370px) {
   #grid-client {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  #grid-client .about-pic {
+    height: 80%;
+  }
+  .mobile-margin {
+    margin: auto 0.5em;
+  }
+  .mobile-margin * {
+    padding: auto 1em;
   }
 }
 </style>

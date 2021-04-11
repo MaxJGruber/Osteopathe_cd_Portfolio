@@ -60,8 +60,8 @@
         </nav>
       </div>
     </div>
-    <div class="py-6 pr-5 space-y-6">
-      <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+    <div class="py-6 space-y-6">
+      <div class="grid grid-cols-2 gap-y-4 gap-x-8 ">
         <button
           @click="gotToSection('#nourissons')"
           class="text-base font-medium mobile-sub-nav text-logo-blue hover:text-gray-700"

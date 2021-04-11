@@ -64,30 +64,29 @@ export default {
   background-image: url("../assets/photo-gallery/patients-banner-pic.jpg");
   background-size: cover;
   background-position: center;
-  height: 50vh;
+    height: 20rem;
 }
 .about {
   height: auto;
 }
 
 .grid {
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 10px;
 }
 
 .about-pic-frame {
   width: fit-content;
-  display: flex;
+  max-height: 100%;
 }
 .about-pic {
-  height: auto;
   border-radius: 0.5em;
   border: 2px solid #3abfd6;
 }
 
 @media screen and (min-width: 400px) {
   .mobile-margin {
-    margin: auto 2rem;
+    margin: auto 1.2rem;
   }
 }
 </style>

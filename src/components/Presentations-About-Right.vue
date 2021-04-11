@@ -7,7 +7,7 @@
         <div class="grid">
           <div class="about-pic-frame">
             <img
-              class="h-auto w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full about-pic"
+              class="h-50 w-full object-cover sm:h-40 md:h-96 lg:w-full lg:h-full about-pic"
               :src="segment.img"
               alt=""
             />
