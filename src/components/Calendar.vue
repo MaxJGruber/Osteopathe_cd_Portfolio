@@ -148,6 +148,7 @@ export default {
   background-color: rgb(150, 41, 150);
 }
 .calendar-frame {
+  margin-top: 1.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;

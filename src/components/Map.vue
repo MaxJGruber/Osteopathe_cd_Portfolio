@@ -4,7 +4,7 @@
       :accessToken="accessToken"
       :mapStyle="mapStyle"
       :center="centeringCoordinates"
-      :zoom="14.5"
+      :zoom="15"
     >
       <MglMarker :coordinates="coordinatesCabinet" color="blue"></MglMarker>
       <MglMarker :coordinates="coordinatesBusMarche"

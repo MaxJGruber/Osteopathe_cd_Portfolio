@@ -1,7 +1,7 @@
 <template>
   <div class="contact-card sm:mb-5 mobile-margin">
     <h4
-      class="mt-5 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl title-name"
+      class="mb-3 text-3xl leading-6 font-extrabold tracking-tight text-gray-900 sm:text-3xl title-name"
     >
       Charles Dumeige
     </h4>
@@ -53,7 +53,7 @@
     <a
       href="https://www.google.fr/maps/place/19+Rue+Madame+Dassy,+77100+Meaux/@48.9552123,2.8778515,17z/data=!3m1!4b1!4m5!3m4!1s0x47e8a104aa1c7251:0x7c587a186f9a2b9b!8m2!3d48.9552088!4d2.8800402"
       target="_blank"
-      class="sm:mb-5 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-white hover:bg-indigo-50"
+      class=" inline-flex items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-logo-blue bg-white hover:bg-indigo-50"
     >
       Plannifiez votre itinéraire
     </a>
@@ -73,9 +73,8 @@ export default {
     tomorrowHour: null,
   }),
   methods: {
-    // FUNCTION rendering OPEN/CLOSED sign depending on time of day
+    // FUNCTION formatting a date string into a number to use in OPEN/CLOSED logic
     formatTime(targetDay) {
-      console.log(targetDay);
       var hoursFromString = targetDay.name.split(" ");
       var workingHours = hoursFromString[1].split("-");
       var formattedWorkingHours = workingHours.map((elem) =>
@@ -83,6 +82,7 @@ export default {
       );
       return formattedWorkingHours;
     },
+    // FUNCTION rendering OPEN/CLOSED sign depending on time of day
     openCheck() {
       var d = new Date();
       var n = d.getDay();
@@ -91,7 +91,6 @@ export default {
       var day = this.times[n - 1];
       n === 7 ? (n = 0) : n;
       var nextDay = this.times[n];
-      console.log(nextDay);
       if (
         Number(now) > Number(this.formatTime(day)[0]) &&
         Number(now) < Number(this.formatTime(day)[1])
@@ -128,17 +127,14 @@ export default {
 </script>
 
 <style scoped>
-.contact-card {
+/* .contact-card {
   display: flex;
   flex-direction: column;
-}
+  justify-content: center;
+} */
 .contact-card > *,
 .contact-card li {
   margin-top: 15px;
-}
-
-.title-name {
-  margin-bottom: 4%;
 }
 
 #timetable-open {

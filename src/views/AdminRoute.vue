@@ -5,11 +5,11 @@
       <router-link to="/"
         ><strong>RETOURNER A LA PAGE D'ACCUEIL</strong></router-link
       >
-      <div v-show="isLoggedIn === false" class="my-5">
+      <div v-show="isLoggedIn === true" class="my-5">
         <h1><strong>Sign In:</strong></h1>
         <AdminSignin @signin="signin" :order="order" />
       </div>
-      <div v-show="isLoggedIn === true">
+      <div v-show="isLoggedIn === false">
         <div class="my-5">
           <h1><strong>Modifier un message:</strong></h1>
           <div v-for="(message, index) in messages" :key="index">
@@ -22,14 +22,64 @@
         </div>
         <div class="mt-5">
           <h1><strong>Modifier un interval:</strong></h1>
-        </div>
-        <div class="grid-timeslots mx-5 mt-5">
-          <div v-for="(timeslot, index) in timeslots" :key="index">
-            <AppointmentForm
-              :timeslot="timeslot"
-              @delete-timeslot="deleteTimeSlot(timeslot._id, index)"
-            />
+          <div class="date-links mt-5">
+            <a href="#mon"><strong>Lundi</strong></a
+            ><a href="#tue"><strong>Mardi</strong></a
+            ><a href="#wed"><strong>Mercredi</strong></a
+            ><a href="#thu"><strong>Jeudi</strong></a>
+            <a href="#fri"><strong>Vendredi</strong></a>
+            <a href="#sat"><strong>Samedi</strong></a>
+            <a href="#sun"><strong>Dimanche</strong></a>
           </div>
+        </div>
+        <div id="mon">Lundi</div>
+        <div v-for="(timeslot, index) in timeslotsMon" :key="index" id="mon">
+          <AppointmentForm
+            :timeslot="timeslot"
+            @delete-timeslot="deleteTimeSlot(timeslot, index)"
+          />
+        </div>
+        <div id="tue">Mardi</div>
+        <div v-for="(timeslot, index) in timeslotsTue" :key="index">
+          <AppointmentForm
+            :timeslot="timeslot"
+            @delete-timeslot="deleteTimeSlot(timeslot, index)"
+          />
+        </div>
+        <div id="wed">Mercredi</div>
+        <div v-for="(timeslot, index) in timeslotsWed" :key="index">
+          <AppointmentForm
+            :timeslot="timeslot"
+            @delete-timeslot="deleteTimeSlot(timeslot, index)"
+          />
+        </div>
+        <div id="thu">Jeudi</div>
+        <div v-for="(timeslot, index) in timeslotsThu" :key="index">
+          <AppointmentForm
+            :timeslot="timeslot"
+            @delete-timeslot="deleteTimeSlot(timeslot, index)"
+          />
+        </div>
+        <div id="fri">Vendredi</div>
+        <div v-for="(timeslot, index) in timeslotsFri" :key="index">
+          <AppointmentForm
+            :timeslot="timeslot"
+            @delete-timeslot="deleteTimeSlot(timeslot, index)"
+          />
+        </div>
+        <div id="sat">Samedi</div>
+        <div v-for="(timeslot, index) in timeslotsSat" :key="index">
+          <AppointmentForm
+            :timeslot="timeslot"
+            @delete-timeslot="deleteTimeSlot(timeslot, index)"
+          />
+        </div>
+        <div id="sun">Dimanche</div>
+        <div v-for="(timeslot, index) in timeslotsSun" :key="index">
+          <AppointmentForm
+            :timeslot="timeslot"
+            @delete-timeslot="deleteTimeSlot(timeslot, index)"
+          />
         </div>
       </div>
     </div>
@@ -56,25 +106,52 @@ export default {
       messages: [],
       isLoggedIn: false,
       order: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+      timeslotsMon: [],
+      timeslotsTue: [],
+      timeslotsWed: [],
+      timeslotsThu: [],
+      timeslotsFri: [],
+      timeslotsSat: [],
+      timeslotsSun: [],
     };
   },
   methods: {
-    deleteTimeSlot(id, key) {
-      console.log(id);
+    deleteTimeSlot(timeslot, key) {
       apiHandler
-        .deleteTimeSlot(`/api/timetable/${id}/delete`)
-        .then()
+        .deleteTimeSlot(`/api/timetable/${timeslot._id}/delete`)
+        .then(() => {
+          switch (timeslot.day) {
+            case "lundi":
+              this.timeslotsMon.splice(key, 1);
+              break;
+            case "mardi":
+              this.timeslotsTue.splice(key, 1);
+              break;
+            case "mercredi":
+              this.timeslotsWed.splice(key, 1);
+              break;
+            case "jeudi":
+              this.timeslotsThu.splice(key, 1);
+              break;
+            case "vendredi":
+              this.timeslotsFri.splice(key, 1);
+              break;
+            case "samedi":
+              this.timeslotsSat.splice(key, 1);
+              break;
+            case "dimanche":
+              this.timeslotsSun.splice(key, 1);
+              break;
+          }
+        })
         .catch((error) => console.log(error));
-      this.timeslots.splice(key, 1);
     },
     signin(data) {
-      console.log(">>>>>", data);
       apiHandler
         .adminSignin("/api/admin/signin", data)
         .then((res) => {
           this.isLoggedIn = true;
           console.log(res);
-          console.log(this.isLoggedIn);
         })
         .catch((error) => console.log(error));
     },
@@ -103,7 +180,31 @@ export default {
     apiHandler
       .getTimeTable("/api/timetable/all")
       .then((res) => {
-        this.timeslots = res;
+        res.map((elem) => {
+          switch (elem.day) {
+            case "lundi":
+              this.timeslotsMon.push(elem);
+              break;
+            case "mardi":
+              this.timeslotsTue.push(elem);
+              break;
+            case "mercredi":
+              this.timeslotsWed.push(elem);
+              break;
+            case "jeudi":
+              this.timeslotsThu.push(elem);
+              break;
+            case "vendredi":
+              this.timeslotsFri.push(elem);
+              break;
+            case "samedi":
+              this.timeslotsSat.push(elem);
+              break;
+            case "dimanche":
+              this.timeslotsSun.push(elem);
+              break;
+          }
+        });
       })
       .catch((error) => console.log(error));
 
@@ -114,16 +215,16 @@ export default {
       })
       .catch((error) => console.log(error));
   },
-  updated() {
-    if (this.timeslots.length !== this.timeslots.length) {
-      apiHandler
-        .getTimeTable("/api/timetable/all")
-        .then((res) => {
-          this.timeslots = res;
-        })
-        .catch((error) => console.log(error));
-    }
-  },
+  // updated() {
+  //   if (this.timeslots.length !== this.timeslots.length) {
+  //     apiHandler
+  //       .getTimeTable("/api/timetable/all")
+  //       .then((res) => {
+  //         this.timeslots = res;
+  //       })
+  //       .catch((error) => console.log(error));
+  //   }
+  // },
 };
 </script>
 
@@ -139,8 +240,11 @@ export default {
   justify-content: space-evenly;
 }
 
+.date-links > * {
+  margin: auto 10px;
+}
+
 .form > .select-area {
-  /* margin: 0 1em; */
   display: flex;
 }
 
@@ -177,7 +281,6 @@ export default {
 }
 
 @media screen and (max-device-width: 430px) {
-
   .button-group #confirm {
     font-size: 0.5em;
     height: 25px;
