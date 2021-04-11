@@ -27,10 +27,10 @@ export default {
 
 <style>
 .contact-info-container {
-  padding-top: 3%;
+  padding-top: 2%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 10px;
 }
 
@@ -46,6 +46,13 @@ export default {
 
 .map-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 450px) {
+  .map-container {
+    justify-content: center;
+  }
 }
 </style>

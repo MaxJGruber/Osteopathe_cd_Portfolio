@@ -3,8 +3,8 @@
     <MglMap
       :accessToken="accessToken"
       :mapStyle="mapStyle"
-      :center="coordinatesCabinet"
-      :zoom="15"
+      :center="centeringCoordinates"
+      :zoom="14.5"
     >
       <MglMarker :coordinates="coordinatesCabinet" color="blue"></MglMarker>
       <MglMarker :coordinates="coordinatesBusMarche"
@@ -37,6 +37,7 @@ export default {
       coordinatesBusMarche: [2.8791945681925313, 48.955286120169596], // coordinates for bus stop (MARCHE)
       coordinatesBusMediatheque: [2.879068776900545, 48.95482287309044], // coordinates for bus stop (MEDIATHEQUE)
       coordinatesTrain: [2.873683316474508, 48.95734050799616], // coordinates train stop
+      centeringCoordinates: [2.877422362262326, 48.95584987722681],
     };
   },
 
@@ -48,14 +49,20 @@ export default {
 </script>
 <style>
 .map-frame {
-  height: 400px;
-  width: 95%;
+  height: 450px;
+  width: 85%;
   border: 2px #3abfd6 solid;
 }
 
 .map-icon {
   width: 35px;
   height: 35px;
-  /* opacity:initial; */
+}
+
+@media screen and (max-width: 450px) {
+  .map-frame {
+    height: 350px;
+    width: 95%;
+  }
 }
 </style>

@@ -16,7 +16,11 @@
           Dans son cabinet ou à domicile, Charles Dumeige prend en charge tout
           type de patient.
         </p>
-        <router-link to="/patients" target="_blank" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10">
+        <router-link
+          to="/patients"
+          target="_blank"
+          class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10"
+        >
           Apprenez plus sur les patients pris en charge.
         </router-link>
       </div>
@@ -152,7 +156,7 @@
             </div>
             <div class="ml-4">
               <dt class="text-lg leading-6 font-medium text-gray-900">
-                Notifications Mobiles
+                Notifications mobiles
               </dt>
               <dd class="mt-2 text-base text-gray-500">
                 Disponible par téléphone & email pour les contacts directs.

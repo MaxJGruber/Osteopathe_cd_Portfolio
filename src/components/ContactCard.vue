@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-card sm:mb-5 lg:my-2 mobile-margin">
+  <div class="contact-card sm:mb-5 mobile-margin">
     <h4
       class="mt-5 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl title-name"
     >
@@ -13,39 +13,46 @@
             v-bind="attrs"
             v-on:click="gotToSection('.calendar-frame')"
             id="timetable-open"
-            v-show="(isOpen = true)"
+            v-show="isOpen === true"
             >OUVERT
             <font-awesome-icon icon="door-open" class="icon-open" /></v-btn
           ><v-btn
             v-bind="attrs"
             v-on="on"
             id="timetable-closed"
-            v-show="(isOpen = false)"
+            v-show="isOpen === false"
             >FERME<font-awesome-icon icon="door-closed" class="icon-closed"
           /></v-btn>
         </template>
       </v-menu>
     </div>
-    <h4 v-show="(isOpen = false)">
+    <h4
+      v-show="isOpen === false"
+      class="text-md leading-6 font-medium text-gray-900"
+    >
       Le cabinet reouvre <strong>{{ tomorrowDay }}</strong> à
       <strong>{{ tomorrowHour }}</strong
       >.
     </h4>
-    <h6><span>Adresse: </span>19 Rue Madame Dassy, 77100 Meaux</h6>
-    <h6>
-      <span>Moyens de Transports:</span>
+    <h6 class="text-md text-base text-gray-500">
+      <span class="text-gray-900">Adresse: </span>19 Rue Madame Dassy, 77100
+      Meaux
+    </h6>
+    <h6 class="text-md text-base text-gray-500">
+      <span class="text-gray-900">Moyens de Transports:</span>
       <ul>
         <li>Transilien - Gare de Meaux (ligne P)</li>
         <li>Bus - Marché (lignes 4, 69, 3, 19, 64 et 18)</li>
         <li>Bus - Médiathèque (lignes 12, 3 et 69)</li>
       </ul>
     </h6>
-    <h6>
-      <span>Informations d'accès: </span>Cabinet situé au 1er étage avec
-      ascenseur
+    <h6 class="text-md text-base text-gray-500">
+      <span class="text-gray-900">Informations d'accès: </span>Cabinet situé au
+      1er étage avec ascenseur
     </h6>
     <a
       href="https://www.google.fr/maps/place/19+Rue+Madame+Dassy,+77100+Meaux/@48.9552123,2.8778515,17z/data=!3m1!4b1!4m5!3m4!1s0x47e8a104aa1c7251:0x7c587a186f9a2b9b!8m2!3d48.9552088!4d2.8800402"
+      target="_blank"
       class="sm:mb-5 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-white hover:bg-indigo-50"
     >
       Plannifiez votre itinéraire
@@ -67,29 +74,36 @@ export default {
   }),
   methods: {
     // FUNCTION rendering OPEN/CLOSED sign depending on time of day
-    openCheck() {
-      var d = new Date();
-      var n = d.getDay();
-      var now = d.getHours() + "." + d.getMinutes();
-      var day = this.times[n - 1];
-      var nextDay = this.times[n];
-      if (now > this.formatTime(day)[0] && now < this.formatTime(day)[1]) {
-        console.log("We're open right now!");
-        this.isOpen = !this.isOpen;
-      } else {
-        console.log("Sorry, we're closed!");
-        this.isOpen = !this.isOpen;
-        this.tomorrowDay = nextDay.day;
-        this.tomorrowHour = this.formatTime(nextDay)[0].replace(".", ":");
-      }
-    },
     formatTime(targetDay) {
+      console.log(targetDay);
       var hoursFromString = targetDay.name.split(" ");
       var workingHours = hoursFromString[1].split("-");
       var formattedWorkingHours = workingHours.map((elem) =>
         elem.replace(":", ".")
       );
       return formattedWorkingHours;
+    },
+    openCheck() {
+      var d = new Date();
+      var n = d.getDay();
+      n === 0 ? (n = 7) : n;
+      var now = d.getHours() + "." + d.getMinutes();
+      var day = this.times[n - 1];
+      n === 7 ? (n = 0) : n;
+      var nextDay = this.times[n];
+      console.log(nextDay);
+      if (
+        Number(now) > Number(this.formatTime(day)[0]) &&
+        Number(now) < Number(this.formatTime(day)[1])
+      ) {
+        console.log("We're open right now!");
+        this.isOpen = true;
+      } else {
+        console.log("Sorry, we're closed!");
+        this.isOpen = false;
+        this.tomorrowDay = nextDay.day;
+        this.tomorrowHour = this.formatTime(nextDay)[0].replace(".", ":");
+      }
     },
     gotToSection(element) {
       document.querySelector(element).scrollIntoView({ behavior: "smooth" });
@@ -102,6 +116,7 @@ export default {
         for (let i = 0; i < res.length; i++) {
           if (res[i].type === "Secretariat") {
             this.times.push(res[i]);
+            console.log(this.times);
           }
         }
         // Performs openCheck on page render
@@ -113,6 +128,10 @@ export default {
 </script>
 
 <style scoped>
+.contact-card {
+  display: flex;
+  flex-direction: column;
+}
 .contact-card > *,
 .contact-card li {
   margin-top: 15px;
