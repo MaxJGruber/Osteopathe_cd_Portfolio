@@ -3,7 +3,7 @@
     <ExtendedNavbar :page="'patients'" />
     <div class="patients-pic-cover slide-in-bottom"></div>
     <AttentionTab :page="`Page des patients`" />
-    <div class="mobile-margin">
+    <div class="mobile-margin-patients">
       <Disclaimer />
       <hr />
       <AboutRight :segment="nourissons" />
@@ -71,7 +71,7 @@ export default {
 }
 
 .grid {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-gap: 10px;
 }
 
@@ -119,7 +119,7 @@ export default {
 }
 
 @media screen and (min-width: 400px) {
-  .mobile-margin {
+  .mobile-margin-patients {
     margin: auto 1.2rem;
   }
 }

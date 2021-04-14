@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div class="">
       <div class="mt-6">
         <nav class="grid gap-y-8">
           <router-link

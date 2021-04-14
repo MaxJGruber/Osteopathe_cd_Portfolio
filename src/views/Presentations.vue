@@ -3,7 +3,7 @@
     <ExtendedNavbar :page="'presentations'" />
     <div class="presentation-pic-cover slide-in-bottom"></div>
     <AttentionTab :page="`Page des présentations`" />
-    <div class="mobile-margin">
+    <div class="mobile-margin-presentations">
       <Disclaimer />
       <hr />
       <PresentationsAboutRight :segment="osteopathie" />
@@ -63,7 +63,7 @@ export default {
 }
 
 .grid {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
 }
 
@@ -84,8 +84,9 @@ export default {
 }
 
 .slide-in-bottom {
-	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /**
@@ -96,24 +97,24 @@ animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 @-webkit-keyframes slide-in-bottom {
   0% {
     -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    transform: translateY(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-bottom {
   0% {
     -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    transform: translateY(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -126,11 +127,8 @@ animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   #grid-client .about-pic {
     height: 80%;
   }
-  .mobile-margin {
-    margin: auto 0.5em;
-  }
-  .mobile-margin * {
-    padding: auto 1em;
+  .mobile-margin-presentations {
+    margin: auto 1.2em;
   }
 }
 </style>
