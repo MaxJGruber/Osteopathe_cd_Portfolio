@@ -1,7 +1,7 @@
 <template>
   <div>
     <ExtendedNavbar :page="'presentations'" />
-    <div class="presentation-pic-cover"></div>
+    <div class="presentation-pic-cover slide-in-bottom"></div>
     <AttentionTab :page="`Page des présentations`" />
     <div class="mobile-margin">
       <Disclaimer />
@@ -81,6 +81,41 @@ export default {
 .about-pic {
   border-radius: 0.5em;
   border: 2px solid #3abfd6;
+}
+
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 370px) {

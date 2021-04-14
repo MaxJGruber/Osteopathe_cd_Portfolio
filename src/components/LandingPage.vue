@@ -13,13 +13,13 @@
           <polygon points="50,0 100,0 50,100 0,100" />
         </svg>
 
-        <div class="relative pt-10 sm:pl-6 lg:pl-0 ">
+        <div class="relative pt-10 sm:pl-6 lg:pl-0">
           <nav
             class="relative flex items-center justify-between sm:h-10 lg:justify-start"
             aria-label="Global"
           >
             <div
-              class="flex px-8 items-center flex-grow flex-shrink-0 lg:flex-grow-0 lg:px-0 "
+              class="flex px-8 items-center flex-grow flex-shrink-0 lg:flex-grow-0 lg:px-0"
             >
               <div class="flex items-center justify-between w-full md:w-auto">
                 <span class="sr-only">logo</span>
@@ -177,7 +177,7 @@
         </div>
 
         <main
-          class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 "
+          class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
         >
           <div class="sm:text-center lg:text-left mobile-margin">
             <h1
@@ -240,8 +240,8 @@
       class="lg:absolute lg:inset-y-0 lg:right-0"
     >
       <img
-        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-        v-bind:src="info.image"
+        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full slide-in-right"
+        :src="info.image"
         alt=""
       />
     </div>
@@ -267,5 +267,40 @@ export default {
   width: 8vw !important;
   margin-left: 0;
   padding-left: 0;
+}
+
+.slide-in-right {
+	-webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 </style>

@@ -3,7 +3,7 @@
     <NavBar />
     <PhotoGalleryIntro />
     <div class="photo-grid p-5">
-      <div v-for="(img, key) in photos" :key="key" class="pic-container">
+      <div v-for="(img, key) in photos" :key="key" class="pic-container slide-in-bottom">
         <button v-on:click="zoom(img)" @click="lightboxOn = !lightboxOn">
           <img :src="img" class="pic" alt="pic" />
         </button>
@@ -119,5 +119,40 @@ export default {
 
 .pic:hover {
   transform: scale(1.1);
+}
+
+.slide-in-bottom {
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>

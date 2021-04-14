@@ -1,7 +1,7 @@
 <template>
   <div>
     <ExtendedNavbar :page="'patients'" />
-    <div class="patients-pic-cover"></div>
+    <div class="patients-pic-cover slide-in-bottom"></div>
     <AttentionTab :page="`Page des patients`" />
     <div class="mobile-margin">
       <Disclaimer />
@@ -64,7 +64,7 @@ export default {
   background-image: url("../assets/photo-gallery/patients-banner-pic.jpg");
   background-size: cover;
   background-position: center;
-    height: 20rem;
+  height: 20rem;
 }
 .about {
   height: auto;
@@ -82,6 +82,40 @@ export default {
 .about-pic {
   border-radius: 0.5em;
   border: 2px solid #3abfd6;
+}
+.slide-in-bottom {
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 400px) {
