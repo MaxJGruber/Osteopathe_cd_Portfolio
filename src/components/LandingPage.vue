@@ -251,7 +251,7 @@
     >
       <img
         class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full slide-in-right"
-        src="../assets/photo-gallery/shooting3.jpg"
+        src="../assets/photo-gallery/shooting11.jpg"
         alt=""
       />
     </div>
@@ -280,8 +280,8 @@ export default {
 }
 
 .slide-in-right {
-  -webkit-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+  animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
 }
 
 /**
