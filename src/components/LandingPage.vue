@@ -236,12 +236,22 @@
       </div>
     </div>
     <div
-      :class="page === 'home' ? 'lg:w-1/2' : 'full'"
-      class="lg:absolute lg:inset-y-0 lg:right-0"
+      v-show="page === 'home'"
+      class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
     >
       <img
         class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full slide-in-right"
-        :src="info.image"
+        src="../assets/intro-pic.jpeg"
+        alt=""
+      />
+    </div>
+    <div
+      v-show="page === 'contact'"
+      class="lg:absolute lg:inset-y-0 lg:right-0 full"
+    >
+      <img
+        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full slide-in-right"
+        src="../assets/photo-gallery/shooting3.jpg"
         alt=""
       />
     </div>
@@ -270,8 +280,8 @@ export default {
 }
 
 .slide-in-right {
-	-webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /**
@@ -282,24 +292,24 @@ animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 @-webkit-keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
