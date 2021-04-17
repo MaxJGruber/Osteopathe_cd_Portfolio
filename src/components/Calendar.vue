@@ -166,6 +166,9 @@ export default {
   #calendar {
     width: 80%;
   }
+  #legend {
+    display: none;
+  }
 }
 @media screen and (max-width: 430px) {
   #calendar {

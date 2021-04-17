@@ -24,7 +24,7 @@
             </div>
             <div class="ml-4 center">
               <dt class="text-lg leading-6 font-medium text-gray-900">
-                Paiement par espèces ou chèque uniquement
+                Paiement en espèces ou en chèque acceptée
               </dt>
               <!-- <dd class="mt-2 text-base text-gray-500">
                 Une attitude active dans l’approche relationnelle ostéopathe et
@@ -37,19 +37,19 @@
               <div
                 class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
-                <!-- Heroicon name: outline/lightning-bolt -->
-                <font-awesome-icon icon="comment" class="icon" />
+                <!-- Heroicon name: outline/globe-alt -->
+                <font-awesome-icon icon="credit-card" class="icon" />
               </div>
             </div>
             <div class="ml-4 center">
               <dt class="text-lg leading-6 font-medium text-gray-900">
-                Consultation en anglais possible
+                Paiement par carte bancaire acceptée
               </dt>
-              <!-- <dd class="mt-2 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </dd> -->
+              <dd class="text-base text-gray-500">
+                <i class="fab fa-cc-mastercard cc-logo mx-2"></i>
+                <i class="fab fa-cc-amex cc-logo mx-2"></i>
+                <i class="fab fa-cc-visa cc-logo mx-2"></i>
+              </dd>
             </div>
           </div>
           <div class="flex">
@@ -95,15 +95,15 @@
           <div class="flex">
             <div class="flex-shrink-0">
               <div
-                class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white"
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-logo-blue text-white"
               >
                 <!-- Heroicon name: outline/lightning-bolt -->
-                <font-awesome-icon icon="exclamation-triangle" class="icon" />
+                <font-awesome-icon icon="comment" class="icon" />
               </div>
             </div>
             <div class="ml-4 center">
-              <dt class="text-lg leading-6 font-medium text-yellow-500">
-                Cartes bancaires non acceptées
+              <dt class="text-lg leading-6 font-medium text-gray-900">
+                Consultation en anglais possible
               </dt>
               <!-- <dd class="mt-2 text-base text-gray-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -143,6 +143,11 @@ export default {};
 </script>
 
 <style>
+.cc-logo {
+  font-size: 1.8em;
+  color: #21556d;
+}
+
 .svg-inline--fa.fa-w-16,
 .svg-inline--fa.fa-w-18,
 .svg-inline--fa.fa-w-20 {

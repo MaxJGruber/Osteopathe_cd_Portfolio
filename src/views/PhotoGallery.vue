@@ -2,23 +2,23 @@
   <div>
     <NavBar />
     <PhotoGalleryIntro />
+    <v-progress-circular
+      v-show="isLoading === true"
+      indeterminate
+      color="#3abfd6"
+    ></v-progress-circular>
     <div class="photo-grid p-5">
       <div
         v-for="(img, key) in photos"
         :key="key"
         class="pic-container slide-in-bottom"
       >
-        <v-progress-circular
-          v-show="isLoaded === false"
-          indeterminate
-          color="#3abfd6"
-        ></v-progress-circular>
         <button
           v-show="isLoaded === true"
           v-on:click="zoom(img)"
           @click="lightboxOn = !lightboxOn"
         >
-          <img :src="img" class="pic" id="pic" alt="pic" @load="loaded"/>
+          <img :src="img" class="pic" id="pic" alt="pic" />
         </button>
       </div>
     </div>
@@ -51,7 +51,7 @@ export default {
     return {
       photos: [],
       isLoaded: false,
-      isLoading: false,
+      isLoading: true,
       media: [
         {
           thumb: null,
@@ -75,10 +75,6 @@ export default {
         })
         .catch((err) => console.log(err));
     },
-    loaded() {
-      this.isLoaded = true;
-      this.isLoading = false;
-    },
     // FUNCTION to transform selected image to a full screen show
     zoom(linkTarget) {
       this.media = [
@@ -94,6 +90,10 @@ export default {
   created() {
     // Calling getPics method ar page render to get all photos
     this.getPics();
+    window.setTimeout(() => {
+      this.isLoaded = true;
+      this.isLoading = false;
+    }, 2000);
   },
 };
 </script>
@@ -141,8 +141,8 @@ export default {
 }
 
 .slide-in-bottom {
-  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s
-    both;
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.5s both;
   animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
 }
 

@@ -16,7 +16,8 @@
             v-show="isOpen === true"
             >OUVERT
             <font-awesome-icon icon="door-open" class="icon-open" /></v-btn
-          ><v-btn
+          >
+          <v-btn
             v-bind="attrs"
             v-on="on"
             id="timetable-closed"
@@ -91,6 +92,7 @@ export default {
       var day = this.times[n - 1];
       n === 7 ? (n = 0) : n;
       var nextDay = this.times[n];
+
       if (
         Number(now) > Number(this.formatTime(day)[0]) &&
         Number(now) < Number(this.formatTime(day)[1])
@@ -101,6 +103,7 @@ export default {
         console.log("Sorry, we're closed!");
         this.isOpen = false;
         this.tomorrowDay = nextDay.day;
+        
         this.tomorrowHour = this.formatTime(nextDay)[0].replace(".", ":");
       }
     },

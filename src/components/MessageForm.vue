@@ -48,6 +48,7 @@ export default {
   methods: {
     validateMessage() {
       apiHandler
+
         .editMessage(`/api/message/${this.message._id}/edit`, this.input)
         .then()
         .catch((error) => console.log(error));
@@ -56,5 +57,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
