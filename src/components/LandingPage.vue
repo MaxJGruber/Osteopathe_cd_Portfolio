@@ -177,7 +177,7 @@
         </div>
 
         <main
-          class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+          class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-20"
         >
           <div class="sm:text-center lg:text-left mobile-margin">
             <h1

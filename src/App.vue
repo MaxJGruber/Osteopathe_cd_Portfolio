@@ -73,7 +73,8 @@ export default {
 }
 
 .pre-formatted {
-  white-space: pre-wrap;
+  white-space: pre-line;
+  
 }
 
 @media screen and (min-width: 400px) {

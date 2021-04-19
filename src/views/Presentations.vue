@@ -69,7 +69,7 @@ export default {
 
 #grid-client {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 55% 45%;
   grid-gap: 10px;
 }
 
@@ -119,9 +119,9 @@ export default {
   }
 }
 
-@media screen and (min-width: 370px) {
+@media screen and (max-width: 450px) {
   #grid-client {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   #grid-client .about-pic {

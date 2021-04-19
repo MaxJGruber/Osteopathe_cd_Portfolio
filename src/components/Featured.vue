@@ -1,7 +1,7 @@
 <template>
   <div class="py-12 bg-white mobile-margin">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:text-center">
+      <div class="lg:text-center flex direction items-center">
         <h2
           class="text-base text-logo-blue font-semibold tracking-wide uppercase"
         >
@@ -19,7 +19,7 @@
         <router-link
           to="/patients"
           target="_blank"
-          class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10"
+          class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-logo-blue bg-logo-blue-light md:py-4 md:text-lg md:px-10"
         >
           Apprenez plus sur les patients pris en charge.
         </router-link>
@@ -211,5 +211,9 @@ export default {};
 
 .values-grid {
   margin-top: 5em;
+}
+
+.direction {
+  flex-direction: column;
 }
 </style>
