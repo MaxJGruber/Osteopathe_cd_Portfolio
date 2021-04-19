@@ -14,9 +14,8 @@
             v-on:click="gotToSection('.calendar-frame')"
             id="timetable-open"
             v-show="isOpen === true"
-            >OUVERT
-            <font-awesome-icon icon="door-open" class="icon-open" /></v-btn
-          >
+            >OUVERT <font-awesome-icon icon="door-open" class="icon-open"
+          /></v-btn>
           <v-btn
             v-bind="attrs"
             v-on="on"
@@ -103,7 +102,7 @@ export default {
         console.log("Sorry, we're closed!");
         this.isOpen = false;
         this.tomorrowDay = nextDay.day;
-        
+
         this.tomorrowHour = this.formatTime(nextDay)[0].replace(".", ":");
       }
     },
@@ -118,7 +117,6 @@ export default {
         for (let i = 0; i < res.length; i++) {
           if (res[i].type === "Secretariat") {
             this.times.push(res[i]);
-            console.log(this.times);
           }
         }
         // Performs openCheck on page render
@@ -130,11 +128,6 @@ export default {
 </script>
 
 <style scoped>
-/* .contact-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
 .contact-card > *,
 .contact-card li {
   margin-top: 15px;
