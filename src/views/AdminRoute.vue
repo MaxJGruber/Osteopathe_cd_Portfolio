@@ -5,11 +5,11 @@
       <router-link to="/"
         ><strong>RETOURNER A LA PAGE D'ACCUEIL</strong></router-link
       >
-      <div v-show="isLoggedIn === true" class="my-5">
+      <div v-show="isLoggedIn === false" class="my-5">
         <h1><strong>Sign In:</strong></h1>
         <AdminSignin @signin="signin" :order="order" />
       </div>
-      <div v-show="isLoggedIn === false">
+      <div v-show="isLoggedIn === true">
         <div class="my-5">
           <h1><strong>Modifier un message:</strong></h1>
           <div v-for="(message, index) in messages" :key="index">
