@@ -1,7 +1,7 @@
 <template>
   <div>
     <ExtendedNavbar :page="'presentations'" />
-    <div class="presentation-pic-cover slide-in-bottom"></div>
+    <div class="presentation-pic-cover slide-in-left"></div>
     <AttentionTab :page="`Page des présentations`" />
     <div class="mobile-margin-presentations">
       <Disclaimer />
@@ -83,41 +83,41 @@ export default {
   border: 2px solid #3abfd6;
 }
 
-.slide-in-bottom {
-  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
-  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.slide-in-left {
+	-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /**
  * ----------------------------------------
- * animation slide-in-bottom
+ * animation slide-in-left
  * ----------------------------------------
  */
-@-webkit-keyframes slide-in-bottom {
+@-webkit-keyframes slide-in-left {
   0% {
-    -webkit-transform: translateY(1000px);
-    transform: translateY(1000px);
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }
-@keyframes slide-in-bottom {
+@keyframes slide-in-left {
   0% {
-    -webkit-transform: translateY(1000px);
-    transform: translateY(1000px);
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }
+
 
 @media screen and (max-width: 450px) {
   #grid-client {
