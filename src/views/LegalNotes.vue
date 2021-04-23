@@ -56,16 +56,13 @@
                 >Maximilian Gruber</a
               >.
             </h1>
-            <p class="mt-10 mb-10 max-w-6xl text-md text-gray-500 lg:mx-auto">
-              Ce site a été créé en MEVN (MongoDB, Express, Vue, Node) Stack.
-            </p>
             <h2
               class="text-base text-logo-gray font-semibold tracking-wide uppercase"
             >
               Nom de domaine
             </h2>
             <p class="mt-10 mb-10 max-w-6xl text-md text-gray-500 lg:mx-auto">
-              Ce site est hébérgé par 1&1 IONOS SARL avec le nom de domaine
+              Ce site est hébérgé par nos soins avec le nom de domaine acheté chez 1&1 IONOS
               <strong>charles-dumeige-osteomeaux.fr</strong>.
             </p>
           </div>
