@@ -1,7 +1,7 @@
 export const adults = {
   id: "adultes",
   title: "La prise en charge ostéopathique des adultes",
-  intro: `L'adulte peut consulter en ostéopathie pour de nombreux motifs hormis le mal de dos, même s' il reste très récurent. Dans la limite de son champ d'application, l'ostéopathie s'intéressera à un domaine plus large en termes de prise en charge.\n
+  intro: `L'adulte peut consulter en ostéopathie pour de nombreux motifs autre que le mal de dos, même s' il reste très récurent. Dans la limite de son champ d'application, l'ostéopathie s'intéressera à un domaine plus large en termes de prise en charge.\n
 Votre ostéopathe Charles Dumeige vous procurera des séances d'ostéopathie générale mais aussi pour les sphères crâniennes ou encore viscérales.`,
   subtext1Title: `Les motifs les plus fréquents:`,
   subtext1: `- Le mal de dos à tous les niveaux rachidiens (cervicaux, dorsaux, lombaires). Le motif le plus récurrent en consultation.
@@ -13,8 +13,8 @@ Votre ostéopathe Charles Dumeige vous procurera des séances d'ostéopathie gé
 - Les traumatismes après une chute ou les AVP (accidents de la voie publique).
 - Après une entorse de cheville ou genou pour retrouver en mobilité et stabilité. Le même procédé pourra être effectué après une fracture une fois la consolidation de l'os concerné.
 - Les douleurs à l'estomac, RGO (remontées acides vers la bouche) et ballonnements. Les troubles du transit peuvent également être un motif de consultation. L'ostéopathie aura de très bon résultats sur la sphère viscérale.
-- Les douleurs à la mâchoire ou encore les bruxismes (grincement des dents) survenant à la mastication. Il peut y avoir un niveau de stress à prendre en compte pour ce type de douleurs.
-- Les acouphènes (sifflements) ou bourdonnements dans l'oreille. Les maux de tête ou migraines sont également des motifs très fréquents.
+- Les douleurs à la mâchoire survenant à la mastication ou encore les bruxismes (grincement des dents). Il peut y avoir un niveau de stress à prendre en compte pour ce type de douleurs.
+- Les acouphènes (sifflements ou bourdonnements dans l'oreille). Les maux de tête ou migraines sont également des motifs très fréquents.
 - Les troubles gynécologiques, sans contre-indication médicale. L'ostéopathie peut atténuer les douleurs de règles, dyspareunies (douleurs aux rapports) et aider à la conception.`,
   subtext2Title: `Le mal de dos`,
   subtext2: `Les origines du mal de dos ou encore d'autres motifs (lumbago, torticolis et cervicalgies, sciatalgies...) peuvent s'expliquer par les pressions subies au quotidien avec le niveau de stress ou les mauvaises postures au travail.\n
