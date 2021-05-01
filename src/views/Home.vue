@@ -8,6 +8,7 @@
     <Calendar />
     <div class="elfsight-app-20fce0e0-f9ef-427d-bbff-3b4df952898d"></div>
     <Footer />
+    <CookieWarning />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import Featured from "../components/Featured.vue";
 import AttentionTab from "../components/AttentionTab";
 import Calendar from "../components/Calendar";
 import Footer from "../components/Footer";
+import CookieWarning from "../components/CookieWarning";
 
 export default {
   name: "Home",
@@ -32,6 +34,7 @@ export default {
     Footer,
     Calendar,
     AttentionTab,
+    CookieWarning,
   },
   data: () => {
     return {

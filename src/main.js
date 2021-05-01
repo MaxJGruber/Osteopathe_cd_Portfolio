@@ -29,6 +29,7 @@ import {
   faDoorOpen,
   faDoorClosed,
   faCreditCard,
+  faCookieBite,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGoogle,
@@ -64,7 +65,8 @@ library.add(
   faCreditCard,
   faCcAmex,
   faCcMastercard,
-  faCcVisa
+  faCcVisa,
+  faCookieBite
 );
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

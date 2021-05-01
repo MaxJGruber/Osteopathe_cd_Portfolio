@@ -14,6 +14,27 @@
               <h2
                 class="text-base text-logo-gray font-semibold tracking-wide uppercase"
               >
+                Politique relative aux cookies
+              </h2>
+              <p class="mt-10 mb-10 max-w-6xl text-md text-gray-500 lg:mx-auto">
+                Les cookies sont de petits fichiers texte qui sont stockés sur
+                votre ordinateur lorsque vous visitez certains sites Web. Ce
+                site Web utilise des cookies pour Google Analytics. Google
+                Analytics est un outil d'analyse Web qui nous aide à comprendre
+                comment les visiteurs interagissent avec ce site Web.
+              </p>
+              <p class="mt-10 mb-10 max-w-6xl text-md text-gray-500 lg:mx-auto">
+                Les cookies contiennent des informations qui sont transférées
+                sur le disque dur de votre ordinateur. Ils stockent des
+                informations, telles que l'heure à laquelle la visite en cours a
+                eu lieu, si le visiteur a déjà visité le site et quel site a
+                renvoyé le visiteur vers le site. Google Analytics collecte des
+                informations de manière entièrement anonyme. Il rend compte des
+                tendances du site Web sans identifier les visiteurs individuels.
+              </p>
+              <h2
+                class="text-base text-logo-gray font-semibold tracking-wide uppercase"
+              >
                 Contenu écrit
               </h2>
               <h1
@@ -62,7 +83,8 @@
               Nom de domaine
             </h2>
             <p class="mt-10 mb-10 max-w-6xl text-md text-gray-500 lg:mx-auto">
-              Ce site est hébérgé par nos soins avec le nom de domaine acheté chez 1&1 IONOS
+              Ce site est hébérgé par nos soins avec le nom de domaine acheté
+              chez 1&1 IONOS
               <strong>charles-dumeige-osteomeaux.fr</strong>.
             </p>
           </div>
