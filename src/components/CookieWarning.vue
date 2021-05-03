@@ -3,7 +3,7 @@
     Make sure you add some bottom padding to pages that include a sticky banner like this to prevent
     your content from being obscured when the user scrolls to the bottom of the page.
   -->
-  <div class="fixed inset-x-0 bottom-0 " v-show="open">
+  <div class="fixed z-10 inset-x-0 bottom-0 " v-show="open">
     <div class="bg-logo-gray-nohover">
       <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between flex-wrap">
