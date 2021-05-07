@@ -23,7 +23,11 @@
             >
               <div class="flex items-center justify-between w-full md:w-auto">
                 <span class="sr-only">logo</span>
-                <img class="h-8 w-auto sm:h-20 logo" src="../assets/logo.png" />
+                <img
+                  class="h-8 w-auto sm:h-20 logo"
+                  src="../assets/logo.png"
+                  alt="logo charles dumeige osteopathe"
+                />
 
                 <div class="-mr-2 flex justify-end items-center md:hidden">
                   <button
@@ -104,7 +108,11 @@
           >
             <div class="px-5 pt-4 flex items-center justify-between">
               <div>
-                <img class="h-8 w-auto" src="../assets/logo.png" alt="" />
+                <img
+                  class="h-8 w-auto"
+                  src="../assets/logo.png"
+                  alt="logo charles dumeige osteopathe Meaux"
+                />
               </div>
               <div class="-mr-2">
                 <button
@@ -242,7 +250,7 @@
       <img
         class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full slide-in-right"
         src="../assets/intro-pic.jpeg"
-        alt=""
+        alt="osteopathie generale"
       />
     </div>
     <div
@@ -252,7 +260,7 @@
       <img
         class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full slide-in-right"
         src="../assets/photo-gallery/shooting11.jpg"
-        alt=""
+        alt="charles dumeige au cabinet"
       />
     </div>
   </div>
@@ -280,7 +288,8 @@ export default {
 }
 
 .slide-in-right {
-  -webkit-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+  -webkit-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+    both;
   animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
 }
 
