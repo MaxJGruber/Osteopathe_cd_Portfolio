@@ -40,7 +40,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-// Adding fontawesome icons after importing them
+// Adding fontawesome icons  after importing them
 library.add(
   faGoogle,
   faLinkedin,
