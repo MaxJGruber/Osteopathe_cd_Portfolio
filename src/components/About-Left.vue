@@ -22,7 +22,7 @@
               <img
                 class="h-50 w-full lg:w-full object-cover sm:h-72 md:h-96 lg:h-full about-pic"
                 :src="segment.img"
-                alt=""
+                alt="ostéopathie"
               />
             </div>
           </div>
@@ -49,7 +49,7 @@
               <img
                 class="h-50 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full about-pic"
                 :src="segment.img2"
-                alt=""
+                alt="osteopathie"
               />
             </div>
           </div>
@@ -99,5 +99,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
